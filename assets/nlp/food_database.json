@@ -1,0 +1,8387 @@
+[
+  {
+    "ProductID": 1,
+    "ProductName": "Britannia NutriChoice 5 Grain Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "healthy",
+      "multigrain",
+      "weight loss",
+      "tea time",
+      "fiber rich",
+      "nutritious",
+      "low calorie",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oats",
+      "Ragi",
+      "Corn",
+      "Barley",
+      "Dietary Fiber"
+    ],
+    "BadIngredients": [
+      "Partially Hydrogenated Vegetable Oil",
+      "Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 2,
+    "ProductName": "Parle-G Original Glucose Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kids",
+      "tea time",
+      "cheap",
+      "glucose",
+      "classic",
+      "everyday",
+      "school snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Flavors",
+      "Glucose Syrup"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 3,
+    "ProductName": "McVitie's Original Digestive Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "digestive",
+      "tea time",
+      "British biscuit",
+      "fiber",
+      "classic",
+      "wheat",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oat Bran"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Partially Hydrogenated Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Raising Agents",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 4,
+    "ProductName": "Good Day Cashew Butter Cookies",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cookies",
+      "kids",
+      "cashew",
+      "buttery",
+      "snack",
+      "festive",
+      "gifting",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Cashew Pieces"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Butter Flavor",
+      "High Fructose Corn Syrup",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Powder",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 5,
+    "ProductName": "Soulfull Millet Biscuit – Ragi Oat",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "millet",
+      "ragi",
+      "healthy",
+      "weight loss",
+      "diabetic friendly",
+      "low gi",
+      "nutritious",
+      "natural",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Ragi Flour",
+      "Oat Flour",
+      "Whole Wheat Flour",
+      "Jaggery",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 6,
+    "ProductName": "Unibic Sugar-Free Oatmeal Cookies",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar free",
+      "diabetic",
+      "oatmeal",
+      "healthy",
+      "no sugar",
+      "low calorie",
+      "diet biscuit",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Oat Flour",
+      "Whole Wheat Flour",
+      "Maltitol (Sugar Substitute)"
+    ],
+    "BadIngredients": [
+      "Palm Oil",
+      "Refined Wheat Flour"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Raising Agents"
+    ]
+  },
+  {
+    "ProductID": 7,
+    "ProductName": "Bonn High Fiber Digestive Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "high fiber",
+      "digestive",
+      "healthy",
+      "weight loss",
+      "gut health",
+      "constipation",
+      "wheat",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Wheat Bran",
+      "Oats",
+      "Inulin"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Vegetable Shortening"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 8,
+    "ProductName": "Hide & Seek Fab Chocolate Sandwich Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chocolate",
+      "kids",
+      "cream biscuit",
+      "sandwich",
+      "sweet",
+      "indulgent",
+      "snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Powder (minimal)",
+      "Artificial Flavors",
+      "Trans Fat",
+      "High Fructose Corn Syrup",
+      "Vanillin"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 9,
+    "ProductName": "Ketofy Almond Flour Keto Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "keto",
+      "low carb",
+      "almond",
+      "sugar free",
+      "diabetic",
+      "gluten free",
+      "weight loss",
+      "keto biscuit",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Almond Flour",
+      "Coconut Flour",
+      "Erythritol",
+      "Grass-Fed Butter",
+      "Flaxseed"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Powder",
+      "Vanilla Extract"
+    ]
+  },
+  {
+    "ProductID": 10,
+    "ProductName": "Oreo Original Cream Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oreo",
+      "cream biscuit",
+      "kids",
+      "chocolate",
+      "sweet",
+      "dunking",
+      "snack",
+      "party",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "High Fructose Corn Syrup",
+      "Artificial Flavors",
+      "Vanillin",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 11,
+    "ProductName": "Sunfeast Dark Fantasy Choco Fills",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "dark fantasy",
+      "chocolate",
+      "indulgent",
+      "kids",
+      "sweet",
+      "cream filled",
+      "snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Butter Substitute",
+      "Artificial Chocolate Flavor",
+      "Trans Fat",
+      "HFCS"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Emulsifiers",
+      "Baking Soda",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 12,
+    "ProductName": "Britannia Marie Gold Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "marie",
+      "tea time",
+      "light",
+      "plain",
+      "classic",
+      "everyday biscuit",
+      "low fat",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Vanaspati (Trans Fat)",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 13,
+    "ProductName": "Dr. Oetker FunFoods Sugar-Free Digestive",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar free",
+      "digestive",
+      "diabetic",
+      "healthy",
+      "no sugar",
+      "high fiber",
+      "diet",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oat Bran",
+      "Stevia",
+      "Wheat Fiber"
+    ],
+    "BadIngredients": [
+      "Sunflower Oil (refined)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 14,
+    "ProductName": "Saffola Oats & Ragi Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oats",
+      "ragi",
+      "healthy",
+      "heart healthy",
+      "weight management",
+      "fiber",
+      "nutritious",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Ragi",
+      "Whole Wheat Flour",
+      "Jaggery",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [
+      "Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Cinnamon",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 15,
+    "ProductName": "Bourbons Chocolate Cream Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "bourbon",
+      "chocolate cream",
+      "kids",
+      "sweet",
+      "tea time",
+      "snack",
+      "dunking",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Powder (trace)",
+      "Artificial Flavor",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 16,
+    "ProductName": "TrueElements Seed Cycling Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "seeds",
+      "healthy",
+      "PCOS",
+      "hormone balance",
+      "nutritious",
+      "women health",
+      "weight loss",
+      "natural",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Flaxseeds",
+      "Pumpkin Seeds",
+      "Sesame Seeds",
+      "Whole Wheat Flour",
+      "Jaggery"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 17,
+    "ProductName": "Britannia Treat Strawberry Cream Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kids",
+      "strawberry",
+      "cream biscuit",
+      "fun",
+      "colorful",
+      "sweet",
+      "snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Strawberry Flavor",
+      "Synthetic Food Color",
+      "Trans Fat",
+      "High Fructose Corn Syrup"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 18,
+    "ProductName": "Yoga Bar Whole Wheat Almond Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "healthy",
+      "almond",
+      "whole wheat",
+      "protein",
+      "gym",
+      "weight loss",
+      "clean eating",
+      "best rated",
+      "good for me",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Almonds",
+      "Oats",
+      "Dates"
+    ],
+    "BadIngredients": [
+      "Cane Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Sunflower Oil",
+      "Cinnamon"
+    ]
+  },
+  {
+    "ProductID": 19,
+    "ProductName": "Diabooti Sugar-Free Multigrain Cracker",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "diabetic",
+      "sugar free",
+      "multigrain",
+      "healthy",
+      "no sugar",
+      "low gi",
+      "crackers",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oats",
+      "Ragi",
+      "Psyllium Husk",
+      "Erythritol"
+    ],
+    "BadIngredients": [
+      "Refined Sunflower Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 20,
+    "ProductName": "Nutrichoice Digestive Zero Sugar",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar free",
+      "digestive",
+      "zero sugar",
+      "diabetic",
+      "healthy",
+      "diet",
+      "no sugar added",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oats",
+      "Maltitol"
+    ],
+    "BadIngredients": [
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Raising Agent"
+    ]
+  },
+  {
+    "ProductID": 21,
+    "ProductName": "Lay's Classic Salted Potato Chips",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chips",
+      "snack",
+      "salty",
+      "munchies",
+      "party",
+      "evening snack",
+      "crispy",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Sunflower Oil",
+      "Acrylamide (frying byproduct)",
+      "Artificial Flavoring",
+      "MSG"
+    ],
+    "NeutralIngredients": [
+      "Potato",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 22,
+    "ProductName": "Haldiram's Aloo Bhujia",
+    "Category": "Snacks",
+    "TotalScore": 3,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "bhujia",
+      "namkeen",
+      "Indian snack",
+      "salty",
+      "evening snack",
+      "spicy",
+      "tea time",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [
+      "Potato"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Palm Oil",
+      "Artificial Flavors",
+      "MSG",
+      "High Sodium"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Spices",
+      "Gram Flour"
+    ]
+  },
+  {
+    "ProductID": 23,
+    "ProductName": "Slurrp Farm Millet Puffs",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kids",
+      "millet",
+      "healthy snack",
+      "toddler",
+      "no maida",
+      "natural",
+      "puffs",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Jowar Flour",
+      "Bajra Flour",
+      "Ragi Flour",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Turmeric",
+      "Cumin",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 24,
+    "ProductName": "Yoga Bar Protein Bar – Chocolate Almond",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein bar",
+      "gym",
+      "post workout",
+      "high protein",
+      "muscle building",
+      "healthy snack",
+      "chocolate",
+      "fitness",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Isolate",
+      "Almonds",
+      "Oats",
+      "Dark Chocolate",
+      "Dates"
+    ],
+    "BadIngredients": [
+      "Cane Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Sunflower Lecithin",
+      "Natural Flavors"
+    ]
+  },
+  {
+    "ProductID": 25,
+    "ProductName": "Too Yumm! Veggie Sticks",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "baked",
+      "low fat",
+      "healthy chips",
+      "veggie",
+      "light snack",
+      "munchies",
+      "guilt free",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack"
+    ],
+    "GoodIngredients": [
+      "Potato",
+      "Spinach Powder",
+      "Beet Powder"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Palm Oil",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Turmeric",
+      "Rice Flour"
+    ]
+  },
+  {
+    "ProductID": 26,
+    "ProductName": "Happilo Premium Dry Fruits Mix",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "dry fruits",
+      "healthy snack",
+      "weight loss",
+      "protein",
+      "nuts",
+      "natural",
+      "diabetic friendly",
+      "energy",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Almonds",
+      "Cashews",
+      "Walnuts",
+      "Pistachios",
+      "Raisins"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt (trace)"
+    ]
+  },
+  {
+    "ProductID": 27,
+    "ProductName": "Kurkure Masala Munch",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kurkure",
+      "spicy",
+      "kids",
+      "junk food",
+      "party",
+      "masala",
+      "crunchy",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Rice Meal",
+      "Edible Vegetable Oil (Palm)",
+      "Artificial Flavors",
+      "MSG",
+      "Sodium Diacetate",
+      "Disodium 5-Ribonucleotide"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Corn Meal",
+      "Spices"
+    ]
+  },
+  {
+    "ProductID": 28,
+    "ProductName": "RiteBite Max Protein Bar – Choco Berry",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein bar",
+      "gym",
+      "high protein",
+      "post workout",
+      "fitness",
+      "muscle",
+      "energy bar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Concentrate",
+      "Soy Protein Isolate",
+      "Almonds",
+      "Dark Chocolate Chips"
+    ],
+    "BadIngredients": [
+      "Glucose Syrup",
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Emulsifiers",
+      "Natural Flavors"
+    ]
+  },
+  {
+    "ProductID": 29,
+    "ProductName": "Epigamia Greek Yogurt – Plain",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "greek yogurt",
+      "high protein",
+      "probiotic",
+      "gut health",
+      "healthy snack",
+      "low fat",
+      "fitness",
+      "weight loss",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whole Milk",
+      "Live Active Cultures",
+      "Probiotic Strains"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Milk Solids",
+      "Lactic Acid Bacteria"
+    ]
+  },
+  {
+    "ProductID": 30,
+    "ProductName": "Bikano Classic Mixture",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "mixture",
+      "namkeen",
+      "salty",
+      "Indian snack",
+      "Diwali",
+      "tea time",
+      "fried snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [
+      "Peanuts (minimal)"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Palm Oil",
+      "Artificial Flavors",
+      "MSG",
+      "High Sodium",
+      "Vanaspati"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Spices",
+      "Gram Flour",
+      "Rice Flour"
+    ]
+  },
+  {
+    "ProductID": 31,
+    "ProductName": "Monsoon Harvest Baked Quinoa Chips",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "quinoa",
+      "baked",
+      "healthy chips",
+      "protein snack",
+      "gluten free",
+      "clean eating",
+      "low calorie",
+      "best rated",
+      "good for me",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Quinoa",
+      "Whole Wheat Flour",
+      "Sunflower Oil",
+      "Chia Seeds"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Herbs",
+      "Lemon Juice Powder"
+    ]
+  },
+  {
+    "ProductID": 32,
+    "ProductName": "Doritos Nacho Cheese Tortilla Chips",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "doritos",
+      "chips",
+      "cheese",
+      "junk food",
+      "party snack",
+      "kids",
+      "spicy",
+      "crunchy",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Corn Meal",
+      "Vegetable Oil (Palm)",
+      "Artificial Cheese Flavor",
+      "MSG",
+      "Sodium Diacetate",
+      "Disodium Guanylate",
+      "Artificial Color (Yellow 6)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Whey Powder"
+    ]
+  },
+  {
+    "ProductID": 33,
+    "ProductName": "Sattviko Roasted Makhana – Peri Peri",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "makhana",
+      "fox nuts",
+      "healthy snack",
+      "roasted",
+      "low calorie",
+      "protein",
+      "gut friendly",
+      "diet snack",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Fox Nuts (Makhana)",
+      "Sunflower Oil",
+      "Natural Spices"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Chili Powder",
+      "Lemon Powder"
+    ]
+  },
+  {
+    "ProductID": 34,
+    "ProductName": "Cornitos Nachos – Sea Salt",
+    "Category": "Snacks",
+    "TotalScore": 3,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "nachos",
+      "chips",
+      "salted",
+      "party snack",
+      "crunch",
+      "dip",
+      "munchies",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly"
+    ],
+    "GoodIngredients": [
+      "Corn"
+    ],
+    "BadIngredients": [
+      "Palm Oil",
+      "Refined Sunflower Oil",
+      "Artificial Flavoring",
+      "High Sodium"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Lime",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 35,
+    "ProductName": "Baked 100 Calorie Almonds Snack Pack",
+    "Category": "Snacks",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "almonds",
+      "healthy snack",
+      "low calorie",
+      "protein",
+      "diabetic friendly",
+      "heart healthy",
+      "weight loss",
+      "keto",
+      "portioned snack",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Almonds",
+      "Vitamin E"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt (trace)"
+    ]
+  },
+  {
+    "ProductID": 36,
+    "ProductName": "Unibic Cashew Badam Cookies",
+    "Category": "Biscuits",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cashew",
+      "almond",
+      "cookie",
+      "tea time",
+      "nutty",
+      "sweet",
+      "baked",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Cashew Pieces",
+      "Almond Pieces"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Flavors"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 37,
+    "ProductName": "The Whole Truth Protein Bar – Peanut Butter",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein bar",
+      "no added sugar",
+      "peanut butter",
+      "gym",
+      "clean label",
+      "high protein",
+      "fitness",
+      "keto friendly",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Peanuts",
+      "Pea Protein",
+      "Date Paste",
+      "Cocoa Butter"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Natural Flavors",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 38,
+    "ProductName": "Cadbury Perk Chocolate Bar",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chocolate",
+      "kids",
+      "sweet",
+      "snack",
+      "perk",
+      "wafer",
+      "indulgent",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Butter Substitute",
+      "Artificial Vanilla Flavor",
+      "Glucose Syrup",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Milk Solids",
+      "Emulsifiers",
+      "Wafer (Refined Flour)"
+    ]
+  },
+  {
+    "ProductID": 39,
+    "ProductName": "Kellogg's Special K Original Cereal",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "cereal",
+      "breakfast",
+      "weight loss",
+      "high protein",
+      "diet",
+      "low fat",
+      "morning meal",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack"
+    ],
+    "GoodIngredients": [
+      "Wheat",
+      "Rice",
+      "Vitamins and Minerals",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Malt Flavoring",
+      "Refined Wheat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Niacinamide",
+      "Thiamin",
+      "Riboflavin"
+    ]
+  },
+  {
+    "ProductID": 40,
+    "ProductName": "Nilon's Roasted Peanuts – Masala",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "peanuts",
+      "roasted",
+      "protein snack",
+      "healthy snack",
+      "gym",
+      "low carb",
+      "budget protein",
+      "masala",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil"
+    ],
+    "GoodIngredients": [
+      "Peanuts",
+      "Natural Spices"
+    ],
+    "BadIngredients": [
+      "Refined Oil (small amount)",
+      "MSG"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Chili Powder",
+      "Turmeric",
+      "Lemon"
+    ]
+  },
+  {
+    "ProductID": 41,
+    "ProductName": "Coca-Cola Classic 330ml Can",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cola",
+      "soda",
+      "cold drink",
+      "party",
+      "sweet",
+      "fizzy",
+      "refreshing",
+      "junk drink"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "High Fructose Corn Syrup",
+      "Phosphoric Acid",
+      "Caramel Color (Class IV)",
+      "Artificial Flavors"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Caffeine"
+    ]
+  },
+  {
+    "ProductID": 42,
+    "ProductName": "Coca-Cola Zero Sugar 330ml Can",
+    "Category": "Beverages",
+    "TotalScore": 4,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "zero sugar",
+      "sugar free cola",
+      "diet cola",
+      "no calorie",
+      "keto drink",
+      "fizzy drink",
+      "diabetic friendly",
+      "low glycemic index",
+      "no added sugar"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Aspartame",
+      "Acesulfame K",
+      "Phosphoric Acid",
+      "Caramel Color (Class IV)",
+      "Artificial Flavors"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Caffeine",
+      "Sodium Citrate"
+    ]
+  },
+  {
+    "ProductID": 43,
+    "ProductName": "Real Fruit Power Apple Juice 200ml",
+    "Category": "Beverages",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "fruit juice",
+      "apple juice",
+      "kids drink",
+      "vitamin C",
+      "natural",
+      "juice box",
+      "breakfast"
+    ],
+    "GoodIngredients": [
+      "Apple Juice Concentrate"
+    ],
+    "BadIngredients": [
+      "Added Sugar",
+      "Ascorbic Acid (synthetic)"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 44,
+    "ProductName": "Limca Lemon Lime Soda 250ml",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "limca",
+      "lemon soda",
+      "cold drink",
+      "summer",
+      "fizzy",
+      "sweet",
+      "refreshing",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Citric Acid",
+      "Artificial Lemon Flavor",
+      "Sodium Benzoate"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide"
+    ]
+  },
+  {
+    "ProductID": 45,
+    "ProductName": "Paperboat Aam Panna 200ml",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "aam panna",
+      "mango drink",
+      "summer drink",
+      "raw mango",
+      "natural taste",
+      "Indian drink",
+      "kids",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Raw Mango Pulp",
+      "Mint Extract",
+      "Cumin Extract"
+    ],
+    "BadIngredients": [
+      "Added Sugar",
+      "Preservatives"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Salt",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 46,
+    "ProductName": "Bournvita Energy Drink 30g Sachet",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "bournvita",
+      "kids drink",
+      "chocolate drink",
+      "health drink",
+      "calcium",
+      "energy",
+      "morning drink"
+    ],
+    "GoodIngredients": [
+      "Calcium",
+      "Vitamins (D, B)",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Sugar (high amount)",
+      "Malt Extract",
+      "Cocoa Solids",
+      "Caramel Color",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Milk (when mixed)",
+      "Maltodextrin"
+    ]
+  },
+  {
+    "ProductID": 47,
+    "ProductName": "Amul Kool Chocolate Flavoured Milk 200ml",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "chocolate milk",
+      "kids",
+      "protein drink",
+      "calcium",
+      "after school",
+      "energy drink",
+      "flavored milk",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Toned Milk",
+      "Calcium",
+      "Protein"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Artificial Chocolate Flavor",
+      "Caramel Color"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Cocoa Powder",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 48,
+    "ProductName": "Nescafé Classic Instant Coffee Powder 50g",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "coffee",
+      "instant coffee",
+      "morning drink",
+      "caffeine",
+      "low calorie",
+      "weight loss",
+      "sugar free",
+      "keto drink",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Roasted Coffee Beans",
+      "Antioxidants",
+      "Chlorogenic Acid"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Coffee Extract"
+    ]
+  },
+  {
+    "ProductID": 49,
+    "ProductName": "Lipton Yellow Label Tea 100 Bags",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "tea",
+      "black tea",
+      "low calorie",
+      "antioxidant",
+      "morning drink",
+      "healthy drink",
+      "weight loss",
+      "no sugar",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Black Tea Leaves",
+      "Theaflavins",
+      "Polyphenols",
+      "Antioxidants"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Tea Extract"
+    ]
+  },
+  {
+    "ProductID": 50,
+    "ProductName": "Red Bull Energy Drink 250ml",
+    "Category": "Beverages",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "energy drink",
+      "caffeine",
+      "party",
+      "gaming",
+      "focus",
+      "fizzy drink",
+      "sports drink"
+    ],
+    "GoodIngredients": [
+      "B-Vitamins",
+      "Taurine"
+    ],
+    "BadIngredients": [
+      "Sugar (high)",
+      "Artificial Flavors",
+      "Sodium Citrate",
+      "Caffeine (excess)"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Inositol"
+    ]
+  },
+  {
+    "ProductID": 51,
+    "ProductName": "Tropicana 100% Orange Juice 1L",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "orange juice",
+      "vitamin C",
+      "breakfast",
+      "natural juice",
+      "immunity",
+      "no added sugar",
+      "fruit juice",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Orange Juice (Not from Concentrate)",
+      "Vitamin C",
+      "Folate"
+    ],
+    "BadIngredients": [
+      "Natural Flavors (processed)"
+    ],
+    "NeutralIngredients": [
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 52,
+    "ProductName": "Complan Nutrition Drink – Chocolate",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "complan",
+      "kids growth drink",
+      "protein drink",
+      "height growth",
+      "calcium",
+      "school kids",
+      "milk supplement",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Milk Protein",
+      "Calcium",
+      "Vitamins D & A"
+    ],
+    "BadIngredients": [
+      "Sugar (high)",
+      "Maltodextrin",
+      "Artificial Chocolate Flavor",
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Soy Lecithin",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 53,
+    "ProductName": "Himalayan Sparkling Mineral Water 500ml",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sparkling water",
+      "zero calorie",
+      "keto drink",
+      "healthy drink",
+      "mineral water",
+      "no sugar",
+      "diabetic friendly",
+      "diet drink",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Natural Minerals",
+      "Calcium",
+      "Magnesium"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide"
+    ]
+  },
+  {
+    "ProductID": 54,
+    "ProductName": "Monster Energy Original 473ml",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "energy drink",
+      "party",
+      "gaming",
+      "caffeine",
+      "extreme",
+      "sports",
+      "fizzy"
+    ],
+    "GoodIngredients": [
+      "B-Vitamins"
+    ],
+    "BadIngredients": [
+      "High Fructose Corn Syrup",
+      "Sucrose",
+      "Glucose",
+      "Taurine (excess)",
+      "Artificial Flavors",
+      "Sodium Citrate",
+      "Benzoic Acid"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 55,
+    "ProductName": "Sunfeast Mom's Magic Rich Butter Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "butter biscuit",
+      "kids",
+      "tea time",
+      "sweet",
+      "buttery",
+      "baked",
+      "snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Butter Flavor",
+      "Vanillin",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 56,
+    "ProductName": "Tata Tea Premium Black Tea 250g",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "tea",
+      "black tea",
+      "morning",
+      "chai",
+      "antioxidant",
+      "healthy",
+      "low calorie",
+      "no sugar",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Black Tea Leaves",
+      "Polyphenols",
+      "Flavonoids"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Tea Dust",
+      "Natural Tea Flavors"
+    ]
+  },
+  {
+    "ProductID": 57,
+    "ProductName": "Organic India Tulsi Green Tea",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "tulsi",
+      "green tea",
+      "detox",
+      "immunity",
+      "healthy drink",
+      "antioxidant",
+      "weight loss",
+      "stress relief",
+      "herbal",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Organic Tulsi Leaves",
+      "Green Tea Leaves",
+      "EGCG Catechins",
+      "Adaptogenic Herbs"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Natural Herb Extract"
+    ]
+  },
+  {
+    "ProductID": 58,
+    "ProductName": "Maaza Mango Fruit Drink 600ml",
+    "Category": "Beverages",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "mango drink",
+      "maaza",
+      "kids",
+      "cold drink",
+      "summer drink",
+      "fruity",
+      "refreshing",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Mango Pulp (minimal)"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Citric Acid",
+      "Artificial Mango Flavor",
+      "Sodium Benzoate",
+      "Synthetic Colors"
+    ],
+    "NeutralIngredients": [
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 59,
+    "ProductName": "Yakult Probiotic Drink 65ml",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "probiotic",
+      "gut health",
+      "digestion",
+      "healthy drink",
+      "fermented",
+      "immunity",
+      "daily drink",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Lactobacillus casei Shirota (6.5 billion)",
+      "Skimmed Milk Powder"
+    ],
+    "BadIngredients": [
+      "Sugar"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Glucose"
+    ]
+  },
+  {
+    "ProductID": 60,
+    "ProductName": "Wonderz Sugar-Free Electrolyte Drink",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "electrolyte",
+      "sugar free",
+      "hydration",
+      "sports drink",
+      "keto",
+      "no sugar",
+      "exercise",
+      "diabetic friendly",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Sodium",
+      "Potassium",
+      "Magnesium",
+      "Calcium",
+      "Stevia"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 61,
+    "ProductName": "Ensure Adult Nutrition Drink – Vanilla",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "elderly nutrition",
+      "meal replacement",
+      "protein drink",
+      "high protein",
+      "meal supplement",
+      "senior health",
+      "weight gain",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Isolate",
+      "Calcium",
+      "Vitamin D",
+      "Iron",
+      "Zinc"
+    ],
+    "BadIngredients": [
+      "Corn Maltodextrin",
+      "Sugar",
+      "Artificial Vanilla Flavor"
+    ],
+    "NeutralIngredients": [
+      "Soy Protein Isolate",
+      "Sunflower Oil",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 62,
+    "ProductName": "Pepsi Cola 250ml Can",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "pepsi",
+      "cola",
+      "cold drink",
+      "party",
+      "soda",
+      "fizzy",
+      "sweet"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "High Fructose Corn Syrup",
+      "Caramel Color IV",
+      "Phosphoric Acid",
+      "Artificial Flavors"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Caffeine"
+    ]
+  },
+  {
+    "ProductID": 63,
+    "ProductName": "Starbucks Cold Brew Black Coffee 200ml",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cold brew",
+      "black coffee",
+      "no sugar",
+      "keto",
+      "low calorie",
+      "caffeine",
+      "weight loss",
+      "ready to drink",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Cold Brew Coffee Concentrate",
+      "Chlorogenic Acids",
+      "Antioxidants"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Nitrogen (canning)"
+    ]
+  },
+  {
+    "ProductID": 64,
+    "ProductName": "Thums Up Charged Strong Cola 330ml",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cola",
+      "cold drink",
+      "strong",
+      "soda",
+      "party",
+      "fizzy",
+      "refreshing"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "High Fructose Corn Syrup",
+      "Phosphoric Acid",
+      "Caramel Color IV",
+      "Artificial Flavors",
+      "High Caffeine"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide"
+    ]
+  },
+  {
+    "ProductID": 65,
+    "ProductName": "Paper Boat Kokum Sherbet 200ml",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kokum",
+      "sherbet",
+      "summer drink",
+      "Indian drink",
+      "digestive drink",
+      "antioxidant",
+      "natural",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Kokum Extract",
+      "Vitamin C"
+    ],
+    "BadIngredients": [
+      "Added Sugar"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Salt",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 66,
+    "ProductName": "Haldiram's Moong Dal Namkeen",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "moong dal",
+      "namkeen",
+      "Indian snack",
+      "protein",
+      "tea time",
+      "lentil snack",
+      "salty",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [
+      "Moong Dal (Split Green Gram)"
+    ],
+    "BadIngredients": [
+      "Palm Oil",
+      "High Sodium",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Spices",
+      "Turmeric"
+    ]
+  },
+  {
+    "ProductID": 67,
+    "ProductName": "Protinex Original Nutrition Supplement",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein supplement",
+      "high protein",
+      "recovery",
+      "gym",
+      "strength",
+      "meal supplement",
+      "adults",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil"
+    ],
+    "GoodIngredients": [
+      "Soy Protein Isolate",
+      "Vitamins",
+      "Minerals",
+      "Calcium",
+      "Zinc"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Maltodextrin",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Solids",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 68,
+    "ProductName": "Amul Tazza Tetrapack Milk 500ml",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "milk",
+      "dairy",
+      "calcium",
+      "protein",
+      "healthy drink",
+      "kids",
+      "daily essential",
+      "nutrition",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Toned Milk",
+      "Calcium",
+      "Protein",
+      "Vitamin B12",
+      "Riboflavin"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Milk Solids",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 69,
+    "ProductName": "Ching's Secret Masala Soda",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "masala soda",
+      "soda",
+      "spicy",
+      "refreshing",
+      "summer",
+      "street food",
+      "Indian soda"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Artificial Masala Flavor",
+      "Sodium Benzoate",
+      "Citric Acid"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 70,
+    "ProductName": "Dabur Amla Juice 500ml",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "amla juice",
+      "vitamin C",
+      "immunity",
+      "natural",
+      "health drink",
+      "ayurvedic",
+      "detox",
+      "antioxidant",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Amla Extract",
+      "Vitamin C (natural)",
+      "Polyphenols"
+    ],
+    "BadIngredients": [
+      "Added Sugar",
+      "Preservatives"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 71,
+    "ProductName": "Sunfeast Farmlite Oats & Almonds Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oats",
+      "almonds",
+      "healthy biscuit",
+      "fiber",
+      "heart healthy",
+      "tea time",
+      "low fat",
+      "natural",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Oats",
+      "Almond Pieces",
+      "Whole Wheat Flour"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 72,
+    "ProductName": "Millet Amma Organic Ragi Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "ragi",
+      "organic",
+      "healthy biscuit",
+      "calcium",
+      "kids",
+      "natural",
+      "no maida",
+      "millet biscuit",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Organic Ragi Flour",
+      "Whole Wheat Flour",
+      "Jaggery",
+      "Sesame Seeds",
+      "Cold Pressed Sunflower Oil"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Cardamom"
+    ]
+  },
+  {
+    "ProductID": 73,
+    "ProductName": "1mg Sugar-Free Protein Cookie – Peanut Butter",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein cookie",
+      "sugar free",
+      "peanut butter",
+      "gym",
+      "post workout",
+      "keto",
+      "high protein",
+      "fitness",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "diet friendly",
+      "low cal",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Concentrate",
+      "Peanut Butter",
+      "Almond Flour",
+      "Erythritol"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 74,
+    "ProductName": "Anmol Choco Fills Cream Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cream biscuit",
+      "chocolate",
+      "kids",
+      "sweet",
+      "snack",
+      "cheap biscuit",
+      "dunking",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Chocolate Flavor",
+      "Trans Fat",
+      "High Fructose Corn Syrup",
+      "Vanillin",
+      "Synthetic Color"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 75,
+    "ProductName": "Priyagold Butter Bite Salted Cracker",
+    "Category": "Biscuits",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "salted cracker",
+      "biscuit",
+      "tea time",
+      "salty",
+      "light",
+      "plain",
+      "everyday",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Vanaspati (Trans Fat)",
+      "Palm Oil",
+      "Artificial Butter Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Water",
+      "Yeast"
+    ]
+  },
+  {
+    "ProductID": 76,
+    "ProductName": "EatElite Keto Coconut Chocolate Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "keto",
+      "coconut",
+      "chocolate",
+      "low carb",
+      "sugar free",
+      "keto biscuit",
+      "weight loss",
+      "diabetic",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Coconut Flour",
+      "Almond Flour",
+      "Dark Cocoa Powder",
+      "Erythritol",
+      "Coconut Oil"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Powder",
+      "Vanilla Extract"
+    ]
+  },
+  {
+    "ProductID": 77,
+    "ProductName": "Bisk Farm Vita Marie Gold",
+    "Category": "Biscuits",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "marie biscuit",
+      "plain",
+      "tea time",
+      "light",
+      "kids",
+      "everyday",
+      "calcium",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [
+      "Calcium Carbonate"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Vanaspati",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 78,
+    "ProductName": "Plix Oats & Flaxseed Cracker",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cracker",
+      "oats",
+      "flaxseed",
+      "healthy",
+      "high fiber",
+      "omega-3",
+      "weight loss",
+      "diabetic friendly",
+      "low gi",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Flaxseeds",
+      "Whole Wheat Flour",
+      "Chia Seeds",
+      "Stevia"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Sunflower Oil",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 79,
+    "ProductName": "Enjoy Rusk Toast – Elaichi",
+    "Category": "Biscuits",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "rusk",
+      "tea time",
+      "elaichi",
+      "toast biscuit",
+      "breakfast",
+      "baked",
+      "dipping biscuit",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Vanaspati",
+      "Artificial Elaichi Flavor",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Yeast",
+      "Water",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 80,
+    "ProductName": "Gaia Healthy Oats & Seeds Bar",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oats bar",
+      "seeds",
+      "healthy snack",
+      "fiber",
+      "energy bar",
+      "natural",
+      "weight loss",
+      "morning snack",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Flaxseeds",
+      "Sunflower Seeds",
+      "Honey",
+      "Almonds",
+      "Sesame Seeds"
+    ],
+    "BadIngredients": [
+      "Glucose Syrup (minimal)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Sunflower Oil",
+      "Cinnamon"
+    ]
+  },
+  {
+    "ProductID": 81,
+    "ProductName": "Lays Wafer Cream & Onion 52g",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chips",
+      "cream onion",
+      "wafer",
+      "junk food",
+      "evening snack",
+      "party",
+      "salty"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Potato Starch",
+      "Palm Oil",
+      "Artificial Cream & Onion Flavor",
+      "MSG",
+      "Dextrose",
+      "Lactose"
+    ],
+    "NeutralIngredients": [
+      "Potato",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 82,
+    "ProductName": "Bomba Cheese Balls Snack",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cheese balls",
+      "kids snack",
+      "puffed",
+      "junk food",
+      "crunchy",
+      "artificial flavor",
+      "party snack"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Corn Grit",
+      "Palm Oil",
+      "Artificial Cheese Flavor",
+      "MSG",
+      "Dextrose",
+      "Maltodextrin",
+      "Synthetic Color (Yellow 5)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Whey Powder"
+    ]
+  },
+  {
+    "ProductID": 83,
+    "ProductName": "Patanjali Dalia (Broken Wheat) 500g",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "dalia",
+      "broken wheat",
+      "healthy breakfast",
+      "weight loss",
+      "high fiber",
+      "diabetic friendly",
+      "low gi",
+      "Indian breakfast",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat (Broken)",
+      "Dietary Fiber",
+      "Iron",
+      "Protein"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Wheat Grain"
+    ]
+  },
+  {
+    "ProductID": 84,
+    "ProductName": "Snickers Chocolate Bar 50g",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "snickers",
+      "chocolate bar",
+      "peanut",
+      "sweet",
+      "indulgent",
+      "candy",
+      "kids",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Peanuts"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Corn Syrup",
+      "Artificial Vanilla Flavor",
+      "Partially Hydrogenated Soybean Oil",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Butter",
+      "Milk Solids",
+      "Salt",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 85,
+    "ProductName": "Millet & More Jowar Puffs – Tomato",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "jowar",
+      "puffs",
+      "healthy snack",
+      "millet",
+      "baked",
+      "tomato",
+      "kids",
+      "low calorie",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Jowar Flour",
+      "Tomato Powder",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [
+      "Citric Acid"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Spices",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 86,
+    "ProductName": "Fix My Mind Brahmi Ashwagandha Latte",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "adaptogen",
+      "stress relief",
+      "brahmi",
+      "ashwagandha",
+      "ayurvedic",
+      "healthy drink",
+      "mental health",
+      "focus",
+      "herbal latte",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Brahmi Extract",
+      "Ashwagandha",
+      "Coconut Milk Powder",
+      "Jaggery"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Cardamom",
+      "Cinnamon",
+      "Natural Flavors"
+    ]
+  },
+  {
+    "ProductID": 87,
+    "ProductName": "MyProtein Impact Whey Protein Shake – Chocolate",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "whey protein",
+      "protein shake",
+      "gym",
+      "post workout",
+      "muscle building",
+      "high protein",
+      "fitness",
+      "bodybuilding",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Concentrate",
+      "Leucine",
+      "Calcium",
+      "BCAAs"
+    ],
+    "BadIngredients": [
+      "Artificial Sweeteners (Sucralose)",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Emulsifiers",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 88,
+    "ProductName": "Boost Energy Drink Sachet 27g",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "boost",
+      "energy drink powder",
+      "kids",
+      "chocolate",
+      "sports drink",
+      "stamina",
+      "school",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Vitamins B6, B12",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Malt Extract",
+      "Caramel Color",
+      "Artificial Flavor",
+      "Cocoa Solids (trace)"
+    ],
+    "NeutralIngredients": [
+      "Soy Lecithin",
+      "Maltodextrin",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 89,
+    "ProductName": "Vahdam Chamomile Herbal Tea",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chamomile tea",
+      "sleep aid",
+      "herbal tea",
+      "calming",
+      "stress relief",
+      "no caffeine",
+      "bedtime drink",
+      "detox",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whole Chamomile Flowers",
+      "Apigenin (antioxidant)"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Natural Herb Extract"
+    ]
+  },
+  {
+    "ProductID": 90,
+    "ProductName": "Jimmy's Iced Coffee – Original",
+    "Category": "Beverages",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "iced coffee",
+      "coffee drink",
+      "ready to drink",
+      "milk coffee",
+      "cafe",
+      "summer drink",
+      "cold coffee"
+    ],
+    "GoodIngredients": [
+      "Coffee",
+      "Milk"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Cream",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carrageenan",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 91,
+    "ProductName": "Vega Plant-Based Protein Shake – Vanilla",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "vegan protein",
+      "plant protein",
+      "high protein",
+      "gym",
+      "dairy free",
+      "fitness",
+      "muscle building",
+      "post workout",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Pea Protein Isolate",
+      "Hemp Seed Protein",
+      "Flaxseed",
+      "Stevia",
+      "Vitamins & Minerals"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Natural Vanilla Flavor",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 92,
+    "ProductName": "Biotique Bio Dandelion Visibly Ageless Drink",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "herbal drink",
+      "liver detox",
+      "dandelion",
+      "ayurvedic",
+      "wellness",
+      "detox",
+      "health drink",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Dandelion Extract",
+      "Neem Extract",
+      "Tulsi",
+      "Giloy"
+    ],
+    "BadIngredients": [
+      "Added Sugar"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid",
+      "Natural Flavors"
+    ]
+  },
+  {
+    "ProductID": 93,
+    "ProductName": "Kurkure Puffcorn Yummy Puffs",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "puffcorn",
+      "puffs",
+      "kids snack",
+      "junk food",
+      "crunchy",
+      "masala",
+      "sweet & spicy",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Corn Meal",
+      "Palm Oil",
+      "Sugar",
+      "Artificial Flavors",
+      "MSG",
+      "Maltodextrin",
+      "Dextrose",
+      "Sodium Diacetate"
+    ],
+    "NeutralIngredients": [
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 94,
+    "ProductName": "Britannia Vita Marie Light",
+    "Category": "Biscuits",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "marie light",
+      "low fat biscuit",
+      "diet",
+      "light snack",
+      "tea time",
+      "calcium",
+      "plain biscuit",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Calcium Carbonate"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Partially Hydrogenated Vegetable Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Milk Solids",
+      "Baking Soda",
+      "Raising Agent"
+    ]
+  },
+  {
+    "ProductID": 95,
+    "ProductName": "Kfactor Almond Raisin Energy Balls",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "energy balls",
+      "natural snack",
+      "almond",
+      "raisin",
+      "no bake",
+      "healthy",
+      "pre workout",
+      "kids lunch box",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Almonds",
+      "Raisins",
+      "Dates",
+      "Peanut Butter",
+      "Rolled Oats",
+      "Chia Seeds"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Vanilla Extract",
+      "Cinnamon"
+    ]
+  },
+  {
+    "ProductID": 96,
+    "ProductName": "Maggi 2-Minute Masala Noodles",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "maggi",
+      "noodles",
+      "instant noodles",
+      "quick snack",
+      "kids",
+      "comfort food",
+      "masala",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Palm Oil",
+      "MSG",
+      "Artificial Masala Flavor",
+      "Sodium (excess)",
+      "Lead concerns (historical)",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Dehydrated Vegetables",
+      "Starch"
+    ]
+  },
+  {
+    "ProductID": 97,
+    "ProductName": "Zoe Peri Peri Pita Chips",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "pita chips",
+      "baked",
+      "peri peri",
+      "snack",
+      "party",
+      "spicy",
+      "crunchy",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Artificial Peri Peri Flavor"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Spices",
+      "Yeast Extract",
+      "Paprika"
+    ]
+  },
+  {
+    "ProductID": 98,
+    "ProductName": "Happilo Roasted & Salted Pistachios 200g",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "pistachios",
+      "roasted",
+      "healthy snack",
+      "protein",
+      "heart healthy",
+      "natural",
+      "keto",
+      "diabetic friendly",
+      "nuts",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Pistachios",
+      "Vitamin B6",
+      "Potassium",
+      "Healthy Fats"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt (light)"
+    ]
+  },
+  {
+    "ProductID": 99,
+    "ProductName": "Baked Lays Sour Cream & Onion",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "baked chips",
+      "low fat",
+      "sour cream",
+      "light snack",
+      "guilt free chips",
+      "low calorie snack",
+      "diet friendly",
+      "low cal",
+      "weight loss snack"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Artificial Sour Cream Flavor",
+      "MSG"
+    ],
+    "NeutralIngredients": [
+      "Potato",
+      "Salt",
+      "Corn Starch",
+      "Lactic Acid"
+    ]
+  },
+  {
+    "ProductID": 100,
+    "ProductName": "Godrej Nature's Basket Walnut Kernels 200g",
+    "Category": "Snacks",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "walnuts",
+      "brain food",
+      "omega-3",
+      "healthy snack",
+      "heart healthy",
+      "keto",
+      "diabetic friendly",
+      "protein nuts",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Walnuts",
+      "Omega-3 Fatty Acids",
+      "ALA",
+      "Polyphenols",
+      "Vitamin E"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 101,
+    "ProductName": "Kellogg's Chocos Chocolate Cereal",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chocos",
+      "kids cereal",
+      "chocolate",
+      "breakfast cereal",
+      "sweet",
+      "morning",
+      "school kids"
+    ],
+    "GoodIngredients": [
+      "Iron",
+      "B-Vitamins"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar (high)",
+      "Cocoa Solids (minimal)",
+      "Artificial Flavor",
+      "Caramel Color"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Malt Flavor",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 102,
+    "ProductName": "Rajgira (Amaranth) Chikki Bar",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "chikki",
+      "amaranth",
+      "rajgira",
+      "healthy sweet",
+      "protein snack",
+      "traditional",
+      "natural sweetener",
+      "gym snack",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Puffed Amaranth",
+      "Jaggery",
+      "Calcium",
+      "Iron"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Ghee (trace)",
+      "Cardamom"
+    ]
+  },
+  {
+    "ProductID": 103,
+    "ProductName": "Tata Smartfoods Jowar Flakes",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "jowar",
+      "millet flakes",
+      "breakfast cereal",
+      "healthy",
+      "gluten free",
+      "natural",
+      "low gi",
+      "fiber",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Jowar (Sorghum)",
+      "Dietary Fiber",
+      "Iron",
+      "Antioxidants"
+    ],
+    "BadIngredients": [
+      "Cane Sugar (minimal)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Vitamins"
+    ]
+  },
+  {
+    "ProductID": 104,
+    "ProductName": "Bonn Crunchy Bites Cheese Crackers",
+    "Category": "Biscuits",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cheese cracker",
+      "salty biscuit",
+      "kids",
+      "crunchy",
+      "snack",
+      "cheese flavor",
+      "party",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Palm Oil",
+      "Artificial Cheese Flavor",
+      "MSG",
+      "Dextrose"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Yeast Extract",
+      "Onion Powder",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 105,
+    "ProductName": "Sin-Free Chocolate Lava Protein Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein cookie",
+      "sugar free",
+      "chocolate",
+      "keto",
+      "high protein",
+      "gym",
+      "no sugar",
+      "low carb",
+      "fitness",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Isolate",
+      "Almond Flour",
+      "Dark Chocolate (85%)",
+      "Erythritol",
+      "MCT Oil"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Powder",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 106,
+    "ProductName": "Mondelez Cadbury Dairy Milk 50g",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "dairy milk",
+      "chocolate",
+      "sweet",
+      "gifting",
+      "kids",
+      "indulgent",
+      "dessert",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Cocoa Butter",
+      "Milk Solids"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Artificial Vanilla Flavor",
+      "Glucose Syrup",
+      "Cocoa Butter Substitute"
+    ],
+    "NeutralIngredients": [
+      "Emulsifiers",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 107,
+    "ProductName": "Keya Quinoa Peri Peri Cracker",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "quinoa cracker",
+      "healthy cracker",
+      "spicy",
+      "gluten free",
+      "peri peri",
+      "protein",
+      "low calorie",
+      "snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Quinoa",
+      "Whole Wheat Flour",
+      "Sunflower Oil",
+      "Paprika"
+    ],
+    "BadIngredients": [
+      "Citric Acid"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Chili Powder",
+      "Garlic Powder",
+      "Herbs"
+    ]
+  },
+  {
+    "ProductID": 108,
+    "ProductName": "Pintola 100% Peanut Butter – Unsweetened",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "peanut butter",
+      "high protein",
+      "gym",
+      "keto",
+      "no added sugar",
+      "healthy fat",
+      "fitness",
+      "diabetic friendly",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Peanuts",
+      "Healthy Monounsaturated Fats",
+      "Protein"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt (trace)"
+    ]
+  },
+  {
+    "ProductID": 109,
+    "ProductName": "Paper Boat Drinks – Jal Jeera 200ml",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "jal jeera",
+      "digestive drink",
+      "summer drink",
+      "Indian drink",
+      "spiced drink",
+      "refreshing",
+      "natural",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Cumin Extract",
+      "Mint Extract",
+      "Amchur",
+      "Ginger Extract"
+    ],
+    "BadIngredients": [
+      "Added Sugar"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Salt",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 110,
+    "ProductName": "Raw Pressery Cold Press Beetroot Juice 250ml",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "beetroot juice",
+      "cold pressed",
+      "natural",
+      "detox",
+      "no added sugar",
+      "stamina",
+      "iron rich",
+      "healthy juice",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Cold Pressed Beetroot",
+      "Ginger",
+      "Lemon",
+      "Nitrates (natural)"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water (trace)"
+    ]
+  },
+  {
+    "ProductID": 111,
+    "ProductName": "Baba Ramdev Patanjali Cow Ghee 500ml",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "ghee",
+      "cow ghee",
+      "healthy fat",
+      "ayurvedic",
+      "keto",
+      "cooking fat",
+      "pure ghee",
+      "desi ghee",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Cow Milk Fat",
+      "Butyrate",
+      "Fat-Soluble Vitamins (A, D, E, K)",
+      "CLA"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 112,
+    "ProductName": "Reliance Smart Seeds & Greens Trail Mix",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "trail mix",
+      "seeds",
+      "healthy snack",
+      "protein",
+      "natural",
+      "omega-3",
+      "energy",
+      "nuts",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Pumpkin Seeds",
+      "Sunflower Seeds",
+      "Almonds",
+      "Walnuts",
+      "Dried Cranberries",
+      "Flaxseeds"
+    ],
+    "BadIngredients": [
+      "Dried Cranberries (sugar coated)"
+    ],
+    "NeutralIngredients": [
+      "Salt (trace)"
+    ]
+  },
+  {
+    "ProductID": 113,
+    "ProductName": "Sunfeast Bounce Jelly Filled Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "jelly biscuit",
+      "kids",
+      "fruity",
+      "sweet",
+      "colorful",
+      "snack",
+      "filled biscuit",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Fruit Flavor",
+      "Synthetic Food Colors (Red 40, Yellow 6)",
+      "Glucose Syrup",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 114,
+    "ProductName": "JiivA Cacao Bliss Superfood Bar",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "superfood bar",
+      "cacao",
+      "plant based",
+      "no refined sugar",
+      "healthy snack",
+      "clean label",
+      "energy bar",
+      "natural",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "dairy free",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Raw Cacao",
+      "Medjool Dates",
+      "Almonds",
+      "Quinoa Puffs",
+      "Hemp Seeds",
+      "Ashwagandha"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Vanilla Extract"
+    ]
+  },
+  {
+    "ProductID": 115,
+    "ProductName": "Fiber One Brownies Chocolate 40g",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "fiber brownie",
+      "low calorie dessert",
+      "high fiber snack",
+      "chocolate",
+      "diet dessert",
+      "90 calorie snack",
+      "guilt free"
+    ],
+    "GoodIngredients": [
+      "Chicory Root Extract (Inulin)",
+      "Whole Grain Oats"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Maltitol Syrup",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Eggs",
+      "Salt",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 116,
+    "ProductName": "Nourish Organics Amaranth Ragi Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "amaranth",
+      "ragi",
+      "organic",
+      "healthy biscuit",
+      "no refined sugar",
+      "calcium",
+      "natural",
+      "kids",
+      "clean label",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Amaranth Flour",
+      "Ragi Flour",
+      "Jaggery",
+      "Cold Pressed Coconut Oil",
+      "Sesame Seeds"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt",
+      "Cardamom",
+      "Baking Soda"
+    ]
+  },
+  {
+    "ProductID": 117,
+    "ProductName": "Britannia Good Day Butter Biscuit",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "good day",
+      "butter biscuit",
+      "tea time",
+      "sweet",
+      "classic",
+      "indulgent",
+      "biscuit",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Butter Flavor",
+      "Trans Fat",
+      "Vanillin"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 118,
+    "ProductName": "Dr. Oetker Whey Protein Crunch Bar – Salted Caramel",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein bar",
+      "salted caramel",
+      "gym",
+      "high protein",
+      "post workout",
+      "fitness",
+      "crunchy protein bar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Isolate",
+      "Almonds",
+      "Rice Crisps"
+    ],
+    "BadIngredients": [
+      "Glucose Syrup",
+      "Sucralose"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Butter",
+      "Caramel Flavor",
+      "Salt",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 119,
+    "ProductName": "Britannia 50-50 Maska Chaska",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "50 50",
+      "maska chaska",
+      "salty sweet biscuit",
+      "classic",
+      "tea time",
+      "snack biscuit",
+      "everyday",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Vanaspati (Trans Fat)",
+      "Sugar",
+      "Artificial Butter Flavor",
+      "MSG"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids",
+      "Onion Powder"
+    ]
+  },
+  {
+    "ProductID": 120,
+    "ProductName": "Ziploc-Packed Oat Granola – Honey & Almond",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "granola",
+      "oats",
+      "honey",
+      "almond",
+      "breakfast",
+      "healthy snack",
+      "fiber",
+      "energy",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Almonds",
+      "Honey",
+      "Sunflower Seeds"
+    ],
+    "BadIngredients": [
+      "Vegetable Oil",
+      "Cane Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Cinnamon",
+      "Vanilla Extract"
+    ]
+  },
+  {
+    "ProductID": 121,
+    "ProductName": "Kellogg's Muesli – Fruit, Nut & Fiber",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "muesli",
+      "breakfast",
+      "fiber",
+      "oats",
+      "fruit nut",
+      "healthy cereal",
+      "weight loss",
+      "morning meal",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Whole Oats",
+      "Wheat Flakes",
+      "Raisins",
+      "Almonds",
+      "Dietary Fiber"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Dextrose"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Malt Extract",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 122,
+    "ProductName": "Cadbury Gems Chocolate Button",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "gems",
+      "chocolate button",
+      "kids candy",
+      "colorful",
+      "sweet",
+      "junk food",
+      "party"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Artificial Colors (Red 40, Yellow 5, Blue 1)",
+      "Artificial Chocolate Flavor",
+      "Glucose Syrup",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Milk Solids",
+      "Emulsifiers",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 123,
+    "ProductName": "Keto India Almond Cashew Ladoo",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "keto",
+      "ladoo",
+      "sugar free",
+      "almond",
+      "cashew",
+      "low carb",
+      "diabetic friendly",
+      "healthy sweet",
+      "Indian keto",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "gluten free",
+      "maida free",
+      "celiac friendly",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Almonds",
+      "Cashews",
+      "Erythritol",
+      "Ghee",
+      "Cardamom",
+      "Coconut Flour"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Saffron (trace)",
+      "Edible Silver (trace)"
+    ]
+  },
+  {
+    "ProductID": 124,
+    "ProductName": "Unibic Oatmeal Raisin Cookies",
+    "Category": "Biscuits",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oatmeal",
+      "raisin",
+      "cookie",
+      "healthy-ish",
+      "oats",
+      "fiber",
+      "tea time",
+      "wholesome",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Oat Flour",
+      "Raisins",
+      "Cinnamon"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Refined Wheat Flour"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 125,
+    "ProductName": "Britannia Treat Choco Chip Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "choco chip",
+      "cookie",
+      "kids",
+      "chocolate",
+      "sweet",
+      "baked",
+      "snack",
+      "indulgent",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Chocolate Chips (trace)"
+    ],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Chocolate Flavor",
+      "Vanillin",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 126,
+    "ProductName": "Minimalist Dark Chocolate 85% Cacao",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "dark chocolate",
+      "85% cacao",
+      "healthy chocolate",
+      "antioxidant",
+      "heart health",
+      "low sugar",
+      "keto friendly",
+      "magnesium",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Cocoa Mass",
+      "Cocoa Butter",
+      "Flavanols",
+      "Magnesium",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Cane Sugar (minimal)"
+    ],
+    "NeutralIngredients": [
+      "Vanilla Extract",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 127,
+    "ProductName": "Nasoya Organic Edamame – Salted",
+    "Category": "Snacks",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "edamame",
+      "soy",
+      "high protein",
+      "plant protein",
+      "healthy snack",
+      "diabetic friendly",
+      "keto",
+      "low calorie",
+      "vegan protein",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Edamame (Whole Green Soybean)",
+      "Complete Amino Acid Profile",
+      "Isoflavones"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 128,
+    "ProductName": "Ombar Prebiotic Chocolate – Coconut & Vanilla",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "prebiotic chocolate",
+      "gut health",
+      "dark chocolate",
+      "coconut",
+      "healthy chocolate",
+      "probiotic chocolate",
+      "natural",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Raw Cacao",
+      "Coconut Sugar",
+      "Lacticaseibacillus rhamnosus (probiotic)",
+      "Coconut Milk"
+    ],
+    "BadIngredients": [
+      "Coconut Sugar (moderate)"
+    ],
+    "NeutralIngredients": [
+      "Vanilla Powder",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 129,
+    "ProductName": "Govardhan Paneer 200g",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "paneer",
+      "cottage cheese",
+      "protein snack",
+      "vegetarian protein",
+      "healthy",
+      "keto",
+      "diabetic friendly",
+      "calcium",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Full Fat Cow Milk",
+      "Calcium",
+      "Protein (complete)",
+      "Fat-soluble Vitamins"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Citric Acid (coagulant)"
+    ]
+  },
+  {
+    "ProductID": 130,
+    "ProductName": "Tata Nutrikorner Multigrain Mathri",
+    "Category": "Biscuits",
+    "TotalScore": 6,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "mathri",
+      "multigrain",
+      "Indian snack",
+      "cracker",
+      "traditional",
+      "tea time",
+      "baked",
+      "namkeen",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oats",
+      "Ajwain",
+      "Flaxseeds"
+    ],
+    "BadIngredients": [
+      "Refined Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Cumin",
+      "Black Pepper",
+      "Baking Soda"
+    ]
+  },
+  {
+    "ProductID": 131,
+    "ProductName": "EatFit Low Calorie Protein Chips – BBQ",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein chips",
+      "high protein snack",
+      "low calorie chips",
+      "BBQ",
+      "gym snack",
+      "healthy chips",
+      "baked snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Pea Protein",
+      "Tapioca Starch",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [
+      "Natural Smoke Flavor",
+      "Dextrose"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Paprika",
+      "Onion Powder",
+      "Garlic Powder"
+    ]
+  },
+  {
+    "ProductID": 132,
+    "ProductName": "Bonn Sugar-Free Multigrain Digestive",
+    "Category": "Biscuits",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar free",
+      "multigrain",
+      "digestive",
+      "diabetic",
+      "healthy biscuit",
+      "no sugar",
+      "fiber",
+      "low gi",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oat Bran",
+      "Ragi",
+      "Inulin",
+      "Maltitol"
+    ],
+    "BadIngredients": [
+      "Palm Oil (small)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Raising Agent",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 133,
+    "ProductName": "Plum Organics Baby Puffs – Sweet Potato",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "baby snack",
+      "toddler snack",
+      "organic",
+      "no added sugar",
+      "sweet potato",
+      "kids puffs",
+      "natural",
+      "no preservatives",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Organic Sweet Potato Puree",
+      "Organic Brown Rice Flour",
+      "Organic Oat Flour"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Organic Rice Starch",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 134,
+    "ProductName": "Evian Still Mineral Water 500ml",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "mineral water",
+      "pure water",
+      "zero calorie",
+      "hydration",
+      "healthy drink",
+      "no sugar",
+      "clean water",
+      "diabetic",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Natural Minerals",
+      "Calcium",
+      "Magnesium",
+      "Silica"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Purified Natural Water"
+    ]
+  },
+  {
+    "ProductID": 135,
+    "ProductName": "Saffola Masala Oats – Classic Masala",
+    "Category": "Snacks",
+    "TotalScore": 6,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "masala oats",
+      "healthy breakfast",
+      "fiber",
+      "Indian breakfast",
+      "oats",
+      "savory oats",
+      "weight management",
+      "quick meal",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "vegan",
+      "plant based",
+      "dairy free"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Dehydrated Vegetables",
+      "Spices"
+    ],
+    "BadIngredients": [
+      "Sodium (high)",
+      "MSG",
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Corn Flour",
+      "Turmeric",
+      "Cumin"
+    ]
+  },
+  {
+    "ProductID": 136,
+    "ProductName": "Minus 30 Guava Sorbet (Sugar-Free)",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar free sorbet",
+      "guava",
+      "frozen treat",
+      "low calorie dessert",
+      "diabetic friendly",
+      "no sugar",
+      "healthy dessert",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Guava Puree",
+      "Stevia",
+      "Vitamin C"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Xanthan Gum",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 137,
+    "ProductName": "Royce' Nama Chocolate – Matcha",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "matcha chocolate",
+      "premium chocolate",
+      "gifting",
+      "Japanese chocolate",
+      "indulgent",
+      "green tea chocolate"
+    ],
+    "GoodIngredients": [
+      "Matcha Powder",
+      "Cocoa Butter",
+      "Cream"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil (trace)"
+    ],
+    "NeutralIngredients": [
+      "Milk Powder",
+      "Vanilla Extract",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 138,
+    "ProductName": "Herbalife Formula 1 Meal Replacement Shake",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "meal replacement",
+      "weight loss shake",
+      "protein shake",
+      "slimming",
+      "diet shake",
+      "gym",
+      "slim fast",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Soy Protein Isolate",
+      "Vitamins & Minerals",
+      "Fiber",
+      "Calcium"
+    ],
+    "BadIngredients": [
+      "Fructose",
+      "Corn Syrup Solids",
+      "Artificial Flavor",
+      "Carrageenan"
+    ],
+    "NeutralIngredients": [
+      "Soy Lecithin",
+      "Cellulose Powder",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 139,
+    "ProductName": "Tetley Green Tea – Lemon & Honey",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "green tea",
+      "lemon honey",
+      "weight loss",
+      "detox",
+      "antioxidant",
+      "healthy drink",
+      "metabolism boost",
+      "morning",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Green Tea Leaves",
+      "Lemon Extract",
+      "Honey Flavour",
+      "EGCG Catechins"
+    ],
+    "BadIngredients": [
+      "Natural Flavor (trace processed)"
+    ],
+    "NeutralIngredients": [
+      "Natural Herb Infusion"
+    ]
+  },
+  {
+    "ProductID": 140,
+    "ProductName": "Nimbooz Masala Soda 250ml",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "nimbooz",
+      "lemon soda",
+      "masala",
+      "refreshing",
+      "summer",
+      "soda",
+      "cold drink",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Citric Acid",
+      "Artificial Lemon Flavor",
+      "Sodium Benzoate"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Salt",
+      "Cumin Extract"
+    ]
+  },
+  {
+    "ProductID": 141,
+    "ProductName": "Pillsbury Nutri-Bakes Ragi Banana Cookies",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "ragi",
+      "banana",
+      "cookies",
+      "healthy biscuit",
+      "kids",
+      "fiber",
+      "natural",
+      "baked cookies",
+      "whole grain",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Ragi Flour",
+      "Banana Powder",
+      "Whole Wheat Flour",
+      "Oats"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Refined Sunflower Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Cardamom"
+    ]
+  },
+  {
+    "ProductID": 142,
+    "ProductName": "Anveshan A2 Desi Cow Milk Ghee 500g",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "A2 ghee",
+      "desi cow",
+      "keto",
+      "ayurvedic",
+      "pure ghee",
+      "healthy fat",
+      "gut health",
+      "butyrate",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "A2 Cow Milk Fat",
+      "Butyric Acid",
+      "Vitamins A, D, E, K2",
+      "CLA",
+      "Omega-3"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 143,
+    "ProductName": "Veeba Cheese Spread – Smoked Garlic",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cheese spread",
+      "garlic",
+      "snack",
+      "bread spread",
+      "kids",
+      "savory",
+      "dip",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Cheese",
+      "Garlic"
+    ],
+    "BadIngredients": [
+      "Modified Starch",
+      "Artificial Smoke Flavor",
+      "Sodium (high)",
+      "Emulsifiers",
+      "Preservatives"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Cream",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 144,
+    "ProductName": "Baidyanath Chyawanprash 500g",
+    "Category": "Snacks",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "chyawanprash",
+      "immunity booster",
+      "ayurvedic",
+      "vitamin C",
+      "herbal",
+      "amla",
+      "kids",
+      "winter health",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Amla",
+      "Shatavari",
+      "Ashwagandha",
+      "Guduchi",
+      "Brahmi",
+      "Vitamins"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Jaggery (high glycemic)"
+    ],
+    "NeutralIngredients": [
+      "Ghee",
+      "Honey",
+      "Sesame Oil",
+      "Cardamom"
+    ]
+  },
+  {
+    "ProductID": 145,
+    "ProductName": "Sunfeast Farmlite Simple & Lite Digestive",
+    "Category": "Biscuits",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "digestive",
+      "simple",
+      "light",
+      "healthy biscuit",
+      "fiber",
+      "tea time",
+      "low calorie",
+      "whole wheat",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "biscuit for chai",
+      "evening snacks"
+    ],
+    "GoodIngredients": [
+      "Whole Wheat Flour",
+      "Oat Bran"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Refined Oil",
+      "Palm Oil"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Baking Soda",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 146,
+    "ProductName": "Pulse Candy – Kachcha Aam",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "pulse candy",
+      "kachcha aam",
+      "candy",
+      "kids candy",
+      "sweet sour",
+      "mango candy",
+      "cheap snack",
+      "budget friendly",
+      "affordable",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Artificial Mango Flavor",
+      "Synthetic Colors",
+      "Black Salt (excess)",
+      "Citric Acid",
+      "Modified Starch"
+    ],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 147,
+    "ProductName": "Kellogs Corn Flakes Original 250g",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cornflakes",
+      "breakfast cereal",
+      "kids breakfast",
+      "morning",
+      "quick breakfast",
+      "with milk",
+      "vitamins"
+    ],
+    "GoodIngredients": [
+      "Iron",
+      "Vitamins B1, B2, B3, B12",
+      "Folic Acid"
+    ],
+    "BadIngredients": [
+      "Refined Corn Meal",
+      "Sugar",
+      "Malt Flavoring",
+      "High Glycemic Index"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 148,
+    "ProductName": "Saffola FITTIFY Protein Soup – Tomato",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein soup",
+      "healthy soup",
+      "tomato soup",
+      "weight loss",
+      "low calorie meal",
+      "fitness",
+      "high protein meal",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Tomato Powder",
+      "Pea Protein Isolate",
+      "Oat Fiber",
+      "Ginger"
+    ],
+    "BadIngredients": [
+      "Sodium (moderate)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Starch",
+      "Onion Powder",
+      "Garlic Powder",
+      "Herbs"
+    ]
+  },
+  {
+    "ProductID": 149,
+    "ProductName": "Wow! Life Science Apple Cider Vinegar Drink",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "apple cider vinegar",
+      "detox drink",
+      "weight loss",
+      "ACV",
+      "gut health",
+      "blood sugar",
+      "diabetic",
+      "no sugar",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Raw Apple Cider Vinegar",
+      "Mother of Vinegar",
+      "Acetic Acid"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid",
+      "Natural Apple Flavor"
+    ]
+  },
+  {
+    "ProductID": 150,
+    "ProductName": "Bagrry's White Oats 500g",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oats",
+      "rolled oats",
+      "healthy breakfast",
+      "fiber",
+      "cholesterol",
+      "heart health",
+      "diabetic friendly",
+      "weight loss",
+      "beta glucan",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whole Grain Oats",
+      "Beta-Glucan Fiber",
+      "Protein",
+      "Iron"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Oat Groats"
+    ]
+  },
+  {
+    "ProductID": 151,
+    "ProductName": "Bombay Halwa Sweet Snack",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "halwa",
+      "sweet",
+      "Indian sweet",
+      "Diwali snack",
+      "sugar loaded",
+      "traditional sweet",
+      "dessert"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar (very high)",
+      "Vanaspati",
+      "Artificial Color (Yellow 5)",
+      "Artificial Flavor",
+      "Trans Fat"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Cardamom",
+      "Rose Water"
+    ]
+  },
+  {
+    "ProductID": 152,
+    "ProductName": "Pepsico Quaker Oats Instant Packets – Strawberry",
+    "Category": "Snacks",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "instant oats",
+      "strawberry",
+      "kids breakfast",
+      "quick oats",
+      "flavored oats",
+      "morning",
+      "easy breakfast"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Fiber"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Artificial Strawberry Flavor",
+      "Dextrose",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 153,
+    "ProductName": "Rituals Wellness Moringa Green Powder",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "moringa",
+      "superfood",
+      "green powder",
+      "iron rich",
+      "protein plant",
+      "detox",
+      "antioxidant",
+      "nutrient dense",
+      "vegan",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Organic Moringa Leaf Powder",
+      "Iron",
+      "Vitamin C",
+      "Calcium",
+      "All Essential Amino Acids",
+      "Chlorophyll"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 154,
+    "ProductName": "Nescafé Gold Rich & Smooth Instant Coffee",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "premium coffee",
+      "instant coffee",
+      "gold coffee",
+      "morning drink",
+      "smooth coffee",
+      "low calorie",
+      "caffeine",
+      "weight loss",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Premium Roasted Arabica & Robusta Blend",
+      "Antioxidants"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Coffee Extract",
+      "Dried Coffee"
+    ]
+  },
+  {
+    "ProductID": 155,
+    "ProductName": "Appy Fizz Apple Sparkling Drink 250ml",
+    "Category": "Beverages",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "appy fizz",
+      "apple drink",
+      "fizzy",
+      "kids drink",
+      "refreshing",
+      "sparkling juice",
+      "cold drink"
+    ],
+    "GoodIngredients": [
+      "Apple Juice (minimal)"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Citric Acid",
+      "Artificial Apple Flavor",
+      "Sodium Benzoate",
+      "Carbon Dioxide"
+    ],
+    "NeutralIngredients": [
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 156,
+    "ProductName": "Smoothie King Angel Food Shake 355ml",
+    "Category": "Beverages",
+    "TotalScore": 4,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "smoothie",
+      "protein shake",
+      "sweet",
+      "meal replacement",
+      "fruit shake",
+      "gym",
+      "high calorie",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Strawberry",
+      "Banana",
+      "Nonfat Milk"
+    ],
+    "BadIngredients": [
+      "Turbinado Sugar",
+      "Fructose",
+      "Artificial Flavor"
+    ],
+    "NeutralIngredients": [
+      "Ice",
+      "Vanilla Powder",
+      "Papaya Powder"
+    ]
+  },
+  {
+    "ProductID": 157,
+    "ProductName": "KitKat Original Chocolate Wafer 45g",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kitkat",
+      "chocolate wafer",
+      "break time",
+      "kids",
+      "sweet snack",
+      "chocolate bar",
+      "vending machine",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Butter Substitute",
+      "Artificial Vanilla Flavor",
+      "Trans Fat",
+      "HFCS",
+      "Milk Fat"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Milk Solids",
+      "Wheat Flour",
+      "Emulsifiers",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 158,
+    "ProductName": "Saffola Gold Healthy Lifestyle Blended Oil 1L",
+    "Category": "Snacks",
+    "TotalScore": 6,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cooking oil",
+      "healthy oil",
+      "heart health",
+      "low cholesterol",
+      "blended oil",
+      "rice bran",
+      "sunflower",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Rice Bran Oil",
+      "Sunflower Oil",
+      "MUFA",
+      "PUFA",
+      "Oryzanol"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Refined Vegetable Oil",
+      "Natural Antioxidants"
+    ]
+  },
+  {
+    "ProductID": 159,
+    "ProductName": "Horlicks Original Malt 500g",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "horlicks",
+      "malt drink",
+      "kids",
+      "calcium",
+      "health drink",
+      "bedtime drink",
+      "malted milk",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Malt Extract",
+      "Vitamins D, A, C",
+      "Calcium",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Sugar (high)",
+      "Malt Flavoring",
+      "Artificial Flavor",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Wheat Flour",
+      "Milk Solids",
+      "Soy Lecithin"
+    ]
+  },
+  {
+    "ProductID": 160,
+    "ProductName": "Vahdam Turmeric Ginger Immunity Tea",
+    "Category": "Beverages",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "turmeric tea",
+      "ginger tea",
+      "immunity",
+      "anti-inflammatory",
+      "detox",
+      "herbal",
+      "no sugar",
+      "healthy drink",
+      "curcumin",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Turmeric",
+      "Ginger",
+      "Black Pepper (curcumin enhancer)",
+      "Curcumin",
+      "Gingerols"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Herbal Blend"
+    ]
+  },
+  {
+    "ProductID": 161,
+    "ProductName": "WOW Skin Science Spirulina Superfood Drink",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "spirulina",
+      "superfood",
+      "protein drink",
+      "detox",
+      "vegan protein",
+      "green drink",
+      "antioxidant",
+      "algae",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Spirulina Powder",
+      "Phycocyanin",
+      "Complete Amino Acids",
+      "B-Vitamins",
+      "Iron"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Lemon Extract",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 162,
+    "ProductName": "Knorr Classic Tomato Soup Sachet",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "tomato soup",
+      "instant soup",
+      "winter drink",
+      "quick soup",
+      "kids meal",
+      "comfort food",
+      "hot drink"
+    ],
+    "GoodIngredients": [
+      "Tomato Powder"
+    ],
+    "BadIngredients": [
+      "Corn Starch",
+      "Sugar",
+      "Artificial Flavors",
+      "MSG",
+      "Sodium (high)",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Citric Acid",
+      "Cream Powder",
+      "Onion Powder"
+    ]
+  },
+  {
+    "ProductID": 163,
+    "ProductName": "Del Monte 100% Pineapple Juice 1L",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "pineapple juice",
+      "vitamin C",
+      "tropical",
+      "natural juice",
+      "fruit juice",
+      "breakfast",
+      "refreshing"
+    ],
+    "GoodIngredients": [
+      "Pineapple Juice",
+      "Vitamin C",
+      "Manganese"
+    ],
+    "BadIngredients": [
+      "Added Sugar (some variants)"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Citric Acid"
+    ]
+  },
+  {
+    "ProductID": 164,
+    "ProductName": "Bikaji Khatta Meetha Mixture",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "khatta meetha",
+      "mixture",
+      "Indian snack",
+      "sweet sour",
+      "namkeen",
+      "Diwali snack",
+      "salty snack"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Palm Oil",
+      "Artificial Flavors",
+      "MSG",
+      "Synthetic Colors"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Peanuts (minimal)",
+      "Spices"
+    ]
+  },
+  {
+    "ProductID": 165,
+    "ProductName": "Wellversed Keto Coffee – MCT Butter Coffee",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "keto coffee",
+      "bulletproof coffee",
+      "MCT oil",
+      "butter coffee",
+      "intermittent fasting",
+      "no sugar",
+      "weight loss",
+      "ketogenic",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "MCT Oil (C8:C10)",
+      "Organic Coffee",
+      "Grass-Fed Butter",
+      "Collagen (trace)"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 166,
+    "ProductName": "Cadbury 5 Star Chocolate Bar 40g",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "5 star",
+      "chocolate bar",
+      "caramel",
+      "kids",
+      "sweet",
+      "indulgent",
+      "vending machine",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Palm Oil",
+      "Artificial Caramel Flavor",
+      "Trans Fat",
+      "Vanillin",
+      "Cocoa Butter Substitute"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Milk Solids",
+      "Emulsifiers",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 167,
+    "ProductName": "Sofit Soy Milk – Original 1L",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "soy milk",
+      "plant milk",
+      "vegan milk",
+      "dairy free",
+      "protein drink",
+      "lactose free",
+      "vegetarian",
+      "calcium",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Soy Extract",
+      "Protein",
+      "Isoflavones",
+      "Calcium (fortified)",
+      "Vitamin D"
+    ],
+    "BadIngredients": [
+      "Cane Sugar",
+      "Carrageenan"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Emulsifiers",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 168,
+    "ProductName": "Raw Pressery Almond Milk Unsweetened 1L",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "almond milk",
+      "plant milk",
+      "no sugar",
+      "vegan",
+      "dairy free",
+      "lactose free",
+      "keto",
+      "healthy drink",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "plant based",
+      "maida free",
+      "no wheat",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Almonds",
+      "Vitamin E",
+      "Calcium (fortified)",
+      "Vitamin D"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Xanthan Gum",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 169,
+    "ProductName": "Biggies Burger Oreo Shake",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "milkshake",
+      "oreo shake",
+      "fast food drink",
+      "sweet",
+      "indulgent",
+      "dessert drink",
+      "high calorie"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Ice Cream (full fat)",
+      "Oreo (Refined flour, Sugar, Trans fat)",
+      "Sugar Syrup",
+      "Artificial Cream",
+      "Artificial Colors"
+    ],
+    "NeutralIngredients": [
+      "Milk",
+      "Ice",
+      "Vanilla Flavor"
+    ]
+  },
+  {
+    "ProductID": 170,
+    "ProductName": "Tetley Immune – Tulsi, Ginger & Echinacea Tea",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "immunity tea",
+      "tulsi tea",
+      "ginger tea",
+      "herbal tea",
+      "no caffeine",
+      "detox",
+      "antioxidant",
+      "cold flu remedy",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Tulsi",
+      "Ginger",
+      "Echinacea",
+      "Black Pepper",
+      "Licorice Root"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Herbal Blend"
+    ]
+  },
+  {
+    "ProductID": 171,
+    "ProductName": "Amul Lassi 200ml Tetrapack",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "lassi",
+      "yogurt drink",
+      "probiotic",
+      "Indian drink",
+      "calcium",
+      "summer drink",
+      "refreshing",
+      "sweet lassi",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Yogurt (Dahi)",
+      "Probiotic Cultures",
+      "Calcium",
+      "Protein"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Artificial Rose Flavor"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Milk Solids"
+    ]
+  },
+  {
+    "ProductID": 172,
+    "ProductName": "Sprite Lemon Lime Soda 330ml",
+    "Category": "Beverages",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sprite",
+      "lemon soda",
+      "refreshing",
+      "cold drink",
+      "fizzy",
+      "clear soda",
+      "summer drink"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "High Fructose Corn Syrup",
+      "Citric Acid",
+      "Artificial Lemon Flavor"
+    ],
+    "NeutralIngredients": [
+      "Water",
+      "Carbon Dioxide",
+      "Sodium Citrate"
+    ]
+  },
+  {
+    "ProductID": 173,
+    "ProductName": "Ketofy Collagen Peptide Protein Shake",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "collagen protein",
+      "keto shake",
+      "skin health",
+      "joint health",
+      "sugar free",
+      "high protein",
+      "anti aging drink",
+      "gym",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Bovine Collagen Peptides",
+      "MCT Powder",
+      "Stevia",
+      "Vitamin C"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Natural Vanilla Flavor",
+      "Sunflower Lecithin"
+    ]
+  },
+  {
+    "ProductID": 174,
+    "ProductName": "Mango Frooti 200ml Tetrapack",
+    "Category": "Beverages",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "frooti",
+      "mango drink",
+      "kids",
+      "school snack",
+      "juicebox",
+      "summer",
+      "cold drink",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Mango Pulp (minimal)"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Citric Acid",
+      "Artificial Mango Flavor",
+      "Sodium Benzoate",
+      "Synthetic Colors"
+    ],
+    "NeutralIngredients": [
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 175,
+    "ProductName": "Slurrp Farm Chocolate Smoothie Mix (Kids)",
+    "Category": "Beverages",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kids smoothie",
+      "chocolate",
+      "ragi",
+      "healthy kids drink",
+      "calcium",
+      "no refined sugar",
+      "natural",
+      "maida free",
+      "no wheat",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Ragi",
+      "Banana Powder",
+      "Cocoa Powder",
+      "Jaggery",
+      "Milk Protein"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Vanilla Extract",
+      "Cardamom"
+    ]
+  },
+  {
+    "ProductID": 176,
+    "ProductName": "Saffola Immuniveda Kadha Mix",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "kadha",
+      "immunity",
+      "ayurvedic drink",
+      "herbal",
+      "cold flu",
+      "jaggery",
+      "winter drink",
+      "natural remedy",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Mulethi",
+      "Tulsi",
+      "Ginger",
+      "Black Pepper",
+      "Dalchini",
+      "Giloy"
+    ],
+    "BadIngredients": [
+      "Jaggery (high sugar)"
+    ],
+    "NeutralIngredients": [
+      "Natural Herb Powder"
+    ]
+  },
+  {
+    "ProductID": 177,
+    "ProductName": "Epigamia Greek Yogurt – Mango (Flavored)",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "greek yogurt",
+      "mango flavor",
+      "protein snack",
+      "probiotic",
+      "healthy dessert",
+      "kids snack",
+      "gut health",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Whole Milk",
+      "Probiotic Cultures",
+      "Mango Pulp"
+    ],
+    "BadIngredients": [
+      "Sugar",
+      "Pectin"
+    ],
+    "NeutralIngredients": [
+      "Milk Solids",
+      "Natural Mango Flavor"
+    ]
+  },
+  {
+    "ProductID": 178,
+    "ProductName": "Plix Daily Greens Fizz – Spirulina & Chlorella",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "greens drink",
+      "spirulina",
+      "chlorella",
+      "detox",
+      "vitamin supplement",
+      "no sugar",
+      "fizzy health drink",
+      "alkaline",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Spirulina",
+      "Chlorella",
+      "Vitamins B12 & D",
+      "Zinc",
+      "Stevia"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Citric Acid",
+      "Sodium Bicarbonate",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 179,
+    "ProductName": "Kwality Wall's Cornetto Classico Ice Cream",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "cornetto",
+      "ice cream cone",
+      "kids",
+      "sweet",
+      "summer",
+      "dessert",
+      "indulgent",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Sugar",
+      "Palm Oil",
+      "Cocoa Butter Substitute",
+      "Glucose Syrup",
+      "Artificial Vanilla",
+      "Mono & Diglycerides",
+      "Carrageenan",
+      "Sodium Carboxymethylcellulose"
+    ],
+    "NeutralIngredients": [
+      "Milk",
+      "Cocoa Powder",
+      "Cone (Wheat Flour)",
+      "Whey Powder"
+    ]
+  },
+  {
+    "ProductID": 180,
+    "ProductName": "Ritebite Max Protein Daily Choco Almond Cookie",
+    "Category": "Biscuits",
+    "TotalScore": 7,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "protein cookie",
+      "almond",
+      "chocolate",
+      "high protein",
+      "gym snack",
+      "daily protein",
+      "fitness cookie",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "tea time",
+      "evening snacks",
+      "biscuit for chai"
+    ],
+    "GoodIngredients": [
+      "Whey Protein",
+      "Almond Pieces",
+      "Oats",
+      "Dark Chocolate Chunks"
+    ],
+    "BadIngredients": [
+      "Glucose Syrup",
+      "Cane Sugar"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Sunflower Oil",
+      "Emulsifiers"
+    ]
+  },
+  {
+    "ProductID": 181,
+    "ProductName": "SugarFreeIndia Gold Calorie Free Sweetener 100 Pellets",
+    "Category": "Beverages",
+    "TotalScore": 5,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sugar substitute",
+      "sweetener",
+      "zero calorie",
+      "diabetic",
+      "no sugar",
+      "diet sweetener",
+      "aspartame",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Aspartame",
+      "Acesulfame-K"
+    ],
+    "NeutralIngredients": [
+      "Sodium Saccharin",
+      "Maltodextrin"
+    ]
+  },
+  {
+    "ProductID": 182,
+    "ProductName": "Too Yumm Multigrain Baked Stars – Cheese",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "multigrain snack",
+      "baked",
+      "low fat",
+      "cheese",
+      "kids snack",
+      "crunchy",
+      "school snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children"
+    ],
+    "GoodIngredients": [
+      "Multigrain Blend (Wheat, Oats, Corn)",
+      "Sunflower Oil"
+    ],
+    "BadIngredients": [
+      "Artificial Cheese Flavor",
+      "MSG",
+      "Dextrose"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Rice Flour",
+      "Onion Powder"
+    ]
+  },
+  {
+    "ProductID": 183,
+    "ProductName": "Beyond Snack Kerala Banana Chips – Original",
+    "Category": "Snacks",
+    "TotalScore": 5,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "banana chips",
+      "Kerala chips",
+      "traditional snack",
+      "salty snack",
+      "crispy",
+      "coconut oil",
+      "ethnic snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly"
+    ],
+    "GoodIngredients": [
+      "Raw Banana",
+      "Coconut Oil"
+    ],
+    "BadIngredients": [
+      "High Sodium",
+      "High Calorie (deep fried)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Turmeric"
+    ]
+  },
+  {
+    "ProductID": 184,
+    "ProductName": "Drools Focus Adult Dog Treats (Not for humans – mislabeled)",
+    "Category": "Snacks",
+    "TotalScore": 3,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "dog treats",
+      "pet snack",
+      "high protein",
+      "liver flavor",
+      "treats",
+      "pet food",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout"
+    ],
+    "GoodIngredients": [
+      "Chicken Liver",
+      "Vitamins"
+    ],
+    "BadIngredients": [
+      "Animal By-products",
+      "Artificial Preservatives",
+      "Sodium (pet level)"
+    ],
+    "NeutralIngredients": [
+      "Wheat Flour",
+      "Salt",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 185,
+    "ProductName": "Soulflower Hemp Seed Oil Infused Drink",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "hemp seed",
+      "omega-3",
+      "healthy drink",
+      "skin health",
+      "wellness",
+      "superfood drink",
+      "vegan",
+      "anti inflammatory",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Cold Pressed Hemp Seed Oil",
+      "Omega-3 & Omega-6",
+      "Gamma Linolenic Acid (GLA)"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Lemon Extract",
+      "Stevia"
+    ]
+  },
+  {
+    "ProductID": 186,
+    "ProductName": "Tata Gluco+ Glucose Powder 200g",
+    "Category": "Beverages",
+    "TotalScore": 3,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "glucose powder",
+      "energy drink",
+      "quick energy",
+      "sports recovery",
+      "kids",
+      "summer hydration",
+      "instant energy",
+      "school tiffin",
+      "good for kids",
+      "safe for kids",
+      "children",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [
+      "Vitamin C",
+      "Calcium"
+    ],
+    "BadIngredients": [
+      "Glucose (pure – high glycemic)",
+      "Artificial Flavor",
+      "Artificial Color"
+    ],
+    "NeutralIngredients": [
+      "Dextrose Monohydrate",
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 187,
+    "ProductName": "Nescafé 3-in-1 Coffee Sachet",
+    "Category": "Beverages",
+    "TotalScore": 2,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "instant coffee",
+      "sweet coffee",
+      "office coffee",
+      "3 in 1",
+      "premix coffee",
+      "quick coffee",
+      "convenient"
+    ],
+    "GoodIngredients": [
+      "Coffee Extract"
+    ],
+    "BadIngredients": [
+      "Sugar (high)",
+      "Partially Hydrogenated Vegetable Oil",
+      "Artificial Creamer",
+      "Maltodextrin",
+      "Sodium Caseinate"
+    ],
+    "NeutralIngredients": [
+      "Salt"
+    ]
+  },
+  {
+    "ProductID": 188,
+    "ProductName": "Nutrela High Protein Soya Chunks",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "soya chunks",
+      "high protein",
+      "vegetarian protein",
+      "gym",
+      "muscle",
+      "vegan protein",
+      "diabetic friendly",
+      "iron rich",
+      "low fat",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Defatted Soy Flour",
+      "Complete Protein Profile",
+      "Isoflavones",
+      "Iron",
+      "Calcium"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water (rehydrated for cooking)"
+    ]
+  },
+  {
+    "ProductID": 189,
+    "ProductName": "Tata Sampann Masoor Dal 500g",
+    "Category": "Snacks",
+    "TotalScore": 10,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "masoor dal",
+      "red lentil",
+      "high protein",
+      "iron",
+      "diabetic friendly",
+      "vegetarian protein",
+      "fiber rich",
+      "low fat",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Red Lentils",
+      "Protein",
+      "Iron",
+      "Folate",
+      "Dietary Fiber",
+      "Potassium"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 190,
+    "ProductName": "Saffola Honey – 100% Pure Raw 500g",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "honey",
+      "natural sweetener",
+      "raw honey",
+      "immunity",
+      "antioxidant",
+      "ayurvedic",
+      "low gi alternative",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Raw Honey",
+      "Antioxidants",
+      "Enzymes",
+      "B-Vitamins"
+    ],
+    "BadIngredients": [
+      "Fructose (high natural sugar)"
+    ],
+    "NeutralIngredients": []
+  },
+  {
+    "ProductID": 191,
+    "ProductName": "Muscle Blaze Biozyme Performance Whey 1kg",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "whey protein",
+      "bodybuilding",
+      "gym supplement",
+      "muscle gain",
+      "post workout",
+      "high protein",
+      "BCAAs",
+      "fitness",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "diet friendly",
+      "low cal",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Whey Protein Concentrate",
+      "Whey Protein Isolate",
+      "DigeZyme (digestive enzyme)",
+      "Leucine",
+      "BCAAs"
+    ],
+    "BadIngredients": [
+      "Sucralose",
+      "Maltodextrin"
+    ],
+    "NeutralIngredients": [
+      "Cocoa Powder",
+      "Emulsifiers",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 192,
+    "ProductName": "Saffola Arogyam Pure Herbs Giloy Tulsi",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "giloy",
+      "tulsi",
+      "immunity booster",
+      "ayurvedic",
+      "herbal drink",
+      "detox",
+      "fever remedy",
+      "natural",
+      "no sugar",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Giloy Extract",
+      "Tulsi Extract",
+      "Amla",
+      "Neem"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Preservatives (minimal)"
+    ]
+  },
+  {
+    "ProductID": 193,
+    "ProductName": "Masala Oats & Seed Bhel – Home Style",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "oats bhel",
+      "healthy Indian snack",
+      "street food alternative",
+      "fiber",
+      "natural",
+      "seeds",
+      "low calorie",
+      "weight loss",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Pumpkin Seeds",
+      "Sunflower Seeds",
+      "Peanuts",
+      "Tomato",
+      "Cilantro"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Lemon Juice",
+      "Salt",
+      "Green Chili",
+      "Chaat Masala"
+    ]
+  },
+  {
+    "ProductID": 194,
+    "ProductName": "Nutella Hazelnut Chocolate Spread 400g",
+    "Category": "Snacks",
+    "TotalScore": 1,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "nutella",
+      "chocolate spread",
+      "kids breakfast",
+      "hazelnut",
+      "bread spread",
+      "sweet",
+      "indulgent"
+    ],
+    "GoodIngredients": [
+      "Hazelnuts (13%)",
+      "Cocoa Powder"
+    ],
+    "BadIngredients": [
+      "Sugar (56%)",
+      "Palm Oil",
+      "Skim Milk Powder",
+      "Vanillin",
+      "High Calorie Dense"
+    ],
+    "NeutralIngredients": [
+      "Lecithin (Soy)"
+    ]
+  },
+  {
+    "ProductID": 195,
+    "ProductName": "Wellbeing Nutrition Melts – Sleep Well",
+    "Category": "Beverages",
+    "TotalScore": 8,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "sleep aid",
+      "melatonin",
+      "ashwagandha",
+      "night supplement",
+      "stress relief",
+      "no sugar",
+      "sleep drink",
+      "relaxation",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "diet friendly",
+      "low cal",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Melatonin (0.5mg)",
+      "Ashwagandha KSM-66",
+      "Passion Flower",
+      "L-Theanine",
+      "Magnesium"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Stevia",
+      "Natural Lavender Flavor"
+    ]
+  },
+  {
+    "ProductID": 196,
+    "ProductName": "Bikano Classic Namak Pare",
+    "Category": "Snacks",
+    "TotalScore": 2,
+    "IsSugarFree": true,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "namak pare",
+      "salty snack",
+      "Indian snack",
+      "fried snack",
+      "tea time",
+      "traditional",
+      "Diwali snack",
+      "low glycemic index",
+      "no added sugar",
+      "diabetic friendly",
+      "biscuit for chai",
+      "evening snacks",
+      "budget friendly",
+      "affordable",
+      "cheap snack",
+      "value for money"
+    ],
+    "GoodIngredients": [],
+    "BadIngredients": [
+      "Refined Wheat Flour",
+      "Vanaspati (Trans Fat)",
+      "Palm Oil",
+      "High Sodium"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Ajwain",
+      "Cumin",
+      "Water"
+    ]
+  },
+  {
+    "ProductID": 197,
+    "ProductName": "Saffola Oats Plus 500g",
+    "Category": "Snacks",
+    "TotalScore": 8,
+    "IsSugarFree": false,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "oats plus",
+      "protein oats",
+      "breakfast",
+      "high protein",
+      "weight management",
+      "healthy",
+      "heart health",
+      "fiber",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Rolled Oats",
+      "Pea Protein Isolate",
+      "Beta-Glucan Fiber",
+      "Iron"
+    ],
+    "BadIngredients": [
+      "Cane Sugar (trace)"
+    ],
+    "NeutralIngredients": [
+      "Salt",
+      "Vitamins Blend"
+    ]
+  },
+  {
+    "ProductID": 198,
+    "ProductName": "Naked Juice Green Machine 450ml",
+    "Category": "Beverages",
+    "TotalScore": 6,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "green juice",
+      "detox",
+      "spinach juice",
+      "natural",
+      "vitamins",
+      "fruit veg juice",
+      "cold pressed",
+      "healthy drink",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers"
+    ],
+    "GoodIngredients": [
+      "Apple Juice",
+      "Mango Puree",
+      "Pineapple Juice",
+      "Banana Puree",
+      "Spinach",
+      "Spirulina"
+    ],
+    "BadIngredients": [
+      "Natural Sugars (very high)"
+    ],
+    "NeutralIngredients": [
+      "Kiwi Puree",
+      "Broccoli",
+      "Natural Flavor"
+    ]
+  },
+  {
+    "ProductID": 199,
+    "ProductName": "Pure Bite Keto Trail Mix – Berries & Nuts",
+    "Category": "Snacks",
+    "TotalScore": 9,
+    "IsSugarFree": true,
+    "IsHighProtein": true,
+    "SearchKeywords": [
+      "keto snack",
+      "trail mix",
+      "no sugar",
+      "nuts berries",
+      "low carb",
+      "healthy snack",
+      "diabetic friendly",
+      "weight loss",
+      "clean snack",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "low glycemic index",
+      "no added sugar",
+      "gym food",
+      "protein rich",
+      "muscle building",
+      "post workout",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "ketogenic",
+      "high fat low carb",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Macadamia Nuts",
+      "Brazil Nuts",
+      "Freeze-Dried Strawberries",
+      "Pecans",
+      "Pumpkin Seeds"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Salt (trace)"
+    ]
+  },
+  {
+    "ProductID": 200,
+    "ProductName": "Aadit's Secret Fermented Oat Overnight Drink",
+    "Category": "Beverages",
+    "TotalScore": 9,
+    "IsSugarFree": false,
+    "IsHighProtein": false,
+    "SearchKeywords": [
+      "overnight oats",
+      "gut health",
+      "fermented",
+      "probiotic oats",
+      "natural fiber",
+      "weight loss",
+      "healthy breakfast",
+      "overnight drink",
+      "best rated",
+      "good for me",
+      "clean eating",
+      "diet friendly",
+      "low cal",
+      "weight loss snack",
+      "low fat",
+      "vegan",
+      "plant based",
+      "dairy free",
+      "palm oil free",
+      "no palm oil",
+      "msg free",
+      "no msg",
+      "no artificial flavor enhancers",
+      "good for kids",
+      "safe for kids"
+    ],
+    "GoodIngredients": [
+      "Fermented Rolled Oats",
+      "Live Cultures",
+      "Chia Seeds",
+      "Flaxseeds",
+      "Honey"
+    ],
+    "BadIngredients": [],
+    "NeutralIngredients": [
+      "Water",
+      "Cinnamon",
+      "Vanilla Extract"
+    ]
+  }
+]
