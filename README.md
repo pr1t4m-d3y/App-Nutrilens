@@ -5,6 +5,8 @@ NutriLens is a premium, deep-tech nutritional companion designed to bridge the g
 ## 🌟 Key Features
 
 *   **Smart Scan & Cloud-Start Parallelism**: Instant analysis with a dual-phase feedback loop. Get immediate zero-wait feedback on critical allergens while the cloud generates full clinical insights.
+*   **Generic Medicine Lookups & Insights**: Scan and search for medicines to understand their generic counterparts, usage, potential side effects, and how they interact with your health profile.
+*   **Smart Medicine Reminder**: High-fidelity, intuitive medication adherence tracking featuring iOS-style wheel pickers, smart toggles, and push notifications so you never miss a dose.
 *   **4+1+1 Resilience Strategy**: A multi-layered AI fallback system (Google Gemini 3.0 Flash, OpenAI GPT-4o, DeepSeek V3) ensuring the app never fails.
 *   **The Health Bridge (Layman Engine)**: Translates chemical names into simple language and explains *why* an ingredient is bad for *your* specific health profile.
 *   **Indian Weighted Scoring (FSSAI+ Compliance)**: Contextual 1.0 to 10.0 grading system tuned for the Indian nutritional landscape.
