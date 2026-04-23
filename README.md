@@ -13,7 +13,7 @@ NutriLens is a premium, deep-tech nutritional companion designed to bridge the g
 *   **Marketing Reality Check**: Automatically flags misleading front-of-pack claims (e.g., hidden sweeteners).
 *   **Hyper-Personalized Health Profile**: AI factors in BMI, Fitness Goals, Allergies, and Chronic Conditions for every scan.
 
-## 🎨 UI/UX & Design
+## 🎨 UI/UX & Designs
 
 *   **Aesthetic**: "Ethereal Clinical" / "Luminous Health Editorial".
 *   **Liquid Glass UI**: Modern, translucent navigation bars and bento-style cards.
