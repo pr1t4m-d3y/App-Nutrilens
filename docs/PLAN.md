@@ -1,6 +1,6 @@
 # Plan: NutriLens for the Google FDE role
 
-Status: **draft, awaiting your approval. Nothing below has been built, deployed or pushed.**
+Status: build started on 2026-11-19 under a code-only rule: files were written, but nothing was installed, compiled, run, deployed or pushed. The list of what remains is `docs/ROADMAP.md`.
 Scope: this repo only (`App-Nutrilens`, branch `feat/fde-upgrade`). Basis: `docs/AUDIT.md`.
 Effort: S (under 1 day), M (1-3 days), L (3+ days). Impact is for the FDE application.
 
@@ -56,7 +56,7 @@ Flask is kept so the resume's "Python, Flask, REST" becomes true. Details are in
 |---|---|---|---|---|
 | R1 | **C2 latency.** p50 and p95 scan latency over a stated number of runs: on-device only; Cloud Run warm; Cloud Run cold; each on the same label set. A percentage is reported only if it comes from a baseline you can name. | M | High | Needs your answer to AUDIT Q1. |
 | R2 | **C3 accuracy.** Define it first (ingredient text to canonical ingredient/additive; intent classification), then measure on the B5 label set and a documented intent test set. Report the real figure whether or not it is 98%. | M | High | AUDIT Q2. |
-| R3 | **C7 size.** `scripts/app_size.sh` reports APK/AAB size per build. Before/after on changes that can be made now: remove unused `firebase_auth`/`cloud_firestore`, remove the duplicate NLP folder, `--split-per-abi`, resource shrinking. | S | Med | Needs Flutter and the Android SDK. The historical 70 to 46 MB stays "as reported by you" unless the old builds exist. |
+| R3 | **C7 size.** `scripts/app_size.sh` reports APK/AAB size per build. Before/after on changes that can be made now: remove the unused `cloud_firestore` dependency, `--split-per-abi`, resource shrinking. (The duplicate root `nlp/` folder is not bundled, so it does not affect size.) | S | Med | Needs Flutter and the Android SDK. The historical 70 to 46 MB stays "as reported by you" unless the old builds exist. |
 | R4 | **C9 users.** Not code. You collect the evidence. | S | High | AUDIT Q4. |
 
 ### 4. Skip (missing, not needed for FDE; reword instead)
@@ -113,3 +113,23 @@ Already settled: the target repo is `App-Nutrilens`.
 
 - Gemini and embedding model names and region availability: taken from current Vertex AI documentation at build time, with versions pinned. The Groq and `gemini-2.0-flash` names in today's code should be checked against vendor deprecation notices.
 - Total cost: unknown until Decision 1 and current pricing.
+
+## Implementation status (2026-11-19)
+
+"Written" means the code exists in the repo. Nothing has been compiled or run, so no item is "done" until its roadmap verification item closes.
+
+| Plan item | State |
+|---|---|
+| F1 Keys out of the app | Written (`.env` asset and dotenv removed; `CloudClient`, `CloudConfig`) |
+| F2 JWT API, rate limit, size limits | Written (`backend/`); the demo logins were replaced by a local "Get started" entry (ROADMAP P1) |
+| F3 Local engine fixes, offline medicine check, encrypted profile | Written |
+| F4 Clean-clone build, real tests | Tests written; build not attempted (ROADMAP V1, V2) |
+| B1 Regulation RAG | Pipeline written; no regulation text, no additive table (ROADMAP R1-R5) |
+| B2 Hybrid on-device engine | Allergen, avoid-list, condition and medicine checks written; on-device additive table not built (R4) |
+| B3 Privacy | Consent, encrypted storage, delete action, log masking written |
+| B4 Cloud Run deploy | Dockerfile and scripts written; nothing deployed (D1-D4) |
+| B5 Evals | Runners, metrics and report generator written; no labels, no results (E1-E5) |
+| B6 Quality | Makefile, CI, pre-commit, tests written; never run (V1, V5) |
+| B7 README | Written |
+| B8 Web | Not built (P6) |
+| R1-R4 Re-measure | Scripts written (`evals/`, `scripts/app_size.sh`); no measurement taken |

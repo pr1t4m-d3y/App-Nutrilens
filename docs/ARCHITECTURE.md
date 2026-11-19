@@ -1,6 +1,6 @@
 # Architecture: hybrid on-device + cloud
 
-**Status: proposed design. The "today" column describes the code in this repo as audited on 2026-11-19. Everything in "target" is unbuilt until the matching item in `docs/PLAN.md` ships.**
+**Status: the "Today" section describes the code audited at commit `2de80de`. The "Target" section is the design that the code on `feat/fde-upgrade` is written to follow. That code has not been compiled or run, and parts of it (regulation data, on-device additive table, deployment) do not exist yet; see `docs/ROADMAP.md`.**
 
 ## Today
 

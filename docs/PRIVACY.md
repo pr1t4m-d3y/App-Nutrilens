@@ -1,8 +1,8 @@
 # Privacy and health-data handling
 
-Two sections, kept separate on purpose: what the app does **today** (checked in the audit), and what the **target policy** is. The target is not implemented until the matching plan item (B3, F1, F2, F3) ships. This file must be updated, not trusted, when code changes.
+Two sections, kept separate on purpose: what the app did **at commit `2de80de`** (checked in the audit), and the **target policy**. Code for the target policy is written on `feat/fde-upgrade` (consent dialog, encrypted profile storage, minimised request body, delete action, log masking, `DELETE /v1/me`), but it has never been compiled or run, so none of it is verified. Section 3 lists the tests that are meant to prove each rule; they are written and not yet executed. This file must be updated, not trusted, when code changes.
 
-## 1. Today (verified 2026-11-19)
+## 1. At commit `2de80de` (verified 2026-11-19)
 
 | Question | Answer | Evidence |
 |---|---|---|
@@ -28,7 +28,7 @@ Two sections, kept separate on purpose: what the app does **today** (checked in 
 | Local storage | Profile stored encrypted on the device using the platform keystore. |
 | Server storage | **None by default.** Requests are processed in memory. Only non-identifying operational metrics (latency, status code, token counts) are logged. |
 | Log hygiene | Request bodies are never logged. Profile fields and label text are masked or omitted. Exception text is scrubbed before logging. |
-| Consent | A first-run screen states what is sent to the cloud and why, and the cloud explanation can be switched off. The phone-only checks keep working with it off. |
+| Consent | Before the first cloud request a dialog states what is sent and what is not, and the choice can be changed later under Account > Privacy. The phone-only checks are designed to keep working with it off. |
 | Delete my data | `DELETE /v1/me` and an in-app "delete everything" button. The endpoint exists even though the server stores nothing by default, so the guarantee is testable. |
 | Retention | Local data: until the user deletes it or uninstalls. Server: none. Any future server-side storage requires a documented retention period before it ships. |
 | Medical reports | **Decision pending** (plan Decision 5). Option (b), the recommendation: reports are never ingested, and this document says so. Option (a): a report goes to the API in memory, only allergies and active medicines are extracted and returned to the phone, and the file is discarded. A test must prove nothing from the report is persisted or logged. |
