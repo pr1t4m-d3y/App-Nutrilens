@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nutrilens/services/additive_table.dart';
 
-// Synthetic fixture: invented codes and names, not regulation data.
 final _json = jsonEncode([
   {
     'e_number': 'E999',
@@ -11,7 +10,7 @@ final _json = jsonEncode([
     'synonyms': ['testadd'],
     'category': 'test category',
     'allergen_tags': ['sulphites'],
-    'limits_note': 'synthetic note',
+    'limits_note': 'test note',
     'citation': 'Test Regulation, Annex II',
   },
   {
@@ -20,7 +19,7 @@ final _json = jsonEncode([
     'synonyms': [],
     'category': 'test category',
     'allergen_tags': [],
-    'limits_note': 'synthetic note',
+    'limits_note': 'test note',
     'citation': 'Test Regulation, Annex III',
   },
 ]);

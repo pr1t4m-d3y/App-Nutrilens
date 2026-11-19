@@ -22,10 +22,10 @@ gcloud run deploy "$SERVICE" \
   --max-instances="$MAX_INSTANCES" \
   --concurrency=8 \
   --cpu=1 \
-  --memory=512Mi \
-  --timeout=60 \
+  --memory=1Gi \
+  --timeout=120 \
   --add-cloudsql-instances="${PROJECT_ID}:${REGION}:${SQL_INSTANCE}" \
-  --set-env-vars="FIREBASE_PROJECT_ID=${PROJECT_ID},GOOGLE_CLOUD_PROJECT=${PROJECT_ID},DB_HOST=/cloudsql/${PROJECT_ID}:${REGION}:${SQL_INSTANCE},DB_NAME=${DB_NAME},DB_USER=${DB_USER}" \
+  --set-env-vars="FIREBASE_PROJECT_ID=${PROJECT_ID},GOOGLE_CLOUD_PROJECT=${PROJECT_ID},GOOGLE_CLOUD_LOCATION=${VERTEX_LOCATION:-global},GOOGLE_GENAI_USE_ENTERPRISE=true,GOOGLE_GENAI_USE_VERTEXAI=true,DB_HOST=/cloudsql/${PROJECT_ID}:${REGION}:${SQL_INSTANCE},DB_NAME=${DB_NAME},DB_USER=${DB_USER}" \
   --set-secrets="DB_PASSWORD=${DB_SECRET}:latest"
 
 gcloud run services describe "$SERVICE" \

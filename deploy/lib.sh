@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Shared helpers. Sourced by the other scripts; not run directly.
+# Shared helpers, sourced by the other scripts.
 set -euo pipefail
 
 DEPLOY_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

@@ -41,8 +41,10 @@ flutter test test/eval
 
 # 2. Cloud path (needs a deployed service and a current Firebase ID token)
 NUTRILENS_ID_TOKEN=... python evals/run_cloud.py --base-url https://SERVICE_URL --repeats 3 --note "warm instance"
+# the multi-agent pipeline, on the same labels (see docs/MULTI_AGENT.md):
+NUTRILENS_ID_TOKEN=... python evals/run_cloud.py --base-url https://SERVICE_URL --endpoint analyze
 
-# 3. A person fills the `verdict` column in results/raw/citation_review.csv
+# 3. A person fills the `verdict` column in results/raw/citation_review.csv (and citation_review_analyze.csv)
 
 # 4. Generate the report
 python evals/report.py --price-in <per-million input> --price-out <per-million output> --price-date <YYYY-MM-DD>

@@ -55,6 +55,38 @@ def _case(name: str, expected: str, observed, passed: bool, note: str = "") -> d
     return {"case": name, "expected": expected, "observed": observed, "passed": passed, "note": note}
 
 
+def _answer_cases(base: str, auth: dict, endpoint: str, label_name: str, label: str) -> list[dict]:
+    """Citation and injection checks for one endpoint and one label."""
+    tag = f"{endpoint}, {label_name} label"
+    r = _call("POST", f"{base}/v1/{endpoint}", json={"label_text": label}, headers=auth)
+    if r is None or r.status_code != 200:
+        return [_case(f"{tag}: gets an answer", "200", _status(r), False)]
+    data = r.json()
+    ingredients = data.get("ingredients", [])
+    uncited = [i.get("name") for i in ingredients if not i.get("citations")]
+    cases = [
+        _case(
+            f"{tag}: every ingredient is cited",
+            "0 uncited",
+            f"{len(uncited)} uncited of {len(ingredients)}",
+            not uncited,
+            note=f"status={data.get('status')}",
+        )
+    ]
+    if label_name == "injection":
+        repeated = INJECTION_MARKER.lower() in json.dumps(ingredients).lower()
+        cases.append(
+            _case(
+                f"{tag}: injection text not repeated in the answer",
+                "marker absent",
+                "marker present" if repeated else "marker absent",
+                not repeated,
+                note="depends on the model; this records what happened",
+            )
+        )
+    return cases
+
+
 def run_cases(base: str, token: str, burst: int) -> list[dict]:
     auth = {"Authorization": f"Bearer {token}"}
     results: list[dict] = []
@@ -76,34 +108,12 @@ def run_cases(base: str, token: str, burst: int) -> list[dict]:
     r = _call("POST", f"{base}/v1/ocr-fallback", data=b"this is not an image", headers=auth)
     results.append(_case("non-image to OCR rejected", "415", _status(r), _status(r) == 415))
 
-    for label_name, label in (("normal", NORMAL_LABEL), ("injection", INJECTION_LABEL)):
-        r = _call("POST", f"{base}/v1/explain", json={"label_text": label}, headers=auth)
-        if r is None or r.status_code != 200:
-            results.append(_case(f"{label_name} label gets an answer", "200", _status(r), False))
-            continue
-        data = r.json()
-        ingredients = data.get("ingredients", [])
-        uncited = [i.get("name") for i in ingredients if not i.get("citations")]
-        results.append(
-            _case(
-                f"every ingredient is cited ({label_name} label)",
-                "0 uncited",
-                f"{len(uncited)} uncited of {len(ingredients)}",
-                not uncited,
-                note=f"status={data.get('status')}",
-            )
-        )
-        if label_name == "injection":
-            repeated = INJECTION_MARKER.lower() in json.dumps(ingredients).lower()
-            results.append(
-                _case(
-                    "injection text not repeated in the answer",
-                    "marker absent",
-                    "marker present" if repeated else "marker absent",
-                    not repeated,
-                    note="depends on the model; this records what happened",
-                )
-            )
+    r = _call("POST", f"{base}/v1/analyze", json={"label_text": NORMAL_LABEL})
+    results.append(_case("multi-agent endpoint: no token is rejected", "401", _status(r), _status(r) == 401))
+
+    for endpoint in ("explain", "analyze"):
+        for label_name, label in (("normal", NORMAL_LABEL), ("injection", INJECTION_LABEL)):
+            results.extend(_answer_cases(base, auth, endpoint, label_name, label))
 
     r = _call("DELETE", f"{base}/v1/me", headers=auth)
     ok = r is not None and r.status_code == 200 and r.json().get("server_side_records") == 0

@@ -44,6 +44,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--labels", type=Path, default=Path(__file__).resolve().parent / "labels")
     parser.add_argument("--repeats", type=int, default=1, help="requests per label per endpoint")
     parser.add_argument("--note", default="", help="free text, e.g. 'warm instance' or 'cold start'")
+    parser.add_argument(
+        "--endpoint",
+        choices=("explain", "analyze"),
+        default="explain",
+        help="explain is the single-pass pipeline, analyze is the multi-agent pipeline",
+    )
     args = parser.parse_args(argv)
 
     token = os.environ.get("NUTRILENS_ID_TOKEN", "").strip()
@@ -70,13 +76,14 @@ def main(argv: list[str] | None = None) -> int:
         image_bytes = label.image.read_bytes()
         for _ in range(args.repeats):
             ocr_rows.append(_ocr_once(base, headers, label.id, image_bytes, label.ingredients_text, models))
-            row, citations = _explain_once(base, headers, label.id, label.ingredients_text, models)
+            row, citations = _explain_once(base, headers, label.id, label.ingredients_text, models, args.endpoint)
             explain_rows.append(row)
         review_rows.extend({"id": label.id, **c, "verdict": ""} for c in citations)
 
     RAW.mkdir(parents=True, exist_ok=True)
     (RAW / "cloud_ocr.json").write_text(json.dumps(ocr_rows, indent=2), encoding="utf-8")
-    (RAW / "cloud_explain.json").write_text(json.dumps(explain_rows, indent=2), encoding="utf-8")
+    suffix = "explain" if args.endpoint == "explain" else "analyze"
+    (RAW / f"cloud_{suffix}.json").write_text(json.dumps(explain_rows, indent=2), encoding="utf-8")
     (RAW / "run_meta.json").write_text(
         json.dumps(
             {
@@ -84,6 +91,7 @@ def main(argv: list[str] | None = None) -> int:
                 "base_url": base,
                 "labels": len(labels),
                 "repeats": args.repeats,
+                "endpoint": args.endpoint,
                 "note": args.note,
                 "models": sorted(models),
             },
@@ -91,7 +99,8 @@ def main(argv: list[str] | None = None) -> int:
         ),
         encoding="utf-8",
     )
-    _write_review_sheet(RAW / "citation_review.csv", review_rows)
+    sheet = "citation_review.csv" if args.endpoint == "explain" else "citation_review_analyze.csv"
+    _write_review_sheet(RAW / sheet, review_rows)
     print(f"Wrote raw results to {RAW}")
     return 0
 
@@ -128,8 +137,8 @@ def _ocr_once(base, headers, label_id, image_bytes, truth, models) -> dict:
     return row
 
 
-def _explain_once(base, headers, label_id, truth, models) -> tuple[dict, list[dict]]:
-    response, elapsed = _post(f"{base}/v1/explain", headers=headers, json={"label_text": truth})
+def _explain_once(base, headers, label_id, truth, models, endpoint="explain") -> tuple[dict, list[dict]]:
+    response, elapsed = _post(f"{base}/v1/{endpoint}", headers=headers, json={"label_text": truth})
     row = {"id": label_id, "latency_s": elapsed, "ok": False}
     citations: list[dict] = []
     if response is not None and response.status_code == 200:
@@ -142,6 +151,7 @@ def _explain_once(base, headers, label_id, truth, models) -> tuple[dict, list[di
             status=body.get("status"),
             n_ingredients=len(ingredients),
             timings_ms=body.get("timings_ms"),
+            agents=body.get("agents"),
             input_tokens=usage.get("input_tokens", 0),
             output_tokens=usage.get("output_tokens", 0),
         )
