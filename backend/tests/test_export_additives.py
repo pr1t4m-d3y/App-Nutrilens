@@ -6,7 +6,7 @@ from nutrilens_api.rag.additive_rows import AdditiveFileError, parse_rows
 from nutrilens_api.rag.export_additives import build_entries, main
 
 HEADER = "e_number,name,synonyms,category,allergen_tags,limits_note,source_doc_id,source_locator\n"
-ROW = "E999,Test additive,testadd|t-add,test category,sulphites,synthetic note,doc1,Annex II\n"
+ROW = "E999,Test additive,testadd|t-add,test category,sulphites,test note,doc1,Annex II\n"
 
 
 def manifest(tmp_path):

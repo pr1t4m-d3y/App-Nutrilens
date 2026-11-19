@@ -72,6 +72,63 @@ def explain():
     return jsonify(body)
 
 
+@bp.post("/v1/analyze")
+@limiter.limit(current_limit)
+def analyze():
+    """Same request and response shape as /v1/explain, produced by the
+    four-agent pipeline. Slower and costlier, with an extra verification pass."""
+    services = _services()
+    if request.content_length is not None and request.content_length > _MAX_EXPLAIN_BODY:
+        return error_response("payload_too_large", 413)
+    try:
+        req = parse_explain(request.get_json(silent=True), services.settings.max_label_chars)
+    except ValidationError as exc:
+        return error_response("invalid_request", 400, exc.detail)
+
+    try:
+        outcome = services.agents.analyze(req, hash_uid(g.uid))
+    except UpstreamError:
+        return error_response("upstream_unavailable", 502)
+
+    cost = services.settings.estimate_cost(outcome.input_tokens, outcome.output_tokens)
+    stages = [
+        {
+            "agent": stage.agent,
+            "events": stage.events,
+            "seconds": round(stage.seconds, 2),
+            "input_tokens": stage.input_tokens,
+            "output_tokens": stage.output_tokens,
+        }
+        for stage in outcome.stages
+    ]
+    log.info(
+        "analyze",
+        extra={
+            "fields": {
+                "uid": hash_uid(g.uid),
+                "status": outcome.body["status"],
+                "searches": outcome.searches,
+                "unsupported": outcome.unsupported,
+                "dropped_uncited": outcome.dropped,
+                "input_tokens": outcome.input_tokens,
+                "output_tokens": outcome.output_tokens,
+                "stages": stages,
+                "cost": cost,
+            }
+        },
+    )
+    body = dict(outcome.body)
+    body["model"] = outcome.model
+    body["usage"] = {"input_tokens": outcome.input_tokens, "output_tokens": outcome.output_tokens}
+    body["agents"] = {
+        "searches": outcome.searches,
+        "unsupported_dropped": outcome.unsupported,
+        "uncited_dropped": outcome.dropped,
+        "stages": stages,
+    }
+    return jsonify(body)
+
+
 @bp.post("/v1/search")
 @limiter.limit(current_limit)
 def search():

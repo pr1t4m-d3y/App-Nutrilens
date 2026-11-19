@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from conftest import AUTH, FakeLlm, FakeRetriever, source
+from conftest import AUTH, FakeAgents, FakeLlm, FakeRetriever, source
 
 GOOD_JSON = json.dumps(
     {
@@ -109,7 +109,7 @@ def test_search_returns_verbatim_cited_chunks(make_client):
         "id": "doc:0001",
         "title": "Test Regulation",
         "locator": "Annex II",
-        "snippet": "synthetic test text",
+        "snippet": "test passage",
         "method": "exact",
     }
 
@@ -133,5 +133,49 @@ def test_search_requires_token(make_client):
 def test_search_retrieval_failure_is_502(make_client):
     client = make_client(retriever=FakeRetriever(error=RuntimeError("db")))
     response = client.post("/v1/search", json={"query": "sodium"}, headers=AUTH)
+    assert response.status_code == 502
+    assert response.get_json() == {"error": "upstream_unavailable"}
+
+
+# ---- /v1/analyze (multi-agent) ----------------------------------------------
+
+
+def test_analyze_requires_token(make_client):
+    assert make_client().post("/v1/analyze", json=BODY).status_code == 401
+
+
+def test_analyze_returns_the_explain_shape_plus_agent_details(make_client):
+    agents = FakeAgents()
+    client = make_client(agents=agents)
+    response = client.post("/v1/analyze", json=BODY, headers=AUTH)
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data["status"] == "ok"
+    assert data["ingredients"][0]["citations"] == ["S1"]
+    assert data["usage"] == {"input_tokens": 10, "output_tokens": 5}
+    assert data["agents"]["searches"] == 3
+    assert data["agents"]["unsupported_dropped"] == 2
+    assert data["agents"]["uncited_dropped"] == 1
+    assert data["agents"]["stages"][0]["agent"] == "ingredient_analyst"
+
+
+def test_analyze_passes_a_hashed_user_key_not_the_uid(make_client):
+    from nutrilens_api.logging_utils import hash_uid
+
+    agents = FakeAgents()
+    make_client(agents=agents).post("/v1/analyze", json=BODY, headers=AUTH)
+    assert agents.calls[0][1] == hash_uid("user-1")
+
+
+def test_analyze_rejects_extra_fields(make_client):
+    body = {"label_text": "Ingredients: sugar, salt", "name": "A Person"}
+    response = make_client().post("/v1/analyze", json=body, headers=AUTH)
+    assert response.status_code == 400
+    assert b"A Person" not in response.data
+
+
+def test_analyze_upstream_failure_is_502(make_client):
+    client = make_client(agents=FakeAgents(error=True))
+    response = client.post("/v1/analyze", json=BODY, headers=AUTH)
     assert response.status_code == 502
     assert response.get_json() == {"error": "upstream_unavailable"}

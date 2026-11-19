@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import time
 from dataclasses import dataclass
+from typing import Protocol
 
 from flask import Flask, g, request
 from werkzeug.exceptions import HTTPException
@@ -13,6 +14,7 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from .auth import Verifier, install_auth
 from .config import Settings
 from .errors import error_response
+from .agents.runner import AgentExplainService, AgentOutcome
 from .explain import ExplainService, LlmLike, RetrieverLike
 from .limits import limiter
 from .llm import LlmClient
@@ -24,12 +26,17 @@ from .routes import bp
 log = logging.getLogger(__name__)
 
 
+class AgentServiceLike(Protocol):
+    def analyze(self, req, user_key: str) -> AgentOutcome: ...
+
+
 @dataclass
 class Services:
     settings: Settings
     llm: LlmClient
     explain: ExplainService
     retriever: RetrieverLike
+    agents: AgentServiceLike
 
 
 def create_app(
@@ -38,6 +45,7 @@ def create_app(
     llm: LlmLike | None = None,
     retriever: RetrieverLike | None = None,
     verifier: Verifier | None = None,
+    agent_service: AgentServiceLike | None = None,
 ) -> Flask:
     """Build the app. `llm`, `retriever` and `verifier` can be injected, which
     is how tests run without Google Cloud."""
@@ -53,7 +61,10 @@ def create_app(
     llm = llm or LlmClient(settings)
     if retriever is None:
         retriever = Retriever(Store(settings.db_conninfo(), settings.embedding_dim), llm, settings)
-    app.extensions["nutrilens"] = Services(settings, llm, ExplainService(settings, llm, retriever), retriever)
+    agent_service = agent_service or AgentExplainService(settings, retriever)
+    app.extensions["nutrilens"] = Services(
+        settings, llm, ExplainService(settings, llm, retriever), retriever, agent_service
+    )
 
     @app.before_request
     def _start_timer():

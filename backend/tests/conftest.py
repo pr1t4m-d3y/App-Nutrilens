@@ -1,8 +1,10 @@
 import pytest
 
+from nutrilens_api.agents.runner import AgentOutcome, StageStats
 from nutrilens_api.app import create_app
 from nutrilens_api.config import Settings
 from nutrilens_api.limits import limiter
+from nutrilens_api.errors import UpstreamError
 from nutrilens_api.llm import LlmError, LlmResult
 from nutrilens_api.rag.retriever import Retrieved
 
@@ -41,6 +43,34 @@ class FakeRetriever:
         return self.items
 
 
+class FakeAgents:
+    """Stands in for the agent service."""
+
+    def __init__(self, body: dict | None = None, error: bool = False):
+        self.body = body or {
+            "status": "ok",
+            "ingredients": [
+                {"name": "Sodium benzoate", "impact": "bad", "details": ["A reason."], "citations": ["S1"]}
+            ],
+            "sources": [{"id": "S1", "title": "Test Regulation", "locator": "Annex II"}],
+        }
+        self.error = error
+        self.calls: list[tuple] = []
+
+    def analyze(self, req, user_key: str) -> AgentOutcome:
+        self.calls.append((req, user_key))
+        if self.error:
+            raise UpstreamError("agents failed")
+        return AgentOutcome(
+            body=self.body,
+            model="fake-model",
+            dropped=1,
+            unsupported=2,
+            searches=3,
+            stages=[StageStats("ingredient_analyst", events=1, seconds=0.5, input_tokens=10, output_tokens=5)],
+        )
+
+
 def fake_verifier(token: str, project_id: str) -> dict:
     if token == GOOD_TOKEN:
         return {
@@ -52,7 +82,7 @@ def fake_verifier(token: str, project_id: str) -> dict:
 
 
 def source(chunk_id="doc:0001", title="Test Regulation", locator="Annex II") -> Retrieved:
-    return Retrieved(chunk_id, title, locator, "synthetic test text", "exact", None)
+    return Retrieved(chunk_id, title, locator, "test passage", "exact", None)
 
 
 @pytest.fixture
@@ -62,7 +92,7 @@ def settings() -> Settings:
 
 @pytest.fixture
 def make_client(settings):
-    def _make(llm=None, retriever=None, **settings_overrides):
+    def _make(llm=None, retriever=None, agents=None, **settings_overrides):
         from dataclasses import replace
 
         app = create_app(
@@ -70,6 +100,7 @@ def make_client(settings):
             llm=llm or FakeLlm(),
             retriever=retriever or FakeRetriever([source()]),
             verifier=fake_verifier,
+            agent_service=agents or FakeAgents(),
         )
         limiter.reset()
         return app.test_client()

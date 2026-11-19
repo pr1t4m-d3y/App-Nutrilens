@@ -37,6 +37,7 @@ _VALID_IMPACT = {"bad", "neutral", "good"}
 _MAX_INGREDIENTS = 25
 _MAX_NAME = 80
 _MAX_REASON = 300
+_MAX_NOTE = 200
 
 
 class ModelOutputError(ValueError):
@@ -75,9 +76,14 @@ def build_prompt(req: ExplainRequest, numbered: dict[str, Retrieved]) -> str:
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$", re.IGNORECASE)
 
 
+def strip_fences(text: str) -> str:
+    """Remove a Markdown code fence a model may wrap around JSON."""
+    return _FENCE.sub("", text.strip())
+
+
 def parse_model_json(text: str) -> list[dict]:
     try:
-        data = json.loads(_FENCE.sub("", text.strip()))
+        data = json.loads(strip_fences(text))
     except json.JSONDecodeError as exc:
         raise ModelOutputError("not JSON") from exc
     if not isinstance(data, dict) or not isinstance(data.get("ingredients"), list):
@@ -106,6 +112,9 @@ def enforce_citations(items: list[dict], numbered: dict[str, Retrieved]) -> tupl
             dropped += 1
             continue
         details = [reason.strip()[:_MAX_REASON]]
+        note = item.get("profile_note")
+        if isinstance(note, str) and note.strip():
+            details.append(note.strip()[:_MAX_NOTE])
         details += [f"Source: {numbered[s].doc_title}, {numbered[s].locator}" for s in ids]
         kept.append({"name": name.strip()[:_MAX_NAME], "impact": impact, "details": details, "citations": ids})
     return kept, dropped

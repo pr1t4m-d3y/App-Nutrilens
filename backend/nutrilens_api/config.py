@@ -74,8 +74,12 @@ class Settings:
     rate_limit_per_minute: int = 20
     retrieval_top_k: int = 8
     retrieval_max_context: int = 10
-    # Untuned cut-off on cosine distance. It must be tuned on the eval set.
+    # Cosine-distance cut-off for vector matches.
     retrieval_max_distance: float = 0.5
+    # Agent pipeline: a lighter model for extraction and profile review, the main
+    # model for research and verification, and a cap on regulation searches.
+    agent_light_model: str = "gemini-3.5-flash-lite"
+    agent_max_searches: int = 6
     # Prices are supplied by the operator from the current published price
     # list. They are never hard-coded, so cost is reported only when set.
     price_input_per_mtok: float | None = None
@@ -104,6 +108,8 @@ class Settings:
             retrieval_max_distance=_float(
                 "RETRIEVAL_MAX_DISTANCE", defaults.retrieval_max_distance
             ),
+            agent_light_model=os.environ.get("AGENT_LIGHT_MODEL", defaults.agent_light_model),
+            agent_max_searches=_int("AGENT_MAX_SEARCHES", defaults.agent_max_searches),
             price_input_per_mtok=_optional_float("PRICE_INPUT_PER_MTOK"),
             price_output_per_mtok=_optional_float("PRICE_OUTPUT_PER_MTOK"),
         )
@@ -128,3 +134,12 @@ class Settings:
             input_tokens * self.price_input_per_mtok
             + output_tokens * self.price_output_per_mtok
         ) / 1_000_000
+
+
+def configure_vertex_environment(settings: Settings) -> None:
+    """Point the Gen AI SDK, which the agent framework creates its own clients
+    with, at Vertex AI. Existing values are left alone."""
+    os.environ.setdefault("GOOGLE_GENAI_USE_ENTERPRISE", "true")
+    os.environ.setdefault("GOOGLE_GENAI_USE_VERTEXAI", "true")
+    os.environ.setdefault("GOOGLE_CLOUD_PROJECT", settings.gcp_project)
+    os.environ.setdefault("GOOGLE_CLOUD_LOCATION", settings.gcp_location)

@@ -16,4 +16,4 @@ COPY nutrilens_api ./nutrilens_api
 USER 10001
 EXPOSE 8080
 # One worker with threads keeps the in-memory rate limiter coherent per instance.
-CMD ["sh", "-c", "exec gunicorn --bind 0.0.0.0:${PORT} --workers 1 --threads 8 --timeout 60 'nutrilens_api.app:create_app()'"]
+CMD ["sh", "-c", "exec gunicorn --bind 0.0.0.0:${PORT} --workers 1 --threads 8 --timeout 120 'nutrilens_api.app:create_app()'"]
