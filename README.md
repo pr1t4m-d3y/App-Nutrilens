@@ -76,7 +76,7 @@ What is built, what is verified, and what comes next is tracked in the [roadmap]
 
 ### Prerequisites
 
-- Flutter SDK (Dart `^3.7.2`) and an Android device or emulator
+- Flutter SDK 3.50.0 (the version CI uses; the project requires Dart `^3.7.2`) and an Android device or emulator
 - Python 3.12 or newer
 - For deployment: a Google Cloud project with billing, and the `gcloud` CLI
 
@@ -170,9 +170,7 @@ make size LABEL=baseline             # APK / AAB sizes, appended to docs/size_lo
 - [Privacy and health-data handling](docs/PRIVACY.md)
 - [Multi-agent review](docs/MULTI_AGENT.md)
 - [Security review](docs/SECURITY.md)
-- [How the repo maps to the FDE requirements](docs/FDE_MAPPING.md)
 - [Roadmap](docs/ROADMAP.md)
-- [Audit of earlier claims against the code](docs/AUDIT.md)
 - [Eval method](evals/README.md)
 
 ## Design system

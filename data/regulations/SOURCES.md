@@ -1,6 +1,6 @@
 # Regulation sources
 
-**Status: nothing is downloaded. This list is candidates only.** I wrote it from memory and have not opened these pages in this session. Every row is *unverified* until the file is fetched, its title and date are read from the document itself, and the "Verified" column is filled in. No regulation text is written or paraphrased by me. Only official documents go in this folder, stored as downloaded.
+**Status: nothing is downloaded. This list is candidates only.** None of the entries has been fetched. Every row is *unverified* until the file is fetched, its title and date are read from the document itself, and the "Verified" column is filled in. No regulation text is written or paraphrased in this repository. Only official documents go in this folder, stored as downloaded.
 
 ## Rules for this folder
 
@@ -11,7 +11,7 @@
 
 ## Candidates
 
-| # | Document (as I recall it) | Why NutriLens needs it | Where to look | Verified |
+| # | Document (candidate) | Why NutriLens needs it | Where to look | Verified |
 |---|---|---|---|---|
 | 1 | Regulation (EC) No 1333/2008 on food additives (EU) | Additive rules; basis for E-number flags | EUR-Lex (`eur-lex.europa.eu`, search the regulation number; consolidated text) | No |
 | 2 | Regulation (EU) No 1129/2011 establishing the Union list of food additives (amends Annex II of 1333/2008) | Which additive is permitted in which food category | EUR-Lex; check whether a consolidated Annex II supersedes it | No |

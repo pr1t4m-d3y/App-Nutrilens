@@ -4,7 +4,7 @@ This is the single list of everything that remains. The code contains no placeho
 
 ## Ground rule for this branch
 
-The code on `feat/fde-upgrade` was **written but never compiled, run or tested**. No toolchain was installed and no command was executed against it, so nothing in the repo is claimed to work or to pass. Item V1 is therefore the first thing to do; every other claim depends on it.
+The code in this repository was **written but never compiled, run or tested**. No toolchain was installed and no command was executed against it, so nothing in the repo is claimed to work or to pass. Item V1 is therefore the first thing to do; every other claim depends on it.
 
 Each item lists what it **needs** and when it is **done**.
 
@@ -14,8 +14,8 @@ Each item lists what it **needs** and when it is **done**.
 |---|---|---|---|
 | V1 | Run the toolchain over the new code and fix what breaks: `make backend-install backend-lint backend-test`, `flutter pub get` (this also regenerates `pubspec.lock`, which still lists the removed `flutter_dotenv` and `cloud_firestore`), `flutter analyze`, `flutter test`. | Python 3.12 or newer, Flutter SDK, permission to install them | Both CI jobs in `.github/workflows/ci.yml` pass on a pull request, and the test counts are recorded in the PR |
 | V2 | Build a release APK from a clean clone with only `app_config.json` (no `.env`) and open it on a device | V1; an Android device or emulator | The app starts, a label scan completes on-device with cloud off |
-| V3 | Pin the Flutter SDK version in CI and README | V1 (the version that builds cleanly) | `ci.yml` names an exact version instead of `channel: stable` |
-| V4 | Check the assumptions I could not test: `genai.Client(enterprise=True, ...)` arguments for `google-genai` 2.34.0; `task_type` and `output_dimensionality` for `gemini-embedding-001`; that the default model IDs in `backend/nutrilens_api/config.py` exist in the chosen region; that pgvector can be enabled on the Cloud SQL version used; that `flask-limiter` accepts one `Limiter` across several `create_app` calls in tests | V1 and a GCP project | Each assumption is confirmed or the code is corrected, and the config comments name the date checked |
+| V3 | Confirm the app builds and runs on the Flutter version CI uses (3.50.0), and keep the README prerequisite in step | V1 | `flutter run` succeeds on that version and CI stays green |
+| V4 | Check the assumptions that could not be tested: `genai.Client(enterprise=True, ...)` arguments for `google-genai` 2.34.0; `task_type` and `output_dimensionality` for `gemini-embedding-001`; that the default model IDs in `backend/nutrilens_api/config.py` exist in the chosen region; that pgvector can be enabled on the Cloud SQL version used; that `flask-limiter` accepts one `Limiter` across several `create_app` calls in tests | V1 and a GCP project | Each assumption is confirmed or the code is corrected, and the config comments name the date checked |
 | V5 | Install the pre-commit hooks (`pre-commit install`) and run them once over the repo | V1 | Hooks pass, `gitleaks` reports no findings |
 | M1 | Confirm the ADK integration assumptions listed at the end of `docs/MULTI_AGENT.md` against ADK 1.39.1 (runner and session signatures, instruction functions bypassing templating, Vertex environment variables, `generate_content_config` with tools, event fields, container memory) | V1, a GCP project | `backend/tests/test_agents.py` passes, one real `/v1/analyze` call returns, and the doc's assumptions list is marked confirmed or corrected |
 
@@ -34,7 +34,7 @@ Each item lists what it **needs** and when it is **done**.
 
 | ID | Item | Needs | Done when |
 |---|---|---|---|
-| R1 | Download the regulation documents unchanged from the official sites and complete `data/regulations/SOURCES.md` (title read from each document, version, URL, date, SHA-256, reuse terms) | Your approval to download, or the files from you | Every row of the download log is filled and every candidate in `SOURCES.md` is marked verified or dropped |
+| R1 | Download the regulation documents unchanged from the official sites and complete `data/regulations/SOURCES.md` (title read from each document, version, URL, date, SHA-256, reuse terms) | Permission to download, or the files supplied | Every row of the download log is filled and every candidate in `SOURCES.md` is marked verified or dropped |
 | R2 | Write `data/regulations/manifest.json` and run `python -m nutrilens_api.rag.ingest` | R1, D2, Vertex AI access | Chunks and embeddings are in the database; the command's per-document chunk counts are recorded |
 | R3 | Author `data/additives.csv` from the regulation text, one row per additive, each with its `source_doc_id` and `source_locator` (the loader rejects rows without them) | R1 | `ingest --additives` loads it without errors |
 | R4 | On-device additive table: the exporter (`make export-additives`), the Dart reader and the scan integration are written. What remains is the data and the export | R3 | `assets/additives/additives.json` exists and a scan with no network flags a listed E-number with its citation |
@@ -44,11 +44,11 @@ Each item lists what it **needs** and when it is **done**.
 
 | ID | Item | Needs | Done when |
 |---|---|---|---|
-| E1 | 50 or more label photos from `evals/LABEL_CHECKLIST.md`, plus ground-truth JSON, reviewed by a person | Your photos, or approval to use Open Food Facts images with attribution | `load_labels` returns 50 or more reviewed labels |
+| E1 | 50 or more label photos from `evals/LABEL_CHECKLIST.md`, plus ground-truth JSON, reviewed by a person | Label photos, or approval to use Open Food Facts images with attribution | `load_labels` returns 50 or more reviewed labels |
 | E2 | On-device OCR export: `integration_test/ocr_export_test.dart` is written. It has to be run on a device with the label images pushed (steps are in the file header) | E1, an Android device | `evals/results/raw/mlkit_ocr.json` exists and `report.py` shows an ML Kit row |
 | E3 | Run the evals (`flutter test test/eval`, `evals/run_cloud.py`, `evals/run_safety.py`, citation review, `evals/report.py`) and write `evals/ERROR_ANALYSIS.md` | E1, E2, D2, R2, a current ID token | `RESULTS.md` is generated and every false negative is discussed |
-| E4 | Latency comparison of on-device, cloud warm and cloud cold on the same labels, and the re-measurement of the claimed latency reduction against a baseline you define | E3; your answer to what the baseline was | The comparison is in `RESULTS.md` |
-| E5 | Intent classifier evaluation: a labelled test set of user queries for the 6 intents, and the re-measurement of the claimed mapping accuracy | The classifier's training data or a new labelled set; TensorFlow Lite tooling | A confusion matrix is generated from a documented test set |
+| E4 | Latency comparison of on-device, cloud warm and cloud cold on the same labels, and a latency comparison against a defined baseline | E3; a decision on what the baseline is | The comparison is in `RESULTS.md` |
+| E5 | Intent classifier evaluation: a labelled test set of user queries for the 6 intents, and a measurement of its accuracy | The classifier's training data or a new labelled set; TensorFlow Lite tooling | A confusion matrix is generated from a documented test set |
 | E6 | Compare `/v1/explain` and `/v1/analyze` on the same labels (`run_cloud.py --endpoint explain` and `--endpoint analyze`, both citation sheets reviewed) and apply the decision rule in `docs/MULTI_AGENT.md` | E1, E3, D2, M1 | `RESULTS.md` shows both pipelines and the default for the app is set by the rule |
 | E7 | Per-model prices so multi-agent cost is not an upper bound | E3 | The report applies a price per model |
 
@@ -67,7 +67,7 @@ None of these exists in the code.
 |---|---|---|---|
 | P1 | Account sign-in and family profiles. The Google and phone sign-in buttons, the hard-coded demo logins, the demo data loaders and the "Add Family Member" action were removed because they did nothing real. The app now has a local profile and an anonymous cloud identity only | A decision on whether accounts are wanted; Firebase sign-in providers | Sign-in works on a device and a profile can be switched |
 | P1b | Caloric intake chart. The chart on the Progress screen showed fixed numbers, so it was removed | A data source (for example nutrition values captured per scan) | The chart plots recorded values only |
-| P2 | Medical-report import, only if users need it. The current design never ingests reports; if it is built, the report is processed in memory and discarded | Your decision | `docs/PRIVACY.md` and a test show nothing from a report is stored or logged |
+| P2 | Medical-report import, only if users need it. The current design never ingests reports; if it is built, the report is processed in memory and discarded | A decision on scope | `docs/PRIVACY.md` and a test show nothing from a report is stored or logged |
 | P3 | Offline food-medicine interaction notes from a short, sourced list, each with a citation | A reviewed source for each entry | Entries load from a data file and each shows its citation |
 | P4 | Dose reminders that fire notifications (the reminder screen is an interface only) | A notification plugin and platform setup | A scheduled reminder fires on a device |
 | P5 | Cited healthier alternatives (the earlier uncited suggestion was removed from the cloud flow) | R2 | Each suggestion carries a regulation or nutrition-source citation |
@@ -77,8 +77,4 @@ None of these exists in the code.
 
 | ID | Item | Needs | Done when |
 |---|---|---|---|
-| H1 | Remove the duplicate root `nlp/` folder (its files are byte-identical to `assets/nlp/`, which is the copy the app bundles) | A check that nothing references it | The folder is deleted and the build is unaffected |
-| H2 | Retire the old root `PLAN.md` checklist and `NutriLens_App_Details.md` claims that no longer match the code | None | They match the code or are removed |
-| H3 | Fill `docs/USER_FEEDBACK.md` and finish `RESUME_FACTS.md` section 3 from real measurements | S1, E3, evidence for the user count | No empty measured cell remains |
 | H4 | Screenshots and a demo recording for the README | V2 | The README embeds them |
-| H5 | Push the branch and open the pull request | Your go-ahead. I will not merge | A PR exists and CI has run |

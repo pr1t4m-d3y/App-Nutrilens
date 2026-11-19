@@ -95,7 +95,7 @@ python evals/report.py
 
 `RESULTS.md` then shows, side by side: latency percentiles, mean tokens in and out, per-agent seconds and tokens, searches per run, findings rejected by the verifier, and citation correctness from human review of each pipeline's sheet. `evals/run_safety.py` runs the same citation and prompt-injection cases against both endpoints.
 
-**Decision rule, fixed before any measurement:** the multi-agent pipeline becomes the app's default only if its human-reviewed citation correctness is higher than the single-pass pipeline's on the same labels, and the measured latency and cost are acceptable to the owner. Otherwise it stays available as an option and the write-up says so.
+**Decision rule, fixed before any measurement:** the multi-agent pipeline becomes the app's default only if its human-reviewed citation correctness is higher than the single-pass pipeline's on the same labels, and the measured latency and cost are acceptable to the maintainers. Otherwise it stays available as an option and the results say so.
 
 ## Known limits
 

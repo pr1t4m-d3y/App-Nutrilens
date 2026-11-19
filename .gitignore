@@ -44,15 +44,45 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Environment Variables
+# Environment variables and secrets (never commit)
 .env
-
-# Local configuration (never commit)
+.env.*
+!.env.example
 app_config.json
 backend/.env
 deploy/config.env
+*.pem
+*.key
+*.jks
+*.keystore
+key.properties
+service-account*.json
+google-services.json
+GoogleService-Info.plist
 
 # Python tooling
 __pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
 .pytest_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+
+# Editor and assistant folders
+.vscode/
+.claude/
+.agents/
+
+# Personal and working notes (kept locally, not published)
+claude.md
+PLAN.md
+NutriLens_App_Details.md
+dataset_info.txt
+RESUME_FACTS.md
+docs/AUDIT.md
+docs/PLAN.md
+docs/FDE_MAPPING.md
+docs/USER_FEEDBACK.md

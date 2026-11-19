@@ -1,8 +1,8 @@
 # Privacy and health-data handling
 
-Two sections, kept separate on purpose: what the app did **at commit `2de80de`** (checked in the audit), and the **target policy**. Code for the target policy is written on `feat/fde-upgrade` (consent dialog, encrypted profile storage, minimised request body, delete action, log masking, `DELETE /v1/me`), but it has never been compiled or run, so none of it is verified. Section 3 lists the tests that are meant to prove each rule; they are written and not yet executed. This file must be updated, not trusted, when code changes.
+Two sections, kept separate on purpose: what the app did **before the cloud service was added**, and the **target policy**. Code for the target policy is written (consent dialog, encrypted profile storage, minimised request body, delete action, log masking, `DELETE /v1/me`), but it has never been compiled or run, so none of it is verified. Section 3 lists the tests meant to prove each rule; they are written and not yet executed. This file must be updated, not trusted, when code changes.
 
-## 1. At commit `2de80de` (verified 2026-11-19)
+## 1. Before the cloud service (checked 2026-11-19)
 
 | Question | Answer | Evidence |
 |---|---|---|

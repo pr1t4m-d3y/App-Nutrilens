@@ -1,6 +1,6 @@
 # Architecture: hybrid on-device + cloud
 
-**Status: the "Today" section describes the code audited at commit `2de80de`. The "Target" section is the design that the code on `feat/fde-upgrade` is written to follow. That code has not been compiled or run, and parts of it (regulation data, on-device additive table, deployment) do not exist yet; see `docs/ROADMAP.md`.**
+**Status: the "Today" section describes the app before the cloud service was added. The "Target" section is the design the code follows. The code has not been compiled or run, and parts of it (regulation data, the on-device additive table, deployment) are not in place yet; see `docs/ROADMAP.md`.**
 
 ## Today
 
