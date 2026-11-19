@@ -1,6 +1,6 @@
 # Roadmap
 
-This is the single list of everything that remains. The code contains no placeholder, demo-only or "coming soon" paths for these items: a feature that is not built is not in the code.
+This is the single list of everything that remains. The code contains no placeholder, demo-only or stubbed paths for these items: a feature that is not built is not in the code.
 
 ## Ground rule for this branch
 
