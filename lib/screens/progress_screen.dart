@@ -5,7 +5,6 @@ import 'package:haptic_feedback/haptic_feedback.dart';
 
 import '../providers/user_profile_provider.dart';
 import '../theme/app_colors.dart';
-import '../widgets/animated_calorie_chart.dart';
 
 class ProgressScreen extends StatefulWidget {
   const ProgressScreen({super.key});
@@ -116,13 +115,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
           children: [
             _buildStatCards(theme),
             const SizedBox(height: 32),
-            
-            Text('Caloric Intake', style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700))
-              .animate().fade().slideX(begin: -0.1),
-            const SizedBox(height: 16),
-            _buildProgressChart(theme),
-            
-            const SizedBox(height: 32),
             Text('BMI Calculator', style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700))
               .animate().fade().slideX(begin: -0.1),
             const SizedBox(height: 16),
@@ -190,33 +182,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
         ],
       ),
     );
-  }
-
-  Widget _buildProgressChart(ThemeData theme) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: theme.cardTheme.color,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: [
-          BoxShadow(color: theme.colorScheme.onSurface.withOpacity(0.04), blurRadius: 24, offset: const Offset(0, 8))
-        ],
-      ),
-      alignment: Alignment.center,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-        child: SizedBox(
-          height: 150,
-          child: AnimatedCalorieChart(
-            dataPoints: Provider.of<UserProfileProvider>(context).userId == 'Admin123'
-                ? [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-                : [2100.0, 2250.0, 1950.0, 2400.0, 2050.0, 2200.0, 1800.0],
-            lineColor: AppColors.primary,
-            gradientColor: AppColors.primaryContainer,
-          ),
-        ),
-      ),
-    ).animate().fade().scaleXY(begin: 0.9, end: 1.0, curve: Curves.easeOutBack);
   }
 
   Widget _buildBmiCalculator(ThemeData theme) {
