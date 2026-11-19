@@ -15,6 +15,9 @@ class CloudConfig {
       String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID');
   static const String firebaseProjectId = String.fromEnvironment('FIREBASE_PROJECT_ID');
 
+  /// Use the multi-agent review endpoint instead of the single-pass one.
+  static const bool useAgents = bool.fromEnvironment('NUTRILENS_USE_AGENTS');
+
   static bool get firebaseConfigured =>
       firebaseApiKey.isNotEmpty &&
       firebaseAppId.isNotEmpty &&

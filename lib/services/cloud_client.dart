@@ -87,7 +87,7 @@ class CloudClient {
     if (!CloudConfig.isConfigured) throw const CloudUnavailable('not configured');
     final response = await _http
         .post(
-          _uri('/v1/explain'),
+          _uri(CloudConfig.useAgents ? '/v1/analyze' : '/v1/explain'),
           headers: await _headers(),
           body: jsonEncode(explainBody(
             labelText: labelText,
@@ -96,7 +96,7 @@ class CloudClient {
             avoid: avoid,
           )),
         )
-        .timeout(const Duration(seconds: 45))
+        .timeout(Duration(seconds: CloudConfig.useAgents ? 120 : 45))
         .catchError((_) => throw const CloudUnavailable('network'));
     if (response.statusCode != 200) {
       throw CloudUnavailable('status ${response.statusCode}');

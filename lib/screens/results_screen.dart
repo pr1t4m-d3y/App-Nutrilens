@@ -38,23 +38,11 @@ class _ResultsScreenState extends State<ResultsScreen> {
     final String? marketingWarning = results?['marketingWarning'];
     final List<dynamic> ingredients = results?['ingredients'] ?? [];
 
-    // Split into good, neutral, and bad. Handle legacy `isHarmful` boolean for old mock data.
-    final badIngredients = ingredients.where((i) {
-      if (i['impact'] != null) return i['impact'] == 'harmful' || i['impact'] == 'bad';
-      return i['isHarmful'] == true;
-    }).toList();
-    
-    final neutralIngredients = ingredients.where((i) {
-      if (i['impact'] != null) return i['impact'] == 'neutral';
-      return false; // Legacy mock data didn't have neutral
-    }).toList();
-
-    final goodIngredients = ingredients.where((i) {
-      if (i['impact'] != null) return i['impact'] == 'good';
-      return i['isHarmful'] != true && i['impact'] != 'neutral';
-    }).toList();
-
-    final Map<String, dynamic>? healthierSwap = results?['healthierSwap'];
+    // Split into bad, neutral and good by impact.
+    final badIngredients =
+        ingredients.where((i) => i['impact'] == 'harmful' || i['impact'] == 'bad').toList();
+    final neutralIngredients = ingredients.where((i) => i['impact'] == 'neutral').toList();
+    final goodIngredients = ingredients.where((i) => i['impact'] == 'good').toList();
 
 
     return Scaffold(
@@ -200,59 +188,6 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 ),
               )),
             ],
-
-            // ─── Healthier Swap Block ───
-            if (healthierSwap != null && healthierSwap.isNotEmpty && healthScore < 7.0) ...[
-              const SizedBox(height: 32),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [const Color(0xFF00BFA5).withOpacity(0.2), const Color(0xFF00BFA5).withOpacity(0.05)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(color: const Color(0xFF00BFA5).withOpacity(0.4), width: 1.5),
-                  boxShadow: [
-                    BoxShadow(color: const Color(0xFF00BFA5).withOpacity(0.1), blurRadius: 10, offset: const Offset(0, 4)),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                         Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF00BFA5).withOpacity(0.2),
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Icon(Icons.swap_calls_rounded, color: Color(0xFF00BFA5), size: 24),
-                        ),
-                        const SizedBox(width: 12),
-                        Text(
-                          'Healthier Swap',
-                          style: theme.textTheme.titleMedium?.copyWith(color: const Color(0xFF00BFA5), fontWeight: FontWeight.w800),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      healthierSwap['name'] ?? 'Healthier Alternative',
-                      style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      healthierSwap['reason'] ?? 'This option is better suited for your health constraints.',
-                      style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-                    ),
-                  ],
-                ),
-              ).animate().slideY(begin: 0.1, end: 0, delay: 300.ms).fadeIn(delay: 300.ms),
-            ],
           ],
         ),
       ),
@@ -322,12 +257,8 @@ class _IngredientGroupCard extends StatelessWidget {
           ...ingredients.asMap().entries.map((entry) {
             final item = Map<String, dynamic>.from(entry.value);
             final String name = item['name'] ?? 'Unknown';
-            // Support new `details` array format from AI, with legacy `note`/`reasoning` fallback
-            final List<String> details = item['details'] != null
-                ? List<String>.from(item['details'])
-                : (item['note'] ?? item['reasoning'] ?? '').toString().isNotEmpty
-                    ? [(item['note'] ?? item['reasoning']).toString()]
-                    : [];
+            final List<String> details =
+                (item['details'] as List?)?.map((e) => e.toString()).toList() ?? <String>[];
             return _IngredientListItem(
               name: name,
               details: details,
