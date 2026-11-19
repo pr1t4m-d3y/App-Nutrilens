@@ -376,9 +376,8 @@ class _ScanScreenState extends State<ScanScreen> with WidgetsBindingObserver {
 class _TopButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onTap;
-  final Color? color;
 
-  const _TopButton({required this.icon, required this.onTap, this.color});
+  const _TopButton({required this.icon, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -391,7 +390,7 @@ class _TopButton extends StatelessWidget {
           color: Colors.black.withOpacity(0.4),
           shape: BoxShape.circle,
         ),
-        child: Icon(icon, color: color ?? Colors.white, size: 22),
+        child: Icon(icon, color: Colors.white, size: 22),
       ),
     );
   }
