@@ -30,6 +30,7 @@ You can truthfully say you wrote these. You cannot say they work, pass or are de
 | Eval harness: metrics, label loader, cloud runner, safety cases, on-device OCR export, generated report | E3 |
 | Regulation search endpoint and screen; cloud OCR option on the scan screen; on-device additive table reader and exporter | V1, D2, R2, R3 |
 | JWT verification with explicit issuer and audience checks; code-reading security review (`docs/SECURITY.md`) | V1, D2 |
+| Four-agent review pipeline on Google ADK (analyst, researcher with a tool loop, profile reviewer, citation verifier) with code-enforced citation gates, and an eval comparison against the single-pass endpoint | M1, E6 |
 | Unit tests (Python and Dart), CI workflow, pre-commit config, Makefile | V1, V5 |
 
 ## 2. Claims to remove or reword

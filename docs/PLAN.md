@@ -62,7 +62,7 @@ Flask is kept so the resume's "Python, Flask, REST" becomes true. Details are in
 ### 4. Skip (missing, not needed for FDE; reword instead)
 
 - **Real dose-reminder notifications.** Today it is UI with no scheduling. Reword to "medicine reminder interface".
-- **Multi-agent / ReAct.** Drishti covers it.
+- **Multi-agent / ReAct** was skipped in this plan and added later at the owner's request: see `docs/MULTI_AGENT.md`.
 - **The "4+1+1" OpenAI/DeepSeek fallbacks.** They do not exist in the code. The new backend uses Vertex AI Gemini with a lighter-model retry. Reword, do not rebuild.
 - **Medicine-to-medicine interaction engine.** Clinical content I cannot source or validate (see Decision 6 for the narrow version).
 

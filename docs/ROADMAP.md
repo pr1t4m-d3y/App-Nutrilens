@@ -15,8 +15,9 @@ Each item lists what it **needs** and when it is **done**.
 | V1 | Run the toolchain over the new code and fix what breaks: `make backend-install backend-lint backend-test`, `flutter pub get` (this also regenerates `pubspec.lock`, which still lists the removed `flutter_dotenv` and `cloud_firestore`), `flutter analyze`, `flutter test`. | Python 3.12 or newer, Flutter SDK, permission to install them | Both CI jobs in `.github/workflows/ci.yml` pass on a pull request, and the test counts are recorded in the PR |
 | V2 | Build a release APK from a clean clone with only `app_config.json` (no `.env`) and open it on a device | V1; an Android device or emulator | The app starts, a label scan completes on-device with cloud off |
 | V3 | Pin the Flutter SDK version in CI and README | V1 (the version that builds cleanly) | `ci.yml` names an exact version instead of `channel: stable` |
-| V4 | Check the assumptions I could not test: `genai.Client(enterprise=True, ...)` arguments for `google-genai` 3.6.1; `task_type` and `output_dimensionality` for `gemini-embedding-001`; that the default model IDs in `backend/nutrilens_api/config.py` exist in the chosen region; that pgvector can be enabled on the Cloud SQL version used; that `flask-limiter` accepts one `Limiter` across several `create_app` calls in tests | V1 and a GCP project | Each assumption is confirmed or the code is corrected, and the config comments name the date checked |
+| V4 | Check the assumptions I could not test: `genai.Client(enterprise=True, ...)` arguments for `google-genai` 2.34.0; `task_type` and `output_dimensionality` for `gemini-embedding-001`; that the default model IDs in `backend/nutrilens_api/config.py` exist in the chosen region; that pgvector can be enabled on the Cloud SQL version used; that `flask-limiter` accepts one `Limiter` across several `create_app` calls in tests | V1 and a GCP project | Each assumption is confirmed or the code is corrected, and the config comments name the date checked |
 | V5 | Install the pre-commit hooks (`pre-commit install`) and run them once over the repo | V1 | Hooks pass, `gitleaks` reports no findings |
+| M1 | Confirm the ADK integration assumptions listed at the end of `docs/MULTI_AGENT.md` against ADK 1.39.1 (runner and session signatures, instruction functions bypassing templating, Vertex environment variables, `generate_content_config` with tools, event fields, container memory) | V1, a GCP project | `backend/tests/test_agents.py` passes, one real `/v1/analyze` call returns, and the doc's assumptions list is marked confirmed or corrected |
 
 ## B. Cloud deployment
 
@@ -48,6 +49,8 @@ Each item lists what it **needs** and when it is **done**.
 | E3 | Run the evals (`flutter test test/eval`, `evals/run_cloud.py`, `evals/run_safety.py`, citation review, `evals/report.py`) and write `evals/ERROR_ANALYSIS.md` | E1, E2, D2, R2, a current ID token | `RESULTS.md` is generated and every false negative is discussed |
 | E4 | Latency comparison of on-device, cloud warm and cloud cold on the same labels, and the re-measurement of the claimed latency reduction against a baseline you define | E3; your answer to what the baseline was | The comparison is in `RESULTS.md` |
 | E5 | Intent classifier evaluation: a labelled test set of user queries for the 6 intents, and the re-measurement of the claimed mapping accuracy | The classifier's training data or a new labelled set; TensorFlow Lite tooling | A confusion matrix is generated from a documented test set |
+| E6 | Compare `/v1/explain` and `/v1/analyze` on the same labels (`run_cloud.py --endpoint explain` and `--endpoint analyze`, both citation sheets reviewed) and apply the decision rule in `docs/MULTI_AGENT.md` | E1, E3, D2, M1 | `RESULTS.md` shows both pipelines and the default for the app is set by the rule |
+| E7 | Per-model prices so multi-agent cost is not an upper bound | E3 | The report applies a price per model |
 
 ## E. App size
 

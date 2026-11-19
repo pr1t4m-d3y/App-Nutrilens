@@ -11,6 +11,7 @@ Food-label apps usually send the whole profile and the photo to a hosted model a
 - **Safety checks do not need a network.** Allergen, avoid-list and medicine-list checks run on the device.
 - **Health data stays local by default.** The profile is stored encrypted on the phone. The cloud request carries label text plus allergy, condition and avoid-list entries, and never the name, age, weight, medicines or the photo.
 - **No claim without a source.** The explanation service answers only from retrieved regulation text, and a statement without a valid citation is dropped by code before it reaches the app.
+- **Agents propose, code decides.** The multi-agent pipeline can draft and check findings, but the response is assembled by ordinary code that drops anything unverified or uncited.
 - **No model keys in the app.** The app holds a short-lived Firebase identity token. Model access belongs to the backend's service account.
 
 ## Architecture
@@ -57,6 +58,7 @@ What runs where, and the reasoning behind each choice, is in [docs/ARCHITECTURE.
 | Medicine vs. your profile | Phone | Compares a scanned medicine with your medicine list and allergies by name and active ingredient. It does not know drug interactions or allergy classes, and the screen says so. |
 | Regulation search | Cloud | Retrieval only: verbatim passages from the ingested regulations with their document and locator. No model writes the result. |
 | Additive lookup | Phone | An additive table exported from the same `data/additives.csv` the cloud uses, so offline and online answers agree. Each entry carries its citation. |
+| Multi-agent review | Cloud | A four-agent pipeline on Google ADK (ingredient analyst, regulation researcher with a search tool, profile reviewer, citation verifier) behind `/v1/analyze`. Code still decides what reaches the app: a finding needs a verifier ruling of supported and a valid citation. It runs next to the single-pass endpoint so the two can be compared on the same labels. See [docs/MULTI_AGENT.md](docs/MULTI_AGENT.md). |
 | Cited explanations | Cloud | Retrieval over FSSAI and EU regulation text, then an explanation in which every statement cites a source. If nothing is found the answer is "no source found". |
 | Cloud OCR option | Cloud | When the on-device reader finds no text, the scan screen offers to send the photo to Gemini on Vertex AI, for that one scan only, because it sends the photo. |
 | Privacy controls | Phone and cloud | Consent before any cloud request, a delete-all-my-data action, a plain-language summary of what is stored and sent, no server-side storage of user data by design. See [docs/PRIVACY.md](docs/PRIVACY.md). |
@@ -96,7 +98,7 @@ flutter pub get
 flutter run --dart-define-from-file=app_config.json
 ```
 
-Without a configured backend the app is designed to run entirely on the device.
+Without a configured backend the app is designed to run entirely on the device. Setting `NUTRILENS_USE_AGENTS` to `true` in `app_config.json` points the app at the multi-agent endpoint.
 
 ### 3. Run the backend locally
 
@@ -166,6 +168,7 @@ make size LABEL=baseline             # APK / AAB sizes, appended to docs/size_lo
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Privacy and health-data handling](docs/PRIVACY.md)
+- [Multi-agent review](docs/MULTI_AGENT.md)
 - [Security review](docs/SECURITY.md)
 - [How the repo maps to the FDE requirements](docs/FDE_MAPPING.md)
 - [Roadmap](docs/ROADMAP.md)

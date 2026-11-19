@@ -66,6 +66,7 @@ Every "why" above is a design intent. Latency, cost and recall figures go in `RE
 |---|---|---|
 | `POST /v1/explain` | Label text + minimised profile flags in; cited explanation out | JWT required; request-size limit; rate limited |
 | `POST /v1/ocr-fallback` | Image in; text out | Image processed in memory, not stored; the app asks the user per scan |
+| `POST /v1/analyze` | Same request as `/v1/explain`, answered by the four-agent pipeline | See `docs/MULTI_AGENT.md`; longer timeout and more memory |
 | `POST /v1/search` | Query in; verbatim regulation passages with document and locator out | Retrieval only, no model |
 | `DELETE /v1/me` | Delete anything held for this user | Even if the server stores nothing by default, the endpoint and its test exist |
 | `GET /healthz` | Liveness | No auth, no data |

@@ -60,7 +60,7 @@ Drishti already covers multi-agent ADK, finance RAG, tracing and evals on Cloud 
 |---|---|---|---|
 | R2 | Production AI on Google Cloud | Yes | A second Cloud Run service behind a real mobile client. **Real users only if C9 produces evidence.** |
 | R3 | Structured + unstructured pipelines, vector DB + RAG | Yes (finance) | Cited RAG over FSSAI, EU additive and allergen rules, plus a structured additive table. |
-| R4 | Multi-agent (ADK, ReAct) | Yes | **Skip.** Retrieve-then-generate is the right design here. |
+| R4 | Multi-agent (ADK, ReAct) | Yes | **Skip.** Retrieve-then-generate is the right design here. *(Superseded: added later at the owner's request, see `docs/MULTI_AGENT.md`.)* |
 | R6 | Tokens/sec, cost, state, tracing | Yes | Cost per scan and latency only. |
 | R9 | Secure APIs, enterprise data | Partly | **Biggest gap and biggest story:** today there is no backend, keys ship in the app and the login is a demo. Build an authenticated API and handle health data properly, with a documented before/after. |
 | R10 | Eval frameworks | Yes | Evals on real label photos: OCR, detection recall, citation correctness. |
