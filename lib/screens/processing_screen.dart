@@ -5,10 +5,13 @@ import 'package:haptic_feedback/haptic_feedback.dart';
 import 'package:provider/provider.dart';
 import '../providers/scan_provider.dart';
 import '../providers/user_profile_provider.dart';
-import '../services/local_scanner.dart';
-import '../services/smart_scan_service.dart';
+import '../services/cloud_client.dart';
+import '../services/cloud_config.dart';
 import '../services/indian_weighted_scorer.dart';
+import '../services/ingredient_parser.dart';
+import '../services/local_scanner.dart';
 import '../services/marketing_checker.dart';
+import '../widgets/cloud_consent_dialog.dart';
 
 class ProcessingScreen extends StatefulWidget {
   const ProcessingScreen({super.key});
@@ -46,12 +49,10 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
       return;
     }
 
-    // ─── OCR SANITIZER ───────────────────────────────────────────────
-    // Step 1: Extract only the ingredient section from the raw OCR dump
-    final cleanOcr = _sanitizeOcrText(ocrText);
-    debugPrint("[Pipeline] Sanitized OCR (${cleanOcr.length} chars): $cleanOcr");
+    // Isolate the ingredient section from the raw OCR dump.
+    final cleanOcr = IngredientParser.sanitize(ocrText);
+    debugPrint('[Pipeline] Sanitized OCR length: ${cleanOcr.length} chars');
 
-    // If sanitized text is too short after cleaning, abort early
     if (cleanOcr.trim().length < 10) {
       scanProvider.setError(
         'Could not find an ingredient list on the label. Please point the camera at the ingredients section and try again.',
@@ -59,30 +60,18 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
       if (mounted) context.go('/home');
       return;
     }
-    // ─────────────────────────────────────────────────────────────────
 
-    final ingredientsList = _extractIngredients(cleanOcr);
+    final ingredientsList = IngredientParser.extract(cleanOcr);
 
-    // ========= CLOUD-START PARALLELISM =========
-    // Fire cloud request with SANITIZED text only — no packaging noise
-    final smartScan = SmartScanService();
-    final cloudFuture = smartScan.initiateCloudScan(
-      ocrText: cleanOcr,
-      userMetadata: userProvider.toMetadataMap(),
-    );
-
-    final localScanner = LocalScanner();
-    final localThreats = localScanner.scanForThreats(
+    // ========= ON-DEVICE CHECKS (no network) =========
+    final localThreats = LocalScanner().scanForThreats(
       ocrText: ocrText,
       userAllergies: userProvider.allergies,
       userConditions: userProvider.conditions,
+      userAvoidList: userProvider.manualAvoidList,
     );
-
-    final scorer = IndianWeightedScorer();
-    final localScore = scorer.calculateFssaiScore(ingredientsList);
-
-    final marketingChecker = MarketingChecker();
-    final marketingWarning = marketingChecker.realityCheck(ocrText, ingredientsList);
+    final localScore = IndianWeightedScorer().calculateFssaiScore(ingredientsList);
+    final marketingWarning = MarketingChecker().realityCheck(ocrText, ingredientsList);
 
     if (localThreats.isNotEmpty) {
       scanProvider.setLocalThreats(localThreats);
@@ -98,25 +87,66 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
         await Future.delayed(const Duration(milliseconds: 200));
         await Haptics.vibrate(HapticsType.heavy);
       } catch (_) {}
-    } else {
-      if (mounted) {
-        setState(() {
-          _statusText = 'Cloud AI Analyzing...';
-          _subText = 'Cross-referencing with health databases';
-        });
-      }
     }
 
+    final localIngredients = _localIngredients(ingredientsList, localThreats);
+    final productName = _guessProductName(ocrText);
+
+    // ========= CLOUD EXPLANATION (optional, needs consent) =========
+    if (!CloudConfig.isConfigured) {
+      await _finishLocal(
+        scanProvider, productName, localScore, marketingWarning, localIngredients,
+        'Cloud explanations are not set up. Showing on-device results.',
+      );
+      return;
+    }
+
+    final allowed = mounted ? await ensureCloudConsent(context) : false;
+    if (!allowed) {
+      await _finishLocal(
+        scanProvider, productName, localScore, marketingWarning, localIngredients,
+        'Cloud explanations are off. Showing on-device results.',
+      );
+      return;
+    }
+
+    if (mounted && !_isEmergency) {
+      setState(() {
+        _statusText = 'Checking regulations...';
+        _subText = 'Looking for sources for each flagged ingredient';
+      });
+    }
     scanProvider.setCloudScanning();
 
     try {
-      final cloudResults = await cloudFuture;
-      
-      if (cloudResults['marketingWarning'] == null && marketingWarning != null) {
-        cloudResults['marketingWarning'] = marketingWarning;
+      final cloud = await CloudClient().explain(
+        labelText: cleanOcr,
+        allergies: userProvider.allergies,
+        conditions: userProvider.conditions,
+        avoid: userProvider.manualAvoidList,
+      );
+
+      if (cloud['status'] != 'ok') {
+        await _finishLocal(
+          scanProvider, productName, localScore, marketingWarning, localIngredients,
+          'No regulation source found for this label. Showing on-device results.',
+        );
+        return;
       }
-      
-      scanProvider.completeScan(cloudResults);
+
+      final cloudIngredients = (cloud['ingredients'] as List? ?? [])
+          .whereType<Map>()
+          .map((e) => Map<String, dynamic>.from(e))
+          .toList();
+
+      scanProvider.completeScan({
+        'productName': productName,
+        // The score comes from the deterministic on-device scorer, not the model.
+        'healthScore': localScore,
+        'marketingWarning': marketingWarning,
+        'ingredients': _merge(cloudIngredients, localIngredients),
+        'sources': cloud['sources'] ?? [],
+      });
 
       if (mounted) {
         setState(() {
@@ -124,116 +154,88 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
           _subText = 'Preparing your results...';
         });
       }
-
       await Future.delayed(const Duration(milliseconds: 500));
       if (mounted) context.go('/results');
     } catch (e) {
-      debugPrint("Cloud scan failed: $e");
+      // Any failure (network, bad response, server error) falls back to the
+      // on-device results. Log the type only.
+      debugPrint('[Pipeline] cloud failed: ${e.runtimeType}');
+      await _finishLocal(
+        scanProvider, productName, localScore, marketingWarning, localIngredients,
+        'Cloud explanation unavailable. Showing on-device results.',
+      );
+    }
+  }
 
-      // ⚠️ DIAGNOSTIC: Show exact error on screen even in release builds
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('AI Error (share this): ${e.toString().substring(0, e.toString().length > 120 ? 120 : e.toString().length)}',
-              style: const TextStyle(fontSize: 11),
-            ),
-            backgroundColor: Colors.red.shade900,
-            duration: const Duration(seconds: 10),
-          ),
-        );
-      }
-      final localResults = {
-        'productName': _guessProductName(ocrText),
-        'healthScore': localScore,
-        'marketingWarning': marketingWarning,
-        'ingredients': ingredientsList.map((ing) {
-          final isThreat = localThreats.any((t) => t.toLowerCase().contains(ing.toLowerCase()));
-          return {
-            'name': ing,
-            'impact': isThreat ? 'bad' : 'neutral',
-            'details': isThreat
-              ? [
-                  'Flagged by local scanner as potentially harmful.',
-                  'Matches a known allergen or condition in your health profile.',
-                  'Consult your doctor before consuming this product.',
-                ]
-              : [
-                  'No immediate concerns detected by local scanner.',
-                  'Did not match any flagged allergens or conditions.',
-                  'Cloud AI was unavailable to provide a deeper analysis.',
-                ],
-          };
-        }).toList(),
+  /// Shows results from the on-device checks only.
+  Future<void> _finishLocal(
+    ScanProvider scanProvider,
+    String productName,
+    double score,
+    String? marketingWarning,
+    List<Map<String, dynamic>> ingredients,
+    String message,
+  ) async {
+    scanProvider.completeScan({
+      'productName': productName,
+      'healthScore': score,
+      'marketingWarning': marketingWarning,
+      'ingredients': ingredients,
+    });
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      setState(() {
+        _statusText = 'Local Analysis Ready';
+        _subText = message;
+      });
+    }
+    await Future.delayed(const Duration(milliseconds: 800));
+    if (mounted) context.go('/results');
+  }
+
+  /// True if one of the on-device threat words appears in the ingredient.
+  bool _isThreat(String ingredient, List<String> threats) {
+    final lower = ingredient.toLowerCase();
+    return threats.any((t) => lower.contains(t.split(' (').first.toLowerCase()));
+  }
+
+  List<Map<String, dynamic>> _localIngredients(List<String> names, List<String> threats) {
+    return names.map((ing) {
+      final flagged = _isThreat(ing, threats);
+      return <String, dynamic>{
+        'name': ing,
+        'impact': flagged ? 'bad' : 'neutral',
+        'details': flagged
+            ? [
+                'Flagged by the on-device check.',
+                'Matches an allergy, condition rule or avoid-list entry on your profile.',
+                'Consult your doctor before consuming this product.',
+              ]
+            : [
+                'Not flagged by the on-device checks.',
+                'These checks cover your allergies, avoid list and condition rules only.',
+              ],
       };
-
-      scanProvider.completeScan(localResults);
-
-      if (mounted) {
-        setState(() {
-          _statusText = 'Local Analysis Ready';
-          _subText = 'Cloud AI unavailable, showing local results';
-        });
-      }
-
-      await Future.delayed(const Duration(milliseconds: 800));
-      if (mounted) context.go('/results');
-    }
+    }).toList();
   }
 
-  // ─── OCR PRE-PROCESSING: Isolate and clean the ingredient list ───────
-  String _sanitizeOcrText(String raw) {
-    final lower = raw.toLowerCase();
-
-    // 1. Find the start of the ingredients section
-    final markers = [
-      'ingredients:', 'ingredient:', 'ingredients list:',
-      'contains:', 'composition:', 'ingr:',
-    ];
-    int startIdx = -1;
-    for (final marker in markers) {
-      final idx = lower.indexOf(marker);
-      if (idx != -1) {
-        startIdx = idx + marker.length;
-        break;
-      }
+  /// Cloud entries (each with a citation) first, then on-device entries for
+  /// ingredients the cloud did not cover.
+  List<Map<String, dynamic>> _merge(
+    List<Map<String, dynamic>> cloud,
+    List<Map<String, dynamic>> local,
+  ) {
+    final covered = cloud.map((c) => (c['name'] ?? '').toString().toLowerCase()).toList();
+    bool isCovered(String name) {
+      final n = name.toLowerCase();
+      return covered.any((c) => c.isNotEmpty && (n.contains(c) || c.contains(n)));
     }
 
-    // If no marker found, use the full raw text but still filter noise
-    final workingText = startIdx != -1 ? raw.substring(startIdx) : raw;
-
-    // 2. Truncate at known end-of-ingredient markers
-    final endMarkers = [
-      'manufactured', 'packed by', 'packaging by', 'best before',
-      'mrp', 'net weight', 'distributed', 'marketed by',
-      'fssai', 'batch', 'mfg', 'expiry', 'customer care',
+    return [
+      ...cloud,
+      ...local.where((l) => !isCovered((l['name'] ?? '').toString())),
     ];
-    String trimmed = workingText.toLowerCase();
-    int endIdx = workingText.length;
-    for (final end in endMarkers) {
-      final idx = trimmed.indexOf(end);
-      if (idx != -1 && idx < endIdx) endIdx = idx;
-    }
-
-    // 3. Filter out noise lines line by line
-    final lines = workingText.substring(0, endIdx).split(RegExp(r'[\n\r]'));
-    final cleaned = lines.where((line) {
-      final t = line.trim();
-      if (t.length < 2) return false;           // empty or 1-char junk
-      if (RegExp(r'^\d{1,2}:\d{2}').hasMatch(t)) return false; // timestamps like 03:52
-      if (RegExp(r'^\d+\.?\d*\s*(g|mg|ml|kg|%)?\s*$').hasMatch(t)) return false; // lone numbers
-      return true;
-    }).join(', ');
-
-    return cleaned.trim();
-  }
-
-  List<String> _extractIngredients(String cleanText) {
-    return cleanText
-        .split(RegExp(r'[,\n•·;]'))
-        .map((s) => s.trim())
-        .where((s) => s.isNotEmpty && s.length > 1 && s.length < 60)
-        .take(25)
-        .toList();
   }
 
   String _guessProductName(String ocrText) {

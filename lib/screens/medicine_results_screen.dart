@@ -35,6 +35,10 @@ class _MedicineResultsScreenState extends State<MedicineResultsScreen> {
     final List<dynamic> matches = results?['matches'] ?? [];
     final String ocrText = results?['ocrText'] ?? '';
     final int matchCount = results?['matchCount'] ?? 0;
+    final List<Map<String, dynamic>> profileAlerts = ((results?['profileAlerts'] as List?) ?? [])
+        .whereType<Map>()
+        .map((e) => Map<String, dynamic>.from(e))
+        .toList();
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -64,6 +68,10 @@ class _MedicineResultsScreenState extends State<MedicineResultsScreen> {
             if (matchCount > 0) ...[
               _buildMatchHeader(theme, matches.first, matchCount),
               const SizedBox(height: 24),
+              if (profileAlerts.isNotEmpty) ...[
+                _buildProfileAlerts(theme, profileAlerts),
+                const SizedBox(height: 24),
+              ],
               // Show each matched medicine with its generics
               ...matches.asMap().entries.map((entry) {
                 final idx = entry.key;
@@ -80,6 +88,44 @@ class _MedicineResultsScreenState extends State<MedicineResultsScreen> {
             ],
           ],
         ),
+      ),
+    );
+  }
+
+  /// Findings from comparing the scanned medicine with the user's own profile.
+  /// Computed on-device. It compares names and ingredients only and does not
+  /// know drug interactions, so no alert does not mean the medicine is safe.
+  Widget _buildProfileAlerts(ThemeData theme, List<Map<String, dynamic>> alerts) {
+    final color = theme.colorScheme.error;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.08),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: color.withOpacity(0.3), width: 1.5),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.warning_amber_rounded, color: color),
+              const SizedBox(width: 8),
+              Text('Check against your profile',
+                  style: theme.textTheme.titleMedium?.copyWith(color: color, fontWeight: FontWeight.w700)),
+            ],
+          ),
+          const SizedBox(height: 12),
+          ...alerts.map((a) => Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Text('${a['message'] ?? ''}', style: theme.textTheme.bodyMedium),
+              )),
+          Text(
+            'Compared on your phone using names and ingredients only. Information, not medical advice.',
+            style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          ),
+        ],
       ),
     );
   }

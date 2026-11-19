@@ -28,7 +28,7 @@ class MarketingChecker {
         for (var violator in violationList) {
           if (combinedIngredients.contains(violator)) {
             // Found a reality check hit!
-            return 'Marketing says "\$claim", but contains \$violator.';
+            return 'Marketing says "$claim", but contains $violator.';
           }
         }
       }

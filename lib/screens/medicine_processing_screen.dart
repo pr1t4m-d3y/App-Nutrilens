@@ -3,7 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import '../providers/scan_provider.dart';
+import '../providers/user_profile_provider.dart';
 import '../services/medicine_db_service.dart';
+import '../services/medicine_profile_check.dart';
 
 class MedicineProcessingScreen extends StatefulWidget {
   const MedicineProcessingScreen({super.key});
@@ -24,6 +26,7 @@ class _MedicineProcessingScreenState extends State<MedicineProcessingScreen> {
 
   Future<void> _processMedicine() async {
     final scanProvider = Provider.of<ScanProvider>(context, listen: false);
+    final profile = Provider.of<UserProfileProvider>(context, listen: false);
     final ocrText = scanProvider.ocrText;
 
     if (ocrText.isEmpty) {
@@ -79,6 +82,21 @@ class _MedicineProcessingScreenState extends State<MedicineProcessingScreen> {
       'matchCount': matches.length,
       'timestamp': DateTime.now().toIso8601String(),
     };
+
+    // On-device check of the best match against the user's own medicines and
+    // allergies. No network is used.
+    final alerts = matches.isEmpty
+        ? <MedicineAlert>[]
+        : MedicineProfileCheck.check(
+            scanned: Map<String, dynamic>.from(matches.first),
+            userMedications: profile.medications,
+            userAllergies: profile.allergies,
+            lookupComposition: (entry) {
+              final found = dbService.searchByOcrText(entry);
+              return found.isEmpty ? null : found.first['Composition']?.toString();
+            },
+          );
+    result['profileAlerts'] = alerts.map((a) => a.toMap()).toList();
 
     if (matches.isNotEmpty) {
       final first = matches.first;
