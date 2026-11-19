@@ -46,3 +46,13 @@ app.*.map.json
 
 # Environment Variables
 .env
+
+# Local configuration (never commit)
+app_config.json
+backend/.env
+deploy/config.env
+
+# Python tooling
+__pycache__/
+.pytest_cache/
+.ruff_cache/
