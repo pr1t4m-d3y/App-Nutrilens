@@ -27,7 +27,7 @@ This folder holds the evaluation method and the code that runs it. `evals/result
 | Metric | Definition | Produced by |
 |---|---|---|
 | OCR error rate | Character and word error rate of extracted text vs. `ingredients_text`, for cloud OCR and for on-device ML Kit. | `run_cloud.py` (cloud); a device export `mlkit_ocr.json` (on device) |
-| Ingredient parsing | Precision and recall of the parser's ingredient list vs. `ingredients`, given the ground-truth text. This is the re-measurement of the resume's "data-mapping accuracy". It reports whatever it finds. | `flutter test test/eval` |
+| Ingredient parsing | Precision and recall of the parser's ingredient list vs. `ingredients`, given the ground-truth text. It reports whatever it finds. | `flutter test test/eval` |
 | Allergen detection | Per group and overall: true/false positives and negatives, precision and recall. **Every missed allergen (false negative) is listed individually.** | `flutter test test/eval` |
 | Citation correctness | For each cited statement a person marks `supported` or `not_supported` in `results/raw/citation_review.csv`. | `run_cloud.py` writes the sheet; a person fills it |
 | Latency | p50 and p95 per endpoint, with the number of runs and a note on warm or cold instance. | `run_cloud.py` |
@@ -54,6 +54,5 @@ Cold-start latency needs a separate run against an instance that has been idle, 
 
 ## Rules
 
-- No number goes into the README, the resume or a PR unless it comes from `RESULTS.md`.
+- No figure is quoted in the README or a PR unless it comes from `RESULTS.md`.
 - Each report records the git commit, date, model names and label counts.
-- If a result is worse than the resume, the resume changes (see `RESUME_FACTS.md`).

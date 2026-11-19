@@ -94,13 +94,15 @@ def run_cases(base: str, token: str, burst: int) -> list[dict]:
     r = _call("POST", f"{base}/v1/explain", json={"label_text": NORMAL_LABEL})
     results.append(_case("no token is rejected", "401", _status(r), _status(r) == 401))
 
-    r = _call("POST", f"{base}/v1/explain", json={"label_text": NORMAL_LABEL}, headers={"Authorization": "Bearer not-a-token"})
+    bad_auth = {"Authorization": "Bearer not-a-token"}
+    r = _call("POST", f"{base}/v1/explain", json={"label_text": NORMAL_LABEL}, headers=bad_auth)
     results.append(_case("invalid token is rejected", "401", _status(r), _status(r) == 401))
 
     body = {"label_text": NORMAL_LABEL, "name": "Example Person", "profile": {"medications": ["x"]}}
     r = _call("POST", f"{base}/v1/explain", json=body, headers=auth)
     echoed = r is not None and ("Example Person" in r.text)
-    results.append(_case("extra fields rejected and not echoed", "400, no echo", _status(r), _status(r) == 400 and not echoed))
+    rejected = _status(r) == 400 and not echoed
+    results.append(_case("extra fields rejected and not echoed", "400, no echo", _status(r), rejected))
 
     r = _call("POST", f"{base}/v1/explain", json={"label_text": OVERSIZE_LABEL}, headers=auth)
     results.append(_case("oversize label rejected", "400 or 413", _status(r), _status(r) in (400, 413)))

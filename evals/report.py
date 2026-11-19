@@ -93,7 +93,9 @@ def section_ocr() -> list[str]:
     elif mlkit:
         lines.append("| ML Kit (on device) | export found, but no ids match reviewed labels | n/a | n/a |")
     else:
-        lines.append("| ML Kit (on device) | no data (`integration_test/ocr_export_test.dart` produces it) | n/a | n/a |")
+        lines.append(
+            "| ML Kit (on device) | no data (`integration_test/ocr_export_test.dart` produces it) | n/a | n/a |"
+        )
     return lines + ["", "CER/WER are edit distance over normalised text; lower is better.", ""]
 
 
@@ -179,8 +181,8 @@ def section_cloud(price_in: float | None, price_out: float | None, price_date: s
         return lines + ["No data (`python evals/run_cloud.py` writes it).", ""]
     if meta:
         lines += [
-            f"- Last run: {meta['date_utc']}, `{meta['base_url']}`, {meta['labels']} labels x {meta['repeats']} repeats, "
-            f"endpoint `{meta.get('endpoint', 'explain')}`",
+            f"- Last run: {meta['date_utc']}, `{meta['base_url']}`, {meta['labels']} labels x "
+            f"{meta['repeats']} repeats, endpoint `{meta.get('endpoint', 'explain')}`",
             f"- Instance state note: {meta['note'] or '(none recorded)'}",
             f"- Models seen: {', '.join(meta['models']) or 'n/a'}",
             "",
@@ -200,7 +202,8 @@ def section_cloud(price_in: float | None, price_out: float | None, price_date: s
         mean_out = _mean([r["output_tokens"] for r in ok]) or 0.0
         tokens[name] = (mean_in, mean_out)
         lines.append(
-            f"| {name} | {summary['n']} | {summary['p50']:.2f} | {summary['p95']:.2f} | {mean_in:.0f} | {mean_out:.0f} |"
+            f"| {name} | {summary['n']} | {summary['p50']:.2f} | {summary['p95']:.2f} | "
+            f"{mean_in:.0f} | {mean_out:.0f} |"
         )
     lines.append("")
 
@@ -260,12 +263,16 @@ def section_safety() -> list[str]:
     if not cases:
         return lines + ["No data (`python evals/run_safety.py` writes it).", ""]
     passed = sum(1 for c in cases if c["passed"])
-    lines += [f"{passed} of {len(cases)} cases behaved as designed.", "", "| Case | Expected | Observed | Result |", "|---|---|---|---|"]
+    lines += [
+        f"{passed} of {len(cases)} cases behaved as designed.",
+        "",
+        "| Case | Expected | Observed | Result |",
+        "|---|---|---|---|",
+    ]
     for case in cases:
         note = f" ({case['note']})" if case.get("note") else ""
-        lines.append(
-            f"| {case['case']} | {case['expected']} | {case['observed']}{note} | {'pass' if case['passed'] else '**FAIL**'} |"
-        )
+        result = "pass" if case["passed"] else "**FAIL**"
+        lines.append(f"| {case['case']} | {case['expected']} | {case['observed']}{note} | {result} |")
     return lines + [""]
 
 

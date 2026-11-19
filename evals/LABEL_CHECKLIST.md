@@ -1,12 +1,12 @@
 # Label photo checklist
 
-I need **at least 50** photos of ingredient labels. This repo has none yet. Put them in `evals/labels/` named `lbl_001.jpg`, `lbl_002.jpg`, and so on. Do not edit or crop them beyond what the camera did.
+The evals need **at least 50** photos of ingredient labels. This repo has none yet. Put them in `evals/labels/` named `lbl_001.jpg`, `lbl_002.jpg`, and so on. Do not edit or crop them beyond what the camera did.
 
 ## How to photograph
 
 - Photograph the **ingredients panel**, as a user would with the app. Not a studio shot.
 - One photo per product. Optionally add a second photo of the front of the pack if it has marketing claims.
-- Keep the original JPEG. Remove EXIF location data if you want to share the repo publicly.
+- Keep the original JPEG. Remove EXIF location data before sharing the repo publicly.
 - Do not include faces, receipts, names or addresses in the frame.
 
 ## Mix to cover (tick as you go)
@@ -25,7 +25,7 @@ I need **at least 50** photos of ingredient labels. This repo has none yet. Put 
 | Ready-to-eat, frozen, pickles | 3 | [ ] |
 | Products with clear E-number / INS additive lists | 5 | [ ] |
 | Products with "may contain" allergen statements | 4 | [ ] |
-| **Total (groups can overlap; I need 50+ distinct photos)** | **52** | |
+| **Total (groups can overlap; 50 or more distinct photos are needed)** | **52** | |
 
 ## Hard cases (at least 15 of the 52 should be one of these)
 
@@ -42,6 +42,6 @@ I need **at least 50** photos of ingredient labels. This repo has none yet. Put 
 
 At least 15 photos of medicine strips or boxes, brand name visible. Prefer brands that are in `assets/medicine_db.json`, and include at least 3 that are **not** in it, so "no match" is tested too.
 
-## After you add photos
+## After adding photos
 
-I will draft `evals/labels/<id>.json` for each, and you review every file before any number is reported.
+Each photo needs a `evals/labels/<id>.json` ground-truth file, and a person reviews every file before any number is reported.

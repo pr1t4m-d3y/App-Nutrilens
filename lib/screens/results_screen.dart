@@ -134,7 +134,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 icon: Icons.info_outline_rounded,
                 iconColor: theme.colorScheme.onSurfaceVariant,
                 borderColor: theme.colorScheme.outlineVariant.withOpacity(0.5),
-                bgColor: theme.colorScheme.surfaceVariant?.withOpacity(0.3) ?? theme.colorScheme.surfaceTint.withOpacity(0.05),
+                bgColor: theme.colorScheme.surfaceVariant.withOpacity(0.3),
                 ingredients: neutralIngredients,
                 statusColor: theme.colorScheme.onSurfaceVariant,
               ).animate().slideX(begin: 0.1, end: 0, delay: 100.ms).fadeIn(delay: 100.ms),

@@ -11,10 +11,10 @@ from flask import Flask, g, request
 from werkzeug.exceptions import HTTPException
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+from .agents.runner import AgentExplainService, AgentOutcome
 from .auth import Verifier, install_auth
 from .config import Settings
 from .errors import error_response
-from .agents.runner import AgentExplainService, AgentOutcome
 from .explain import ExplainService, LlmLike, RetrieverLike
 from .limits import limiter
 from .llm import LlmClient

@@ -157,7 +157,6 @@ class _MedicinePulseAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     const teal = Color(0xFF00BFA5);
     return SizedBox(
       width: 120,

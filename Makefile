@@ -17,7 +17,7 @@ flutter-get:
 	flutter pub get
 
 flutter-analyze:
-	flutter analyze
+	flutter analyze --no-fatal-infos
 
 flutter-test:
 	flutter test

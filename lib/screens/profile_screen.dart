@@ -413,15 +413,14 @@ class _BentoBlock extends StatelessWidget {
 class _ActionRow extends StatelessWidget {
   final IconData icon;
   final String label;
-  final Color? color;
   final VoidCallback? onTap;
 
-  const _ActionRow({required this.icon, required this.label, this.color, this.onTap});
+  const _ActionRow({required this.icon, required this.label, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final effectiveColor = color ?? theme.colorScheme.onSurface;
+    final effectiveColor = theme.colorScheme.onSurface;
     
     return GestureDetector(
       onTap: onTap,

@@ -13,7 +13,16 @@ def manifest(tmp_path):
     path = tmp_path / "manifest.json"
     path.write_text(
         json.dumps(
-            [{"id": "doc1", "title": "Test Regulation", "issuer": "i", "version": "v", "source_url": "u", "file": "f.txt"}]
+            [
+                {
+                    "id": "doc1",
+                    "title": "Test Regulation",
+                    "issuer": "i",
+                    "version": "v",
+                    "source_url": "u",
+                    "file": "f.txt",
+                }
+            ]
         ),
         encoding="utf-8",
     )
