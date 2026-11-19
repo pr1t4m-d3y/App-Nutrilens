@@ -16,6 +16,15 @@ class CloudUnavailable implements Exception {
   String toString() => 'CloudUnavailable($reason)';
 }
 
+/// One passage returned by regulation search: verbatim text from a
+/// published document, with where it comes from.
+class RegulationHit {
+  final String title;
+  final String locator;
+  final String snippet;
+  const RegulationHit({required this.title, required this.locator, required this.snippet});
+}
+
 /// Client for the NutriLens backend. Sends only what the task needs: label
 /// text plus coarse allergy / condition / avoid-list entries. Never the name,
 /// age, weight, medicines or the photo (the photo is sent only by
@@ -95,6 +104,33 @@ class CloudClient {
     final decoded = jsonDecode(utf8.decode(response.bodyBytes));
     if (decoded is! Map<String, dynamic>) throw const CloudUnavailable('bad response');
     return decoded;
+  }
+
+  /// Searches the regulation corpus. Returns verbatim passages with their
+  /// source; an empty list means no source was found.
+  Future<List<RegulationHit>> search(String query) async {
+    if (!CloudConfig.isConfigured) throw const CloudUnavailable('not configured');
+    final response = await _http
+        .post(
+          _uri('/v1/search'),
+          headers: await _headers(),
+          body: jsonEncode({'query': query.trim()}),
+        )
+        .timeout(const Duration(seconds: 30))
+        .catchError((_) => throw const CloudUnavailable('network'));
+    if (response.statusCode != 200) {
+      throw CloudUnavailable('status ${response.statusCode}');
+    }
+    final decoded = jsonDecode(utf8.decode(response.bodyBytes));
+    final results = decoded is Map<String, dynamic> ? decoded['results'] : null;
+    if (results is! List) throw const CloudUnavailable('bad response');
+    return results.whereType<Map>().map((r) {
+      return RegulationHit(
+        title: (r['title'] ?? '').toString(),
+        locator: (r['locator'] ?? '').toString(),
+        snippet: (r['snippet'] ?? '').toString(),
+      );
+    }).toList();
   }
 
   /// Cloud OCR for labels the on-device reader cannot read. Sends the image.

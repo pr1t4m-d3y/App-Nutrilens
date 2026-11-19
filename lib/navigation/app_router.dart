@@ -15,6 +15,7 @@ import '../screens/medicine_scan_screen.dart';
 import '../screens/medicine_processing_screen.dart';
 import '../screens/medicine_results_screen.dart';
 import '../screens/chatbot_view_all_screen.dart';
+import '../screens/regulation_search_screen.dart';
 import '../widgets/liquid_glass_nav_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -66,6 +67,10 @@ final GoRouter appRouter = GoRouter(
           intent: extras['intent'] ?? 'Search',
         );
       },
+    ),
+    GoRoute(
+      path: '/regulation-search',
+      builder: (context, state) => const RegulationSearchScreen(),
     ),
     GoRoute(
       path: '/medicine-processing',

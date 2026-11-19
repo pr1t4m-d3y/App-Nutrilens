@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../providers/scan_provider.dart';
+import '../services/cloud_client.dart';
+import '../services/cloud_config.dart';
 
 class ScanScreen extends StatefulWidget {
   const ScanScreen({super.key});
@@ -80,6 +82,39 @@ class _ScanScreenState extends State<ScanScreen> with WidgetsBindingObserver {
     }
   }
 
+  /// Offers cloud OCR when the on-device reader found no text. The photo
+  /// leaves the phone only if the user agrees for this one scan. Returns the
+  /// recognised text, or null if cloud OCR is unavailable, declined or failed.
+  Future<String?> _cloudOcrFallback(String imagePath) async {
+    if (!CloudConfig.isConfigured || !mounted) return null;
+
+    final send = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Label not readable on this phone'),
+        content: const Text(
+          'The on-device reader could not find text. You can send this photo '
+          'to the NutriLens cloud reader (Google Gemini on Vertex AI). The '
+          'photo is processed in memory and is not stored. Send it for this scan only?',
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Send photo')),
+        ],
+      ),
+    );
+    if (send != true) return null;
+
+    try {
+      final bytes = await XFile(imagePath).readAsBytes();
+      final text = await CloudClient().ocrFallback(bytes);
+      return text.trim().isEmpty ? null : text;
+    } catch (e) {
+      debugPrint('[Scan] cloud OCR failed: ${e.runtimeType}');
+      return null;
+    }
+  }
+
   void _captureAndProcess() async {
     if (_isProcessing) return;
     setState(() => _isProcessing = true);
@@ -89,7 +124,7 @@ class _ScanScreenState extends State<ScanScreen> with WidgetsBindingObserver {
     try {
       if (_controller != null && _controller!.value.isInitialized) {
         final image = await _controller!.takePicture();
-        final text = await _extractTextFromImage(image.path);
+        final text = await _extractTextFromImage(image.path) ?? await _cloudOcrFallback(image.path);
 
         if (text != null && text.isNotEmpty) {
           scanProvider.startScan(text, imagePath: null); 
@@ -100,8 +135,7 @@ class _ScanScreenState extends State<ScanScreen> with WidgetsBindingObserver {
       }
     } catch (e) {
       debugPrint("Capture error: $e");
-      scanProvider.startScan("Failed to capture image. Please try again.", imagePath: null);
-      if (mounted) context.push('/processing');
+      scanProvider.setError('Could not capture the image. Please try again.');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
@@ -118,7 +152,7 @@ class _ScanScreenState extends State<ScanScreen> with WidgetsBindingObserver {
       final image = await picker.pickImage(source: ImageSource.gallery);
 
       if (image != null) {
-        final text = await _extractTextFromImage(image.path);
+        final text = await _extractTextFromImage(image.path) ?? await _cloudOcrFallback(image.path);
         
         if (text != null && text.isNotEmpty) {
           scanProvider.startScan(text, imagePath: null);

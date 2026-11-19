@@ -128,9 +128,17 @@ class ProfileScreen extends StatelessWidget {
 
                 _ActionRow(icon: Icons.edit_rounded, label: 'Edit Name', onTap: () => _showEditNameDialog(context)),
                 const SizedBox(height: 16),
-                const _ActionRow(icon: Icons.help_outline_rounded, label: 'Help & Support'),
+                _ActionRow(
+                  icon: Icons.menu_book_rounded,
+                  label: 'Regulation search',
+                  onTap: () => context.push('/regulation-search'),
+                ),
                 const SizedBox(height: 16),
-                const _ActionRow(icon: Icons.privacy_tip_outlined, label: 'Privacy Policy'),
+                _ActionRow(
+                  icon: Icons.privacy_tip_outlined,
+                  label: 'What is stored and sent',
+                  onTap: () => showPrivacySummary(context),
+                ),
 
               ],
             ),

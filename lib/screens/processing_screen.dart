@@ -5,6 +5,7 @@ import 'package:haptic_feedback/haptic_feedback.dart';
 import 'package:provider/provider.dart';
 import '../providers/scan_provider.dart';
 import '../providers/user_profile_provider.dart';
+import '../services/additive_table.dart';
 import '../services/cloud_client.dart';
 import '../services/cloud_config.dart';
 import '../services/indian_weighted_scorer.dart';
@@ -64,12 +65,21 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
     final ingredientsList = IngredientParser.extract(cleanOcr);
 
     // ========= ON-DEVICE CHECKS (no network) =========
-    final localThreats = LocalScanner().scanForThreats(
+    final scannerThreats = LocalScanner().scanForThreats(
       ocrText: ocrText,
       userAllergies: userProvider.allergies,
       userConditions: userProvider.conditions,
       userAvoidList: userProvider.manualAvoidList,
     );
+
+    // Additives from the table exported from the regulation data. The table is
+    // empty until it has been exported, in which case nothing is found.
+    final additiveFindings = (await AdditiveTable.loadAsset()).scan(cleanOcr);
+    final additiveThreats = AdditiveTable.allergenMatches(additiveFindings, userProvider.allergies)
+        .map((f) => '${f.entry.name} (${f.entry.eNumber})')
+        .toList();
+    final localThreats = [...scannerThreats, ...additiveThreats];
+
     final localScore = IndianWeightedScorer().calculateFssaiScore(ingredientsList);
     final marketingWarning = MarketingChecker().realityCheck(ocrText, ingredientsList);
 
@@ -89,7 +99,9 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
       } catch (_) {}
     }
 
-    final localIngredients = _localIngredients(ingredientsList, localThreats);
+    final localIngredients = _localIngredients(
+      ingredientsList, localThreats, additiveFindings, userProvider.allergies,
+    );
     final productName = _guessProductName(ocrText);
 
     // ========= CLOUD EXPLANATION (optional, needs consent) =========
@@ -200,8 +212,13 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
     return threats.any((t) => lower.contains(t.split(' (').first.toLowerCase()));
   }
 
-  List<Map<String, dynamic>> _localIngredients(List<String> names, List<String> threats) {
-    return names.map((ing) {
+  List<Map<String, dynamic>> _localIngredients(
+    List<String> names,
+    List<String> threats,
+    List<AdditiveFinding> additives,
+    List<String> allergies,
+  ) {
+    final result = names.map((ing) {
       final flagged = _isThreat(ing, threats);
       return <String, dynamic>{
         'name': ing,
@@ -218,6 +235,33 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
               ],
       };
     }).toList();
+
+    // Additives from the regulation table replace the generic entry when the
+    // label names them, otherwise they are added. Each carries its citation.
+    final allergyHits =
+        AdditiveTable.allergenMatches(additives, allergies).map((f) => f.entry.eNumber).toSet();
+    for (final f in additives) {
+      final e = f.entry;
+      final allergic = allergyHits.contains(e.eNumber);
+      final entry = <String, dynamic>{
+        'name': '${e.name} (${e.eNumber})',
+        'impact': allergic ? 'bad' : 'neutral',
+        'details': [
+          '${e.name} (${e.eNumber}): ${e.category}.',
+          if (e.limitsNote.isNotEmpty) e.limitsNote,
+          if (allergic) 'Carries an allergen tag that matches your profile.',
+          'Source: ${e.citation}',
+        ],
+      };
+      final match = f.matchedText.toLowerCase();
+      final index = result.indexWhere((r) => (r['name'] as String).toLowerCase().contains(match));
+      if (index >= 0) {
+        result[index] = entry;
+      } else {
+        result.add(entry);
+      }
+    }
+    return result;
   }
 
   /// Cloud entries (each with a citation) first, then on-device entries for
