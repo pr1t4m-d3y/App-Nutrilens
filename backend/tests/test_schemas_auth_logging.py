@@ -53,12 +53,27 @@ def test_detect_image_mime():
     assert detect_image_mime(b"hello world, not an image") is None
 
 
+def claims(**overrides):
+    base = {"sub": "u1", "iss": "https://securetoken.google.com/p", "aud": "p"}
+    base.update(overrides)
+    return base
+
+
 def good(token, project):
-    return {"sub": "u1"}
+    return claims()
 
 
 def test_verify_bearer_success():
-    assert verify_bearer("Bearer abc", "p", good) == {"sub": "u1"}
+    assert verify_bearer("Bearer abc", "p", good) == claims()
+
+
+def test_verify_bearer_rejects_wrong_issuer_and_audience():
+    with pytest.raises(AuthError):
+        verify_bearer("Bearer abc", "p", lambda t, p: claims(iss="https://securetoken.google.com/other"))
+    with pytest.raises(AuthError):
+        verify_bearer("Bearer abc", "p", lambda t, p: claims(iss="https://accounts.google.com"))
+    with pytest.raises(AuthError):
+        verify_bearer("Bearer abc", "p", lambda t, p: claims(aud="other"))
 
 
 @pytest.mark.parametrize("header", [None, "", "Basic abc", "Bearer ", "Bearer    "])
@@ -99,3 +114,12 @@ def test_json_formatter_logs_exception_type_not_text():
     assert out["exception_type"] == "ValueError"
     assert out["status"] == 500
     assert "secret detail" not in json.dumps(out)
+
+
+def test_trace_resource_parses_the_cloud_trace_header():
+    from nutrilens_api.logging_utils import trace_resource
+
+    header = "105445aa7843bc8bf206b12000100000/1;o=1"
+    assert trace_resource(header, "proj") == "projects/proj/traces/105445aa7843bc8bf206b12000100000"
+    assert trace_resource("not-a-trace/1", "proj") is None
+    assert trace_resource(None, "proj") is None

@@ -16,7 +16,7 @@ from .errors import error_response
 from .explain import ExplainService, LlmLike, RetrieverLike
 from .limits import limiter
 from .llm import LlmClient
-from .logging_utils import configure_logging, hash_uid
+from .logging_utils import configure_logging, hash_uid, trace_resource
 from .rag.retriever import Retriever
 from .rag.store import Store
 from .routes import bp
@@ -29,6 +29,7 @@ class Services:
     settings: Settings
     llm: LlmClient
     explain: ExplainService
+    retriever: RetrieverLike
 
 
 def create_app(
@@ -52,11 +53,12 @@ def create_app(
     llm = llm or LlmClient(settings)
     if retriever is None:
         retriever = Retriever(Store(settings.db_conninfo(), settings.embedding_dim), llm, settings)
-    app.extensions["nutrilens"] = Services(settings, llm, ExplainService(settings, llm, retriever))
+    app.extensions["nutrilens"] = Services(settings, llm, ExplainService(settings, llm, retriever), retriever)
 
     @app.before_request
     def _start_timer():
         g.started = time.perf_counter()
+        g.trace = trace_resource(request.headers.get("X-Cloud-Trace-Context"), settings.gcp_project)
 
     # Registered before the limiter so the limiter can key on g.uid.
     install_auth(app, settings.firebase_project_id, verifier)

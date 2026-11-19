@@ -43,7 +43,11 @@ class FakeRetriever:
 
 def fake_verifier(token: str, project_id: str) -> dict:
     if token == GOOD_TOKEN:
-        return {"sub": "user-1"}
+        return {
+            "sub": "user-1",
+            "iss": "https://securetoken.google.com/test-project",
+            "aud": "test-project",
+        }
     raise ValueError("bad token")
 
 

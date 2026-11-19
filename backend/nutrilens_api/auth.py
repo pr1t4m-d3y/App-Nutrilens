@@ -41,6 +41,12 @@ def verify_bearer(header: str | None, project_id: str, verifier: Verifier | None
         raise AuthError("invalid token") from exc
     if not claims or not claims.get("sub"):
         raise AuthError("token has no subject")
+    # Checked explicitly rather than trusted to the library: the token must have
+    # been issued by this project's Firebase Auth and be addressed to it.
+    if claims.get("iss") != f"https://securetoken.google.com/{project_id}":
+        raise AuthError("wrong issuer")
+    if claims.get("aud") != project_id:
+        raise AuthError("wrong audience")
     return claims
 
 

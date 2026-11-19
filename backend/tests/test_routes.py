@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from conftest import AUTH, FakeLlm, FakeRetriever, source
 
 GOOD_JSON = json.dumps(
@@ -95,3 +97,41 @@ def test_rate_limit_returns_429(make_client):
 
 def test_source_helper_is_importable():
     assert source().chunk_id == "doc:0001"
+
+
+def test_search_returns_verbatim_cited_chunks(make_client):
+    client = make_client()
+    response = client.post("/v1/search", json={"query": "sodium benzoate"}, headers=AUTH)
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data["status"] == "ok"
+    assert data["results"][0] == {
+        "id": "doc:0001",
+        "title": "Test Regulation",
+        "locator": "Annex II",
+        "snippet": "synthetic test text",
+        "method": "exact",
+    }
+
+
+def test_search_with_no_hits_says_so(make_client):
+    client = make_client(retriever=FakeRetriever([]))
+    data = client.post("/v1/search", json={"query": "anything"}, headers=AUTH).get_json()
+    assert data == {"status": "no_source_found", "results": []}
+
+
+@pytest.mark.parametrize("body", [{"query": "ab"}, {"query": 5}, {"query": "okay", "x": 1}, []])
+def test_search_rejects_bad_requests(make_client, body):
+    response = make_client().post("/v1/search", json=body, headers=AUTH)
+    assert response.status_code == 400
+
+
+def test_search_requires_token(make_client):
+    assert make_client().post("/v1/search", json={"query": "sodium"}).status_code == 401
+
+
+def test_search_retrieval_failure_is_502(make_client):
+    client = make_client(retriever=FakeRetriever(error=RuntimeError("db")))
+    response = client.post("/v1/search", json={"query": "sodium"}, headers=AUTH)
+    assert response.status_code == 502
+    assert response.get_json() == {"error": "upstream_unavailable"}

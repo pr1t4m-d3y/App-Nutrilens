@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import logging
 import re
+import time
 from dataclasses import dataclass
 from typing import Protocol
 
@@ -117,6 +118,8 @@ class ExplainOutcome:
     input_tokens: int
     output_tokens: int
     dropped: int
+    retrieval_ms: float = 0.0
+    generation_ms: float = 0.0
 
 
 class ExplainService:
@@ -126,20 +129,24 @@ class ExplainService:
         self._retriever = retriever
 
     def explain(self, req: ExplainRequest) -> ExplainOutcome:
+        started = time.perf_counter()
         try:
             retrieved = self._retriever.retrieve(req.label_text)
         except Exception as exc:  # noqa: BLE001 - database errors vary; log type only
             log.warning("retrieval failed", extra={"fields": {"error_type": type(exc).__name__}})
             raise UpstreamError("retrieval failed") from exc
 
+        retrieval_ms = (time.perf_counter() - started) * 1000
         if not retrieved:
-            return ExplainOutcome(_no_source(), None, 0, 0, 0)
+            return ExplainOutcome(_no_source(), None, 0, 0, 0, retrieval_ms)
 
         numbered = {f"S{i}": item for i, item in enumerate(retrieved, start=1)}
+        generation_started = time.perf_counter()
         try:
             result = self._llm.generate_json(SYSTEM_PROMPT, build_prompt(req, numbered))
         except LlmError as exc:
             raise UpstreamError("generation failed") from exc
+        generation_ms = (time.perf_counter() - generation_started) * 1000
 
         try:
             items = parse_model_json(result.text)
@@ -149,7 +156,10 @@ class ExplainService:
 
         kept, dropped = enforce_citations(items, numbered)
         if not kept:
-            return ExplainOutcome(_no_source(), result.model, result.input_tokens, result.output_tokens, dropped)
+            return ExplainOutcome(
+                _no_source(), result.model, result.input_tokens, result.output_tokens, dropped,
+                retrieval_ms, generation_ms,
+            )
 
         used = list(dict.fromkeys(cid for entry in kept for cid in entry["citations"]))
         sources = [
@@ -157,7 +167,10 @@ class ExplainService:
             for sid in used
         ]
         body = {"status": "ok", "ingredients": kept, "sources": sources}
-        return ExplainOutcome(body, result.model, result.input_tokens, result.output_tokens, dropped)
+        return ExplainOutcome(
+            body, result.model, result.input_tokens, result.output_tokens, dropped,
+            retrieval_ms, generation_ms,
+        )
 
 
 def _no_source() -> dict:

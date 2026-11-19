@@ -96,3 +96,24 @@ def detect_image_mime(data: bytes) -> str | None:
     if len(data) >= 12 and data[:4] == b"RIFF" and data[8:12] == b"WEBP":
         return "image/webp"
     return None
+
+
+_MIN_QUERY_CHARS = 3
+_MAX_QUERY_CHARS = 300
+
+
+def parse_search(payload: object) -> str:
+    """Validate a regulation-search request and return the cleaned query."""
+    if not isinstance(payload, dict):
+        raise ValidationError("body must be a JSON object")
+    if set(payload) - {"query"}:
+        raise ValidationError("unexpected field in request")
+    query = payload.get("query")
+    if not isinstance(query, str):
+        raise ValidationError("query is required")
+    query = _clean(query)
+    if len(query) < _MIN_QUERY_CHARS:
+        raise ValidationError("query is too short")
+    if len(query) > _MAX_QUERY_CHARS:
+        raise ValidationError("query is too long")
+    return query

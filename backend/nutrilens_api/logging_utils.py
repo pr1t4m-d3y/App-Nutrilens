@@ -15,6 +15,8 @@ import logging
 import re
 import sys
 
+from flask import g, has_request_context
+
 _PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"Bearer\s+[A-Za-z0-9._~+/=-]+", re.IGNORECASE), "Bearer [redacted]"),
     (re.compile(r"eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]*"), "[jwt]"),
@@ -51,6 +53,9 @@ class JsonFormatter(logging.Formatter):
         fields = getattr(record, "fields", None)
         if isinstance(fields, dict):
             payload.update(fields)
+        if has_request_context() and g.get("trace"):
+            # Lets Cloud Logging group these lines under the request's Cloud Trace.
+            payload["logging.googleapis.com/trace"] = g.trace
         if record.exc_info and record.exc_info[0] is not None:
             payload["exception_type"] = record.exc_info[0].__name__
         return json.dumps(payload, default=str)
@@ -63,3 +68,14 @@ def configure_logging(level: int = logging.INFO) -> None:
     root = logging.getLogger()
     root.handlers = [handler]
     root.setLevel(level)
+
+
+def trace_resource(header: str | None, gcp_project: str) -> str | None:
+    """Cloud Trace resource name from an `X-Cloud-Trace-Context` header
+    ("TRACE_ID/SPAN_ID;o=1"), or None if the header is absent or malformed."""
+    if not header:
+        return None
+    trace_id = header.split("/", 1)[0].strip()
+    if not re.fullmatch(r"[0-9a-fA-F]{32}", trace_id):
+        return None
+    return f"projects/{gcp_project}/traces/{trace_id}"
