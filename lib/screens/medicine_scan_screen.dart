@@ -227,19 +227,6 @@ class _MedicineScanScreenState extends State<MedicineScanScreen> with WidgetsBin
                     icon: Icons.close_rounded,
                     onTap: () => context.pop(),
                   ),
-                  Row(
-                    children: [
-                      _TopButton(
-                        icon: Icons.flash_off_rounded,
-                        onTap: () {}, // Add flash toggle logic later
-                      ),
-                      const SizedBox(width: 12),
-                      _TopButton(
-                        icon: Icons.help_outline_rounded,
-                        onTap: () {},
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),

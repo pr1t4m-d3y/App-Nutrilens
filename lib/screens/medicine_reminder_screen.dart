@@ -102,7 +102,6 @@ class _MedicineReminderScreenState extends State<MedicineReminderScreen> {
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
-                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(20),
                           child: Row(
