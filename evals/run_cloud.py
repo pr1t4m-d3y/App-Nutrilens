@@ -141,6 +141,7 @@ def _explain_once(base, headers, label_id, truth, models) -> tuple[dict, list[di
             ok=True,
             status=body.get("status"),
             n_ingredients=len(ingredients),
+            timings_ms=body.get("timings_ms"),
             input_tokens=usage.get("input_tokens", 0),
             output_tokens=usage.get("output_tokens", 0),
         )

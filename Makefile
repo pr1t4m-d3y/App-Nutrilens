@@ -1,4 +1,4 @@
-.PHONY: backend-install backend-lint backend-test backend-run flutter-get flutter-analyze flutter-test eval-local eval-cloud eval-report size
+.PHONY: backend-install backend-lint backend-test backend-run flutter-get flutter-analyze flutter-test eval-local eval-cloud eval-safety eval-report export-additives size
 
 backend-install:
 	cd backend && python -m pip install -r requirements-dev.txt
@@ -29,8 +29,15 @@ eval-local:
 eval-cloud:
 	python evals/run_cloud.py
 
+eval-safety:
+	python evals/run_safety.py
+
 eval-report:
 	python evals/report.py
+
+# Export data/additives.csv to the app asset (needs data/regulations/manifest.json).
+export-additives:
+	cd backend && python -m nutrilens_api.rag.export_additives --csv ../data/additives.csv --manifest ../data/regulations/manifest.json --out ../assets/additives/additives.json
 
 # Usage: make size LABEL=baseline
 size:

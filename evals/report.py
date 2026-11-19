@@ -24,7 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from labels_io import load_labels  # noqa: E402
-from metrics import cost, latency_summary, precision_recall  # noqa: E402
+from metrics import cer, cost, latency_summary, precision_recall, wer  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 RAW = HERE / "results" / "raw"
@@ -82,13 +82,18 @@ def section_ocr() -> list[str]:
         )
     else:
         lines.append("| Gemini vision (cloud) | not run | n/a | n/a |")
-    if mlkit:
+    truth = {label.id: label.ingredients_text for label in load_labels(HERE / "labels").labels}
+    scored = [r for r in (mlkit or []) if r.get("id") in truth]
+    if scored:
         lines.append(
-            f"| ML Kit (on device) | {len(mlkit)} | "
-            f"{_pct(_mean([r['cer'] for r in mlkit]))} | {_pct(_mean([r['wer'] for r in mlkit]))} |"
+            f"| ML Kit (on device, after the app's sanitiser) | {len(scored)} | "
+            f"{_pct(_mean([cer(truth[r['id']], r['text']) for r in scored]))} | "
+            f"{_pct(_mean([wer(truth[r['id']], r['text']) for r in scored]))} |"
         )
+    elif mlkit:
+        lines.append("| ML Kit (on device) | export found, but no ids match reviewed labels | n/a | n/a |")
     else:
-        lines.append("| ML Kit (on device) | not run (needs a device export `mlkit_ocr.json`) | n/a | n/a |")
+        lines.append("| ML Kit (on device) | not run (`integration_test/ocr_export_test.dart` on a device) | n/a | n/a |")
     return lines + ["", "CER/WER are edit distance over normalised text; lower is better.", ""]
 
 
@@ -186,6 +191,13 @@ def section_cloud(price_in: float | None, price_out: float | None, price_date: s
             f"{mean_in:.0f} | {mean_out:.0f} |"
         )
     lines.append("")
+    stages = [r["timings_ms"] for r in (explain or []) if r.get("ok") and r.get("timings_ms")]
+    if stages:
+        lines += [
+            f"Mean /v1/explain stage time: retrieval {_mean([s['retrieval'] for s in stages]):.0f} ms, "
+            f"generation {_mean([s['generation'] for s in stages]):.0f} ms (n={len(stages)}).",
+            "",
+        ]
     if price_in is not None and price_out is not None and all_tokens:
         total = sum(cost(round(i), round(o), price_in, price_out) for i, o in all_tokens.values())
         lines += [
@@ -196,6 +208,21 @@ def section_cloud(price_in: float | None, price_out: float | None, price_date: s
     else:
         lines += ["Cost per scan: not computed (no prices supplied).", ""]
     return lines
+
+
+def section_safety() -> list[str]:
+    lines = ["## Safety and API contract", ""]
+    cases = _load("safety.json")
+    if not cases:
+        return lines + ["Not run (`python evals/run_safety.py`).", ""]
+    passed = sum(1 for c in cases if c["passed"])
+    lines += [f"{passed} of {len(cases)} cases behaved as designed.", "", "| Case | Expected | Observed | Result |", "|---|---|---|---|"]
+    for case in cases:
+        note = f" ({case['note']})" if case.get("note") else ""
+        lines.append(
+            f"| {case['case']} | {case['expected']} | {case['observed']}{note} | {'pass' if case['passed'] else '**FAIL**'} |"
+        )
+    return lines + [""]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -219,6 +246,7 @@ def main(argv: list[str] | None = None) -> int:
     lines += section_local()
     lines += section_citations()
     lines += section_cloud(args.price_in, args.price_out, args.price_date)
+    lines += section_safety()
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
