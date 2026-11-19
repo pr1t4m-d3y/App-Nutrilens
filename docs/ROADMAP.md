@@ -26,6 +26,8 @@ Each item lists what it **needs** and when it is **done**.
 | D2 | Create the budget alert, infrastructure and service with `deploy/00_budget.sh`, `10_infra.sh`, `20_deploy.sh` | Project ID, region, budget amount; a decision on Cloud SQL cost after reading current pricing for the tier in `10_infra.sh` | `GET /healthz` returns 200 and the Cloud Run URL is recorded in the README |
 | D3 | Give the ingest job and the runtime separate database users (ingest writes, runtime only reads), add connection pooling, and move rate-limit counters to shared storage | D2 | The runtime user cannot write; the limiter limit holds across instances |
 | D4 | Exercise `deploy/teardown.sh` once on a scratch project | D2 | Nothing from the project remains listed in the console |
+| D5 | Firebase App Check, so the API can tell a genuine app install from a script holding an anonymous token (see `docs/SECURITY.md`) | D1 | The backend rejects requests without a valid App Check token |
+| D6 | Cloud Monitoring alerts on error rate and latency, and an IP-level throttle for requests that fail authentication | D2 | An alert fires on a forced failure in a scratch project |
 
 ## C. Regulation corpus and additive table
 
@@ -34,7 +36,7 @@ Each item lists what it **needs** and when it is **done**.
 | R1 | Download the regulation documents unchanged from the official sites and complete `data/regulations/SOURCES.md` (title read from each document, version, URL, date, SHA-256, reuse terms) | Your approval to download, or the files from you | Every row of the download log is filled and every candidate in `SOURCES.md` is marked verified or dropped |
 | R2 | Write `data/regulations/manifest.json` and run `python -m nutrilens_api.rag.ingest` | R1, D2, Vertex AI access | Chunks and embeddings are in the database; the command's per-document chunk counts are recorded |
 | R3 | Author `data/additives.csv` from the regulation text, one row per additive, each with its `source_doc_id` and `source_locator` (the loader rejects rows without them) | R1 | `ingest --additives` loads it without errors |
-| R4 | On-device additive table: export `data/additives.csv` to an app asset, add a Dart lookup and use it in the offline scan with the same citation text | R3 | A scan with no network flags a listed E-number and shows its citation |
+| R4 | On-device additive table: the exporter (`make export-additives`), the Dart reader and the scan integration are written. What remains is the data and the export | R3 | `assets/additives/additives.json` exists and a scan with no network flags a listed E-number with its citation |
 | R5 | Tune `RETRIEVAL_MAX_DISTANCE` (currently an untuned default) on the eval set | E3 | The chosen value and the evidence are written in `config.py` and `ERROR_ANALYSIS.md` |
 
 ## D. Evaluation
@@ -42,8 +44,8 @@ Each item lists what it **needs** and when it is **done**.
 | ID | Item | Needs | Done when |
 |---|---|---|---|
 | E1 | 50 or more label photos from `evals/LABEL_CHECKLIST.md`, plus ground-truth JSON, reviewed by a person | Your photos, or approval to use Open Food Facts images with attribution | `load_labels` returns 50 or more reviewed labels |
-| E2 | On-device OCR export: an integration test that runs ML Kit over the label images on a device and writes `evals/results/raw/mlkit_ocr.json` | E1, a device | `report.py` shows an ML Kit row |
-| E3 | Run the evals (`flutter test test/eval`, `evals/run_cloud.py`, citation review, `evals/report.py`) and write `evals/ERROR_ANALYSIS.md` | E1, E2, D2, R2, a current ID token | `RESULTS.md` is generated and every false negative is discussed |
+| E2 | On-device OCR export: `integration_test/ocr_export_test.dart` is written. It has to be run on a device with the label images pushed (steps are in the file header) | E1, an Android device | `evals/results/raw/mlkit_ocr.json` exists and `report.py` shows an ML Kit row |
+| E3 | Run the evals (`flutter test test/eval`, `evals/run_cloud.py`, `evals/run_safety.py`, citation review, `evals/report.py`) and write `evals/ERROR_ANALYSIS.md` | E1, E2, D2, R2, a current ID token | `RESULTS.md` is generated and every false negative is discussed |
 | E4 | Latency comparison of on-device, cloud warm and cloud cold on the same labels, and the re-measurement of the claimed latency reduction against a baseline you define | E3; your answer to what the baseline was | The comparison is in `RESULTS.md` |
 | E5 | Intent classifier evaluation: a labelled test set of user queries for the 6 intents, and the re-measurement of the claimed mapping accuracy | The classifier's training data or a new labelled set; TensorFlow Lite tooling | A confusion matrix is generated from a documented test set |
 
@@ -67,7 +69,6 @@ None of these exists in the code.
 | P4 | Dose reminders that fire notifications (the reminder screen is an interface only) | A notification plugin and platform setup | A scheduled reminder fires on a device |
 | P5 | Cited healthier alternatives (the earlier uncited suggestion was removed from the cloud flow) | R2 | Each suggestion carries a regulation or nutrition-source citation |
 | P6 | Flutter web build: the on-device OCR plugin supports Android and iOS only, so web would use the cloud OCR path (`/v1/ocr-fallback`) | D2; a hosting choice | A web build scans a label through cloud OCR |
-| P7 | Cloud OCR option in the Android scan screen for labels the on-device reader cannot read (the `CloudClient.ocrFallback` method exists; no screen calls it) | D2 | The user can choose cloud OCR for one scan, and the screen says the photo is sent |
 
 ## G. Housekeeping
 

@@ -55,9 +55,12 @@ What runs where, and the reasoning behind each choice, is in [docs/ARCHITECTURE.
 | Marketing claim check | Phone | Compares front-of-pack claims such as "no added sugar" with the ingredient list. |
 | Generic-medicine lookup | Phone | Search by brand or composition over a curated 376-row dataset. |
 | Medicine vs. your profile | Phone | Compares a scanned medicine with your medicine list and allergies by name and active ingredient. It does not know drug interactions or allergy classes, and the screen says so. |
+| Regulation search | Cloud | Retrieval only: verbatim passages from the ingested regulations with their document and locator. No model writes the result. |
+| Additive lookup | Phone | An additive table exported from the same `data/additives.csv` the cloud uses, so offline and online answers agree. Each entry carries its citation. |
 | Cited explanations | Cloud | Retrieval over FSSAI and EU regulation text, then an explanation in which every statement cites a source. If nothing is found the answer is "no source found". |
-| Cloud OCR option | Cloud | Intended for labels the on-device reader cannot read; the user chooses it per scan because it sends the photo. |
-| Privacy controls | Phone and cloud | Consent before any cloud request, a delete-all-my-data action, no server-side storage of user data by design. See [docs/PRIVACY.md](docs/PRIVACY.md). |
+| Cloud OCR option | Cloud | When the on-device reader finds no text, the scan screen offers to send the photo to Gemini on Vertex AI, for that one scan only, because it sends the photo. |
+| Privacy controls | Phone and cloud | Consent before any cloud request, a delete-all-my-data action, a plain-language summary of what is stored and sent, no server-side storage of user data by design. See [docs/PRIVACY.md](docs/PRIVACY.md). |
+| Observability | Cloud | Structured logs with token counts, cost (when prices are supplied), retrieval and generation timings, and Cloud Trace correlation. No request bodies are logged. |
 | Natural-language search | Phone | A small TFLite intent classifier over a 200-product catalogue (6 intents: top rated, worst, sugar free, high protein, palm-oil free, vegan). |
 | Medicine reminder screen | Phone | Interface for setting medicine times. |
 
@@ -114,6 +117,8 @@ cd backend
 python -m nutrilens_api.rag.ingest --manifest ../data/regulations/manifest.json --additives ../data/additives.csv
 ```
 
+Export the additive table for the phone from the same file (`make export-additives`), then rebuild the app.
+
 ### 5. Deploy to Cloud Run
 
 ```bash
@@ -126,7 +131,17 @@ bash deploy/teardown.sh                            # removes what the scripts cr
 
 The container is a multi-stage image that runs as a non-root user, with a least-privilege service account and the database password in Secret Manager. Cloud SQL is the main fixed cost; check current pricing before running `10_infra.sh`.
 
-### 6. Tests, lint, size
+### 6. Evaluate
+
+```bash
+flutter test test/eval                                      # on-device engine
+flutter test integration_test/ocr_export_test.dart -d <id>  # ML Kit OCR on a device (steps in the file header)
+NUTRILENS_ID_TOKEN=... python evals/run_cloud.py --base-url https://SERVICE_URL
+NUTRILENS_ID_TOKEN=... python evals/run_safety.py --base-url https://SERVICE_URL
+python evals/report.py                                      # writes evals/results/RESULTS.md
+```
+
+### 7. Tests, lint, size
 
 ```bash
 make backend-lint backend-test       # Python
@@ -140,6 +155,7 @@ make size LABEL=baseline             # APK / AAB sizes, appended to docs/size_lo
 |---|---|
 | `lib/` | Flutter app: screens, providers, on-device services |
 | `backend/` | Flask API, retrieval pipeline, tests, Dockerfile |
+| `integration_test/` | On-device OCR export for the evals |
 | `deploy/` | Cloud Run, Cloud SQL, Secret Manager and teardown scripts |
 | `data/regulations/` | Regulation sources list and manifest |
 | `evals/` | Label dataset format, runners, report generator |
@@ -150,6 +166,8 @@ make size LABEL=baseline             # APK / AAB sizes, appended to docs/size_lo
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Privacy and health-data handling](docs/PRIVACY.md)
+- [Security review](docs/SECURITY.md)
+- [How the repo maps to the FDE requirements](docs/FDE_MAPPING.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Audit of earlier claims against the code](docs/AUDIT.md)
 - [Eval method](evals/README.md)

@@ -27,7 +27,9 @@ You can truthfully say you wrote these. You cannot say they work, pass or are de
 | Retrieval pipeline: structure-aware chunker, pgvector store, hybrid E-number + vector search, citation enforcement | V1, R2 (ingested real text) |
 | Dockerfile (multi-stage, non-root) and Cloud Run / Cloud SQL / Secret Manager deploy and teardown scripts | D2, D4 |
 | On-device medicine-vs-profile check, encrypted profile storage, consent dialog, delete-all-data action | V1, V2 |
-| Eval harness: metrics, label loader, cloud runner, generated report | E3 |
+| Eval harness: metrics, label loader, cloud runner, safety cases, on-device OCR export, generated report | E3 |
+| Regulation search endpoint and screen; cloud OCR option on the scan screen; on-device additive table reader and exporter | V1, D2, R2, R3 |
+| JWT verification with explicit issuer and audience checks; code-reading security review (`docs/SECURITY.md`) | V1, D2 |
 | Unit tests (Python and Dart), CI workflow, pre-commit config, Makefile | V1, V5 |
 
 ## 2. Claims to remove or reword

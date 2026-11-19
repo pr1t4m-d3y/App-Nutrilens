@@ -22,7 +22,7 @@ Two sections, kept separate on purpose: what the app did **at commit `2de80de`**
 
 | Area | Rule |
 |---|---|
-| Minimisation | Send the cloud only what the task needs: label text and coarse flags (for example "type 2 diabetes", "peanut allergy"). Never name, age, free-text notes, or the label image unless the user chooses the cloud OCR fallback for that scan. |
+| Minimisation | Send the cloud only what the task needs: label text and coarse flags (for example "type 2 diabetes", "peanut allergy"), or the query typed into Regulation search. Never name, age, free-text notes, or the label image unless the user chooses the cloud OCR fallback for that one scan. |
 | Keys | No model keys in the app, ever. They live in Secret Manager and are read only by the Cloud Run service account. |
 | Identity | Firebase anonymous auth. Each install gets a JWT; the API verifies it on every request. No email or phone needed. |
 | Local storage | Profile stored encrypted on the device using the platform keystore. |

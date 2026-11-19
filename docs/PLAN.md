@@ -125,7 +125,7 @@ Already settled: the target repo is `App-Nutrilens`.
 | F3 Local engine fixes, offline medicine check, encrypted profile | Written |
 | F4 Clean-clone build, real tests | Tests written; build not attempted (ROADMAP V1, V2) |
 | B1 Regulation RAG | Pipeline written; no regulation text, no additive table (ROADMAP R1-R5) |
-| B2 Hybrid on-device engine | Allergen, avoid-list, condition and medicine checks written; on-device additive table not built (R4) |
+| B2 Hybrid on-device engine | Allergen, avoid-list, condition and medicine checks written; additive table reader, exporter and scan integration written, data pending (R4); cloud OCR option written |
 | B3 Privacy | Consent, encrypted storage, delete action, log masking written |
 | B4 Cloud Run deploy | Dockerfile and scripts written; nothing deployed (D1-D4) |
 | B5 Evals | Runners, metrics and report generator written; no labels, no results (E1-E5) |
