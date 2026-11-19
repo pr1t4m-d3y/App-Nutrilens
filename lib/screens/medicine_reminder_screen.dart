@@ -10,34 +10,7 @@ class MedicineReminderScreen extends StatefulWidget {
 }
 
 class _MedicineReminderScreenState extends State<MedicineReminderScreen> {
-  // Mock data for existing reminders
-  final List<Map<String, dynamic>> _reminders = [
-    {
-      'name': 'Vitamin C',
-      'startDate': DateTime.now().subtract(const Duration(days: 5)),
-      'endDate': DateTime.now().add(const Duration(days: 25)),
-      'timings': ['Morning'],
-      'times': {'Morning': const TimeOfDay(hour: 8, minute: 30)},
-      'frequency': 0, // 0: Daily
-      'notes': 'Take with food',
-      'active': true,
-      'ids': [1001],
-    },
-    {
-      'name': 'Aspirin',
-      'startDate': DateTime.now(),
-      'endDate': DateTime.now().add(const Duration(days: 10)),
-      'timings': ['Evening', 'Night'],
-      'times': {
-        'Evening': const TimeOfDay(hour: 18, minute: 0),
-        'Night': const TimeOfDay(hour: 22, minute: 0)
-      },
-      'frequency': 1, // 1: Alternate
-      'notes': '',
-      'active': false,
-      'ids': [1002, 1003],
-    },
-  ];
+  final List<Map<String, dynamic>> _reminders = [];
 
   void _deleteReminder(int index) {
     setState(() {
@@ -129,7 +102,6 @@ class _MedicineReminderScreenState extends State<MedicineReminderScreen> {
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
-                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(20),
                           child: Row(

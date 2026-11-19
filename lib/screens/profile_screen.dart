@@ -7,6 +7,8 @@ import '../providers/auth_provider.dart';
 import '../providers/user_profile_provider.dart';
 import '../providers/scan_history_provider.dart';
 import '../providers/theme_provider.dart';
+import '../services/privacy_service.dart';
+import '../widgets/cloud_consent_dialog.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -126,9 +128,17 @@ class ProfileScreen extends StatelessWidget {
 
                 _ActionRow(icon: Icons.edit_rounded, label: 'Edit Name', onTap: () => _showEditNameDialog(context)),
                 const SizedBox(height: 16),
-                const _ActionRow(icon: Icons.help_outline_rounded, label: 'Help & Support'),
+                _ActionRow(
+                  icon: Icons.menu_book_rounded,
+                  label: 'Regulation search',
+                  onTap: () => context.push('/regulation-search'),
+                ),
                 const SizedBox(height: 16),
-                const _ActionRow(icon: Icons.privacy_tip_outlined, label: 'Privacy Policy'),
+                _ActionRow(
+                  icon: Icons.privacy_tip_outlined,
+                  label: 'What is stored and sent',
+                  onTap: () => showPrivacySummary(context),
+                ),
 
               ],
             ),
@@ -189,15 +199,28 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
 
-                // Add Family Member
+                // Privacy: cloud explanations
                 ListTile(
-                  leading: Icon(Icons.group_add_rounded, color: theme.colorScheme.onSurface),
-                  title: Text('Add Family Member', style: theme.textTheme.titleMedium),
+                  leading: Icon(Icons.cloud_outlined, color: theme.colorScheme.onSurface),
+                  title: Text('Privacy: cloud explanations', style: theme.textTheme.titleMedium),
+                  trailing: Icon(Icons.chevron_right_rounded, color: theme.colorScheme.onSurfaceVariant),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  onTap: () async {
+                    Navigator.pop(ctx);
+                    await askCloudConsent(context);
+                  },
+                ),
+                const SizedBox(height: 12),
+
+                // Delete all my data
+                ListTile(
+                  leading: Icon(Icons.delete_forever_rounded, color: theme.colorScheme.error),
+                  title: Text('Delete all my data', style: TextStyle(color: theme.colorScheme.error, fontWeight: FontWeight.w600)),
                   trailing: Icon(Icons.chevron_right_rounded, color: theme.colorScheme.onSurfaceVariant),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   onTap: () {
                     Navigator.pop(ctx);
-                    _showAddFamilyDialog(context);
+                    _confirmDeleteEverything(context);
                   },
                 ),
                 const SizedBox(height: 12),
@@ -241,51 +264,40 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  void _showAddFamilyDialog(BuildContext context) {
-    final nameController = TextEditingController();
-    final relationController = TextEditingController();
-    showDialog(
+  Future<void> _confirmDeleteEverything(BuildContext context) async {
+    final profile = Provider.of<UserProfileProvider>(context, listen: false);
+    final history = Provider.of<ScanHistoryProvider>(context, listen: false);
+    final auth = Provider.of<AuthProvider>(context, listen: false);
+    final messenger = ScaffoldMessenger.of(context);
+    final router = GoRouter.of(context);
+
+    final confirmed = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        title: const Text('Add Family Member'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: nameController,
-              autofocus: true,
-              decoration: InputDecoration(
-                labelText: 'Name',
-                hintText: 'e.g. Mom, Dad',
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: relationController,
-              decoration: InputDecoration(
-                labelText: 'Relation',
-                hintText: 'e.g. Mother, Father, Spouse',
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-          ],
+        title: const Text('Delete all my data?'),
+        content: const Text(
+          'This removes your saved health profile, scan history and cloud '
+          'choice from this phone, deletes your anonymous cloud identity, and '
+          'asks the NutriLens service to confirm. It cannot be undone.',
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(ctx);
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('${nameController.text.trim()} added! (Family profiles coming soon)')),
-              );
-            },
-            child: const Text('Add'),
-          ),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Delete')),
         ],
       ),
     );
+    if (confirmed != true) return;
+
+    final result = await PrivacyService().deleteEverything(profile: profile, history: history);
+    auth.logout();
+
+    final parts = <String>['Data on this phone deleted.'];
+    if (result.identityDeleted) parts.add('Cloud identity deleted.');
+    parts.add(result.serverAcknowledged
+        ? 'The service confirmed it holds no data about you.'
+        : 'Could not reach the service to confirm.');
+    messenger.showSnackBar(SnackBar(content: Text(parts.join(' '))));
+    router.go('/login');
   }
 
   void _showEditNameDialog(BuildContext context) {
@@ -401,15 +413,14 @@ class _BentoBlock extends StatelessWidget {
 class _ActionRow extends StatelessWidget {
   final IconData icon;
   final String label;
-  final Color? color;
   final VoidCallback? onTap;
 
-  const _ActionRow({required this.icon, required this.label, this.color, this.onTap});
+  const _ActionRow({required this.icon, required this.label, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final effectiveColor = color ?? theme.colorScheme.onSurface;
+    final effectiveColor = theme.colorScheme.onSurface;
     
     return GestureDetector(
       onTap: onTap,

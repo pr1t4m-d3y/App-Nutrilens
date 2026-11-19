@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import '../providers/auth_provider.dart';
 import '../providers/user_profile_provider.dart';
 import '../providers/scan_history_provider.dart';
 import '../providers/scan_provider.dart';
@@ -169,12 +168,12 @@ class _HeroScanCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (hasData) {
-          final isMedicine = latest!['scanType'] == 'medicine';
+          final isMedicine = latest['scanType'] == 'medicine';
           if (isMedicine) {
-            scanProvider.viewFromHistory(latest!, type: ScanType.medicine);
+            scanProvider.viewFromHistory(latest, type: ScanType.medicine);
             context.push('/medicine-results');
           } else {
-            scanProvider.viewFromHistory(latest!, type: ScanType.food);
+            scanProvider.viewFromHistory(latest, type: ScanType.food);
             context.push('/results');
           }
           context.push(isMedicine ? '/medicine-results' : '/results');
@@ -201,7 +200,7 @@ class _HeroScanCard extends StatelessWidget {
                   SizedBox(
                     width: 80,
                     height: 80,
-                    child: latest != null && latest['scanType'] == 'medicine'
+                    child: latest['scanType'] == 'medicine'
                       ? Container(
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
@@ -254,17 +253,17 @@ class _HeroScanCard extends StatelessWidget {
                         Row(
                           children: [
                             Icon(
-                              latest != null && latest['scanType'] == 'medicine'
+                              latest['scanType'] == 'medicine'
                                 ? Icons.health_and_safety_rounded
                                 : score >= 7 ? Icons.check_circle_rounded : Icons.info_rounded,
-                              color: latest != null && latest['scanType'] == 'medicine'
+                              color: latest['scanType'] == 'medicine'
                                 ? const Color(0xFF00BFA5)
                                 : _getScoreColor(theme, score),
                               size: 16,
                             ),
                             const SizedBox(width: 4),
                             Text(
-                              latest != null && latest['scanType'] == 'medicine'
+                              latest['scanType'] == 'medicine'
                                 ? 'Medicine Lookup'
                                 : score >= 7 ? 'Good Choice' : score >= 4 ? 'Fair' : 'Caution',
                               style: theme.textTheme.labelMedium,

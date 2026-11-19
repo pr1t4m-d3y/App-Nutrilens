@@ -15,45 +15,60 @@ class LocalScanner {
     'shellfish': RegExp(r'(shrimp|crab|lobster|crawfish|prawn|barnacle|krill|clam|oyster|scallop|mussel|squid|octopus)', caseSensitive: false),
     // Eggs
     'eggs': RegExp(r'(egg|albumen|lysozyme|mayonnaise|meringue|ovalbumin|surimi|vitellin)', caseSensitive: false),
-    
+
     // Hidden sugars (for pre-diabetes / diabetes)
     'hidden_sugars': RegExp(r'(maltodextrin|dextrose|fructose|sucrose|glucose|agave|corn syrup|molasses|cane juice|caramel|dextran|diastase|ethyl maltol|galactose)', caseSensitive: false),
   };
 
-  /// Performs an instant, localized RegEx scan of OCR text against the user's specific avoid list.
-  /// Returns a list of detected threat strings. Empty list means "Safe" (locally).
+  /// The allergen groups that have a pattern library, in a stable order.
+  /// Used by the evaluation harness.
+  static List<String> get allergenGroups =>
+      _libraries.keys.where((k) => k != 'hidden_sugars').toList();
+
+  /// Performs an instant, on-device scan of OCR text against the user's
+  /// allergies, conditions and avoid list.
+  /// Returns a list of detected threat strings. Empty means nothing matched
+  /// locally, which is not a guarantee that the product is safe.
   List<String> scanForThreats({
     required String ocrText,
     required List<String> userAllergies,
     required List<String> userConditions,
+    List<String> userAvoidList = const [],
   }) {
     final Set<String> detectedThreats = {};
     final lowerOcr = ocrText.toLowerCase();
 
-    // 1. Scan direct user allergies (Targeted matches)
+    // 1. Scan direct user allergies (targeted matches)
     for (String allergy in userAllergies) {
-      final allergyKey = allergy.toLowerCase();
-      
-      // If we have a robust multi-word regex library for it, use it
+      final allergyKey = allergy.toLowerCase().trim();
+      if (allergyKey.isEmpty) continue;
+
+      // If we have a multi-word regex library for it, use it
       if (_libraries.containsKey(allergyKey)) {
         final matches = _libraries[allergyKey]!.allMatches(lowerOcr);
         for (var match in matches) {
           detectedThreats.add(match.group(0)!);
         }
-      } else {
+      } else if (lowerOcr.contains(allergyKey)) {
         // Fallback to strict string contains
-        if (lowerOcr.contains(allergyKey)) {
-          detectedThreats.add(allergyKey);
-        }
+        detectedThreats.add(allergyKey);
       }
     }
 
-    // 2. Scan for specific conditions (e.g. Pre-diabetes -> hidden sugars)
+    // 2. Scan the user's own avoid list (exact substring matches)
+    for (String avoid in userAvoidList) {
+      final avoidKey = avoid.toLowerCase().trim();
+      if (avoidKey.length >= 3 && lowerOcr.contains(avoidKey)) {
+        detectedThreats.add(avoidKey);
+      }
+    }
+
+    // 3. Scan for specific conditions (e.g. diabetes -> hidden sugars)
     for (String condition in userConditions) {
-      if (condition.toLowerCase().contains("diabetes")) {
+      if (condition.toLowerCase().contains('diabetes')) {
         final matches = _libraries['hidden_sugars']!.allMatches(lowerOcr);
         for (var match in matches) {
-          detectedThreats.add("\${match.group(0)} (High Glycemic)");
+          detectedThreats.add('${match.group(0)} (High Glycemic)');
         }
       }
     }

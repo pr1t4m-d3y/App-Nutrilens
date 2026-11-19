@@ -34,12 +34,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_dotenv: ^6.0.0
   go_router: ^17.0.0
   google_fonts: ^6.3.2
   firebase_core: ^4.5.0
   firebase_auth: ^6.2.0
-  cloud_firestore: ^6.1.3
   camera: ^0.11.2+1
   google_mlkit_text_recognition: ^0.15.0
   http: ^1.6.0
@@ -51,9 +49,12 @@ dependencies:
   intl: ^0.20.2
   tflite_flutter: ^0.12.1
   path_provider: ^2.1.3
+  flutter_secure_storage: ^10.3.4
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -76,9 +77,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - .env
     - assets/medicine_db.json
     - assets/nlp/
+    - assets/additives/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
